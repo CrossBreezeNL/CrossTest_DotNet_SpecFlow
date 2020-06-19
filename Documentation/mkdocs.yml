@@ -1,0 +1,77 @@
+# Project information
+site_name: 'CrossTest v1.0'
+
+# Copyright
+copyright: 'Copyright &copy; 2020 - CrossBreeze'
+
+# Configuration
+theme:
+  name: 'material'
+  logo: 'img/x-test-icon.png'
+  favicon: 'img/favicon.ico'
+  language: 'en'
+  palette:
+    primary: 'blue grey'
+    accent: 'green'
+  features:
+    tabs: true
+
+# Pages
+nav:
+- Home:
+    - 'Introduction'    : 'index.md'
+    - 'Getting started' : 'GettingStarted.md'   
+    - 'Release notes'   : 'ReleaseNotes.md'
+- Steps:
+  - 'Introduction'       : 'Steps/index.md'
+  - 'Process' : 'Steps/Process.md'
+  - 'Database' : 'Steps/Database.md'
+  - 'Context' : 'Steps/Context.md'
+  - 'Function' : 'Steps/Function.md'
+  - 'Query' : 'Steps/Query.md'
+  - 'DbTable' : 'Steps/DbTable.md'
+  - 'Result' : 'Steps/Result.md'
+  - 'Tables'       : 'Steps/Tables.md'
+- Configuration:
+  - 'Introduction'       : 'Configuration/index.md'
+  - 'CrossTestConfig' : 'Configuration/CrossTestConfig.md'
+  - 'TestConfig' : 'Configuration/TestConfig.md'
+  - 'TestNamingConvention' : 'Configuration/TestNamingConvention.md'
+  - 'TestTableHeaderNamingConvention' : 'Configuration/TestTableHeaderNamingConvention.md'
+  - 'ObjectTemplateConfig' : 'Configuration/ObjectTemplateConfig.md'
+  - 'ObjectTemplateAttributeConfig' : 'Configuration/ObjectTemplateAttributeConfig.md'
+  - 'DatabaseConfig' : 'Configuration/DatabaseConfig.md'
+  - 'DatabaseServerConfig' : 'Configuration/DatabaseServerConfig.md'
+  - 'ProcessConfig' : 'Configuration/ProcessConfig.md'
+  - 'ProcessProjectConfig' : 'Configuration/ProcessProjectConfig.md'
+  - 'SsisProjectConnection' : 'Configuration/SsisProjectConnection.md'
+  - 'DatabaseServerType' : 'Configuration/DatabaseServerType.md'
+  - 'SsisProcessType' : 'Configuration/SsisProcessType.md'
+
+# Extra
+extra:
+  social:
+    - icon: fontawesome/brands/twitter
+      link: 'https://twitter.com/CrossBreeze_NL'
+
+# Extensions
+markdown_extensions:
+  - codehilite
+  - toc:
+      permalink: true
+  - footnotes
+  - admonition
+  - def_list
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde

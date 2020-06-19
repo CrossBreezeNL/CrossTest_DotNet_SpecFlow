@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5C1E7A76-AE72-4062-A769-D6C52AC3BB41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CrossBreeze.CrossTest.SpecFlow.Core</RootNamespace>
+    <AssemblyName>CrossBreeze.CrossTest.SpecFlow.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\CrossTestConfig.cs" />
+    <Compile Include="Configuration\Database\DatabaseConfig.cs" />
+    <Compile Include="Configuration\Test\ObjectTemplateConfig.cs" />
+    <Compile Include="Configuration\Process\ProcessConfig.cs" />
+    <Compile Include="Configuration\Test\TestConfig.cs" />
+    <Compile Include="Helpers\TableHelper.cs" />
+    <Compile Include="Modules\Data\Database\Context\Context_Helper.cs" />
+    <Compile Include="Modules\Data\Database\Function\Function_Helper.cs" />
+    <Compile Include="Modules\Data\Database\Query\Query_Helper.cs" />
+    <Compile Include="Modules\Data\Database\DbTable\DbTable_Helper.cs" />
+    <Compile Include="Modules\Data\Database\Database_Helper.cs" />
+    <Compile Include="Modules\Process\Helper\Process_Helper.cs" />
+    <Compile Include="Modules\Result\Helper\Result_Helper.cs" />
+    <Compile Include="Providers\BinaryFormatterProvider.cs" />
+    <Compile Include="Helpers\ConfigurationHelper.cs" />
+    <Compile Include="Modules\Data\Database\DatabaseContext.cs" />
+    <Compile Include="Helpers\DataTableFormatter.cs" />
+    <Compile Include="Helpers\DataTableComparisonResult.cs" />
+    <Compile Include="Helpers\DataTableHelper.cs" />
+    <Compile Include="Helpers\ETLHelper.cs" />
+    <Compile Include="Helpers\ScenarioContextHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\HashAlgorithmProvider.cs" />
+    <Compile Include="Modules\Data\Database\DatabaseContextHooks.cs" />
+    <Compile Include="Modules\Result\Context\ResultContext.cs" />
+    <Compile Include="Utils\DataTypeUtils.cs" />
+    <Compile Include="Utils\MemoryStreamUtils.cs" />
+    <Compile Include="Utils\TableExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CrossBreeze_CrossDoc\CrossBreeze.CrossDoc.csproj">
+      <Project>{6ba29fee-5f8b-4292-b6c6-4a66fb3852af}</Project>
+      <Name>CrossBreeze.CrossDoc</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\CrossBreeze_CrossTest_Database\CrossBreeze.CrossTest.Database.csproj">
+      <Project>{cf8f6829-2d76-420e-81fc-aa1a7203eb26}</Project>
+      <Name>CrossBreeze.CrossTest.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CrossBreeze_CrossTest_Process_SSIS\CrossBreeze.CrossTest.Process.Ssis.csproj">
+      <Project>{f6b68129-2708-4769-9698-7cde2ab00583}</Project>
+      <Name>CrossBreeze.CrossTest.Process.Ssis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MSTest.TestFramework.1.4.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MSTest.TestFramework.1.4.0\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.DataSetExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="TechTalk.SpecFlow, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\SpecFlow.2.4.1\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\..\packages\SpecFlow.2.4.1\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.4.1\build\SpecFlow.targets'))" />
+  </Target>
+</Project>

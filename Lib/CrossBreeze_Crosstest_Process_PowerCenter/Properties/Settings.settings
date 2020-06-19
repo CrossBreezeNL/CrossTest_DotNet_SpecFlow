@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CrossBeeze.CrossTest.Process.PowerCenter.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CrossBeeze_CrossTest_Process_PowerCenter_PowerCenterWebService_DataIntegrationService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:7333/wsh/services/BatchServices/DataIntegration</Value>
+    </Setting>
+    <Setting Name="CrossBeeze_CrossTest_Process_PowerCenter_PowerCenterWebService1_DataIntegrationService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:7333/wsh/services/BatchServices/DataIntegration</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
