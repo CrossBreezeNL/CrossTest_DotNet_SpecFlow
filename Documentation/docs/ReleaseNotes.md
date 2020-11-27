@@ -21,12 +21,18 @@ Click on the header of a version number to go to the documentation of that speci
 [//]: # (>         * [X] Some issue...)
 
 ## [Version 1.0](../1.0/)
+- [ ] 1.0.1 <sup>27-11-2020</sup>
+> Initial release
+> !!! success "New features"
+>     * [ ] Configuration
+>         * [ ] Microsoft SQL Server Database
+>             - Set command timeout in seconds on database server
 
 - [ ] 1.0 <sup>24-05-2019</sup>
 > Initial release
 > !!! success "New features"
 >     * [ ] Database steps
->         * [ ] Microsft SQL Server Database
+>         * [ ] Microsoft SQL Server Database
 >             - [X] Execute a test within a transaction (automatic rollback at the end)
 >             - [X] Insert data into a table
 >             - [X] Execute a SQL query (and get the results)

@@ -27,3 +27,27 @@ Gegeven ik het SQL query bestand '.\DatabaseSteps\SupportFiles\testQueryFile.sql
 Dan verwacht ik het volgende resultaat:
          | ExampleColumn | 
          | 1             |	
+
+Scenario: Test command timeout failure
+Als ik de volgende SQL query uitvoer:
+    """
+        	WAITFOR DELAY '00:00:11'
+			SELECT 1 as ExampleColumn
+			
+    """
+
+Dan verwacht ik het volgende resultaat:
+         | ExampleColumn | 
+         | 1             |	
+
+Scenario: Test command timeout success
+Als ik de volgende SQL query uitvoer:
+    """
+        	WAITFOR DELAY '00:00:09'
+			SELECT 1 as ExampleColumn
+			
+    """
+
+Dan verwacht ik het volgende resultaat:
+         | ExampleColumn | 
+         | 1             |	

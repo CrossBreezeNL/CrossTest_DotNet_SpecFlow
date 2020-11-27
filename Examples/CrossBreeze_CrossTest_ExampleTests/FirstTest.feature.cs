@@ -107,7 +107,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "version_major",
                         "version_minor"});
             table1.AddRow(new string[] {
-                        "15",
+                        "14",
                         "0"});
 #line 11
     testRunner.Then("I expect the following results:", ((string)(null)), table1, "Then ");
@@ -135,7 +135,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "version_major",
                         "version_minor"});
             table2.AddRow(new string[] {
-                        "15",
+                        "14",
                         "0"});
 #line 23
     testRunner.Then("I expect the following results:", ((string)(null)), table2, "Then ");

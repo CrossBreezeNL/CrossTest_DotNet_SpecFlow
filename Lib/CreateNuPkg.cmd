@@ -1,5 +1,5 @@
 @echo off
 
-call nuget pack ./CrossBreeze_CrossTest_SpecFlow/CrossBreeze.CrossTest.SpecFlow.nuspec
+call nuget pack ./CrossBreeze.CrossTest.SpecFlow.nuspec
 
 pause

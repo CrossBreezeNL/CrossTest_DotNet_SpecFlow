@@ -10,7 +10,7 @@ Scenario: Check msdb version with identifier
     # Check whether the result of the table is as expected.
     Then I expect the following results:
         | version_major | version_minor |
-        | 15            | 0             |
+        | 14            | 0             |
 
 Scenario: Check msdb version without identifier
     # Make sure the ExampleMsSqlServer server is used.
@@ -22,4 +22,4 @@ Scenario: Check msdb version without identifier
     # Check whether the result of the table is as expected.
     Then I expect the following results:
         | version_major | version_minor |
-        | 15            | 0             |
+        | 14            | 0             |

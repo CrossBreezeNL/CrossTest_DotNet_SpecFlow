@@ -11,10 +11,13 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Context
         public IDbConnection DatabaseConnection;
         // Docs: https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms191440(v=sql.105)
         public IDbTransaction DatabaseTransaction;
+        private DatabaseServerConfig databaseServerConfig;
         #endregion Variables
 
-        public void SetDefaultDatabaseConnection(DatabaseServerType serverType, string connectionString)
+        public void SetDefaultDatabaseConnection(DatabaseServerType serverType, string connectionString, DatabaseServerConfig dbServerConfig)
         {
+            //Store the databaseServer config entry
+            this.databaseServerConfig = dbServerConfig;
             // If a database connection is set, while there is already a connection specified, close it.
             if (DatabaseConnection != null)
             {
@@ -45,6 +48,9 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Context
         public IDbCommand CreateDbCommand()
         {
             IDbCommand dbCommand = DatabaseConnection.CreateCommand();
+            // Set the command timeout
+            dbCommand.CommandTimeout = databaseServerConfig.CommandTimeout;
+
             // If there is a transaction, run the command within the transaction.
             if (IsTransactionOpen())
                 dbCommand.Transaction = DatabaseTransaction;

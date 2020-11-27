@@ -26,9 +26,30 @@ namespace CrossBreeze.CrossTest.Database.Configuration
             }
         }
 
+        // CommandTimeout
+        // ConnectionName
+        [ConfigurationProperty("commandTimeout")]
+        [XDoc(Description = "Timeout on queries and statements in seconds.")]
+        public int CommandTimeout {
+            get
+            {
+                Int32? cmdt = this["commandTimeout"] as Int32?;
+                if (cmdt != null)
+                {
+                    return cmdt.Value;
+                } else
+                {
+                    //default command timeout to 30 seconds
+                    return 30;
+                }
+            }
+        }
+
         // ConnectionName
         [ConfigurationProperty("connectionName")]
         [XDoc(Description ="The name of the connection string defined in the config, that this database server config refers to.")]
         public string ConnectionName => this["connectionName"] as string;
+
+
     }
 }

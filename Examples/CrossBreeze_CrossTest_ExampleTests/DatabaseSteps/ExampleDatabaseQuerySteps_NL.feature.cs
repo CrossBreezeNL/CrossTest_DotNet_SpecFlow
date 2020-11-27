@@ -170,6 +170,56 @@ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table3,
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Test command timeout failure")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Database query test steps (NL)")]
+        public virtual void TestCommandTimeoutFailure()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test command timeout failure", null, ((string[])(null)));
+#line 31
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 4
+this.FeatureBackground();
+#line hidden
+#line 32
+testRunner.When("ik de volgende SQL query uitvoer:", "    \tWAITFOR DELAY \'00:00:11\'\r\nSELECT 1 as ExampleColumn\r\n", ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "ExampleColumn"});
+            table4.AddRow(new string[] {
+                        "1"});
+#line 39
+testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table4, "Dan ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Test command timeout success")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Database query test steps (NL)")]
+        public virtual void TestCommandTimeoutSuccess()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test command timeout success", null, ((string[])(null)));
+#line 43
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 4
+this.FeatureBackground();
+#line hidden
+#line 44
+testRunner.When("ik de volgende SQL query uitvoer:", "    \tWAITFOR DELAY \'00:00:09\'\r\nSELECT 1 as ExampleColumn\r\n", ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "ExampleColumn"});
+            table5.AddRow(new string[] {
+                        "1"});
+#line 51
+testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table5, "Dan ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -22,10 +22,13 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Context
             // Assert the connection string is configured.
             Assert.IsNotNull(defaultConnectionString, string.Format("The connection '{0}' is not configured!", databaseServerName));
             // Set the database connection.
-            DatabaseContext.GetDatabaseContext().SetDefaultDatabaseConnection(serverConfig.Type, defaultConnectionString);
+            DatabaseContext.GetDatabaseContext().SetDefaultDatabaseConnection(serverConfig.Type, defaultConnectionString, serverConfig);
 
             // Open a connection to the database server.
             DatabaseContext.GetDatabaseContext().DatabaseConnection.Open();
+
+            
+            
         }
 
         public static void SpecifyTargetDatabase(

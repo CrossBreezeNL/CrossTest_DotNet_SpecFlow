@@ -7,7 +7,7 @@
     <ProjectGuid>{5C1E7A76-AE72-4062-A769-D6C52AC3BB41}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CrossBreeze.CrossTest.SpecFlow.Core</RootNamespace>
+    <RootNamespace>CrossBreeze.CrossTest.SpecFlow</RootNamespace>
     <AssemblyName>CrossBreeze.CrossTest.SpecFlow.Core</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

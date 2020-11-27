@@ -7,27 +7,27 @@
   DTS:CreatorName="VM-DEV-WO-IV\Willem"
   DTS:DTSID="{E4F8EE49-406A-41EE-BA5B-A2D33F47F5DD}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.94"
+  DTS:LastModifiedProductVersion="15.0.1301.433"
   DTS:LocaleID="1033"
   DTS:ObjectName="ExamplePackage"
   DTS:PackageType="5"
   DTS:ProtectionLevel="2"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{5F861529-AEA6-42BC-9904-CD891B41A0EC}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{8064A807-BB0F-4D67-8FBD-63CCA9FB7A94}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[.\LocalDev2017.tempdb]"
+      DTS:refId="Package.ConnectionManagers[tempdb]"
       DTS:CreationName="OLEDB"
       DTS:DelayValidation="True"
       DTS:DTSID="{18C1633C-16A7-41B2-AEE0-40B66EE797D4}"
-      DTS:ObjectName=".\LocalDev2017.tempdb">
+      DTS:ObjectName="tempdb">
       <DTS:PropertyExpression
         DTS:Name="ConnectionString">@[User::SqlConnectionString]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=.;User ID=sa; password=Test1234_; Initial Catalog=tempdb;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=localhost\localdev2017;Integrated Security=SSPI; Initial Catalog=tempdb;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -70,7 +70,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="SqlConnectionString">
       <DTS:VariableValue
-        DTS:DataType="8">Data Source=.;User ID=sa; password=Test1234_; Initial Catalog=tempdb;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</DTS:VariableValue>
+        DTS:DataType="8">Data Source=localhost\localdev2017;Integrated Security=SSPI; Initial Catalog=tempdb;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -147,8 +147,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[.\LocalDev2017.tempdb]"
-                  connectionManagerRefId="Package.ConnectionManagers[.\LocalDev2017.tempdb]"
+                  connectionManagerID="Package.ConnectionManagers[tempdb]"
+                  connectionManagerRefId="Package.ConnectionManagers[tempdb]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -266,8 +266,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[.\LocalDev2017.tempdb]"
-                  connectionManagerRefId="Package.ConnectionManagers[.\LocalDev2017.tempdb]"
+                  connectionManagerID="Package.ConnectionManagers[tempdb]"
+                  connectionManagerRefId="Package.ConnectionManagers[tempdb]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
