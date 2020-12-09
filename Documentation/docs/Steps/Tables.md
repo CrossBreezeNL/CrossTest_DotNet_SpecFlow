@@ -2,7 +2,7 @@
 On this page the different tables which can be used in several tests are described.
 
 ## ParameterTable
-The parameter table is a table containing a list of parameter names and values. Each parameter should be specified in its own row. The column names of the table can be configured in the [TestTableHeaderNamingConvention configuration](/Configuration/TestTableHeaderNamingConvention/).
+The parameter table is a table containing a list of parameter names and values. Each parameter should be specified in its own row. The column names of the table can be configured in the [TestTableHeaderNamingConvention configuration](../../Configuration/TestTableHeaderNamingConvention/).
 
 ### Example
 An example of a parameter table with the default naming convention.

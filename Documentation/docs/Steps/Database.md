@@ -9,7 +9,7 @@ Executes a SQL Agent job
 | Given | en | The SQL agent job ([a-zA-Z0-9_@$#]+) has just been executed |
 | When | en | The SQL agent job ([a-zA-Z0-9_@$#]+) is being executed |
 | Given | nl | Dat de SQL agent job ([a-zA-Z0-9_@$#]+) zojuist is uitgevoerd |
-| Given | nl | De SQL agent job ([a-zA-Z0-9_@$#]+) op dit moment wordt uitgevoerd |
+| When | nl | De SQL agent job ([a-zA-Z0-9_@$#]+) op dit moment wordt uitgevoerd |
 
 ### Arguments
 | Parameter    | Datatype          | Description          |
