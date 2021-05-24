@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31313.79
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossBreeze.CrossTest.Database", "CrossBreeze_CrossTest_Database\CrossBreeze.CrossTest.Database.csproj", "{CF8F6829-2D76-420E-81FC-AA1A7203EB26}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossBreeze.CrossTest.Process.Ssis", "CrossBreeze_CrossTest_Process_SSIS\CrossBreeze.CrossTest.Process.Ssis.csproj", "{F6B68129-2708-4769-9698-7CDE2AB00583}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossBreeze.CrossTest.SpecFlow.Core", "CrossBreeze_CrossTest_SpecFlow_Core\CrossBreeze.CrossTest.SpecFlow.Core.csproj", "{50FC9CBC-F979-40A3-B238-EC256362D5B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossBreeze.CrossTest.SpecFlow", "CrossBreeze_CrossTest_SpecFlow\CrossBreeze.CrossTest.SpecFlow.csproj", "{5C1E7A76-AE72-4062-A769-D6C52AC3BB41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{F6B68129-2708-4769-9698-7CDE2AB00583}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6B68129-2708-4769-9698-7CDE2AB00583}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6B68129-2708-4769-9698-7CDE2AB00583}.Release|Any CPU.Build.0 = Release|Any CPU
-		{50FC9CBC-F979-40A3-B238-EC256362D5B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{50FC9CBC-F979-40A3-B238-EC256362D5B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{50FC9CBC-F979-40A3-B238-EC256362D5B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{50FC9CBC-F979-40A3-B238-EC256362D5B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C1E7A76-AE72-4062-A769-D6C52AC3BB41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C1E7A76-AE72-4062-A769-D6C52AC3BB41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C1E7A76-AE72-4062-A769-D6C52AC3BB41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C1E7A76-AE72-4062-A769-D6C52AC3BB41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

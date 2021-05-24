@@ -14,12 +14,3 @@ Scenario: Fill a typed table and test function
 	Then I expect the following results:
 		| ExampleColumn | StageDateTime          |
 		| Some data     | 2000-01-01 00:00:00.00 |
-
-Scenario: Spaces in SQL schema, table, function and column names are working properly
-	Given the staging-storage table [Schema With Space].[ExampleStagingTableWith Space] is loaded with the following data:
-		| ExampleColumnWith Space|
-		| Some data     |
-	When I retrieve the contents of the [Schema With Space].[ExampleStagingTableWith Space] table
-	Then I expect the following results:
-		| ExampleColumnWith Space |
-		| Some data     |

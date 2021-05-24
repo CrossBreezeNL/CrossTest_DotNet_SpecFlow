@@ -54,7 +54,7 @@ namespace CrossBreeze.CrossTest.Database.Helpers
         public static void ExecuteSQLAgentJob(IDbConnection sqlConn, string sqlAgentJobName)
         {
             //Execute sp call to start job and immediately close data reader since it is not used.
-            SqlDataReader reader =  GetDataReaderFromQuery(sqlConn, string.Format("[msdb].[dbo].[sp_start_job] '{0}'", sqlAgentJobName));
+            SqlDataReader reader =  GetDataReaderFromQuery(sqlConn, string.Format("[msdb].[dbo].[sp_start_job] {0}", sqlAgentJobName));
             reader.Close();
             //Poll for job completion, timeout on 10 minutes
             //Retry until current job status is idle (=4)

@@ -133,39 +133,6 @@ this.FeatureBackground();
 #line hidden
             this.ScenarioCleanup();
         }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Spaces in SQL schema, table, function and column names are working properly")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "ExampleTest")]
-        public virtual void SpacesInSQLSchemaTableFunctionAndColumnNamesAreWorkingProperly()
-        {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Spaces in SQL schema, table, function and column names are working properly", null, ((string[])(null)));
-#line 18
-this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
-#line 4
-this.FeatureBackground();
-#line hidden
-            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                        "ExampleColumnWith Space"});
-            table3.AddRow(new string[] {
-                        "Some data"});
-#line 19
- testRunner.Given("the staging-storage table [Schema With Space].[ExampleStagingTableWith Space] is " +
-                    "loaded with the following data:", ((string)(null)), table3, "Given ");
-#line 22
- testRunner.When("I retrieve the contents of the [Schema With Space].[ExampleStagingTableWith Space" +
-                    "] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                        "ExampleColumnWith Space"});
-            table4.AddRow(new string[] {
-                        "Some data"});
-#line 23
- testRunner.Then("I expect the following results:", ((string)(null)), table4, "Then ");
-#line hidden
-            this.ScenarioCleanup();
-        }
     }
 }
 #pragma warning restore

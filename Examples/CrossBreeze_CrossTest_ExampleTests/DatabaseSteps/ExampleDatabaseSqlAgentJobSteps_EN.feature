@@ -5,8 +5,3 @@ Scenario: Run SQL agent job
 	Given the ExampleMsSqlServer database server is used
 	And the ExampleDatabase database is used
 	When The SQL agent job testjob is being executed
-
-Scenario: Run SQL agent job with space in the name
-	Given the ExampleMsSqlServer database server is used
-	And the ExampleDatabase database is used
-	When The SQL agent job TestJobWith Space is being executed

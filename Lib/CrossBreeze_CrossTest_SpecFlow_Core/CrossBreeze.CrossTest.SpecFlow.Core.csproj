@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{50FC9CBC-F979-40A3-B238-EC256362D5B3}</ProjectGuid>
+    <ProjectGuid>{5C1E7A76-AE72-4062-A769-D6C52AC3BB41}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CrossBreeze.CrossTest.SpecFlow</RootNamespace>
