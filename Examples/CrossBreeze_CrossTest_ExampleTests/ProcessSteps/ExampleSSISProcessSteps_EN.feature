@@ -61,6 +61,13 @@ Scenario: Run typed SSIS proces as role
         | id | description |
 		| 1  | 'FirstRow'  |
 
+Scenario: Run typed SSIS proces as role with space
+	When the Data Warhouse Developer executes the ExamplePackage dwh SSIS process in the ExampleSsisISPacProject project
+	And I retrieve the contents of the [dbo].[testTable] table
+	Then I expect the following results:
+        | id | description |
+		| 1  | 'FirstRow'  |
+
 Scenario: Run SSIS proces with parameters as role
 	When the developer executes the ExamplePackage SSIS process in the ExampleSsisISPacProject project with the following parameter:
 		| Parameter        | Value              |
