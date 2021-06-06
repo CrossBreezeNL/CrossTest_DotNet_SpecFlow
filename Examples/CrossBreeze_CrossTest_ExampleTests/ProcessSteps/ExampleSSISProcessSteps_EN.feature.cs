@@ -297,38 +297,68 @@ this.FeatureBackground();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Run typed SSIS proces as role with space")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Run Example SSIS proces (EN)")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("SSIS")]
+        public virtual void RunTypedSSISProcesAsRoleWithSpace()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Run typed SSIS proces as role with space", null, ((string[])(null)));
+#line 64
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 5
+this.FeatureBackground();
+#line 65
+ testRunner.When("the Data Warhouse Developer executes the ExamplePackage dwh SSIS process in the E" +
+                    "xampleSsisISPacProject project", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 66
+ testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                        "id",
+                        "description"});
+            table9.AddRow(new string[] {
+                        "1",
+                        "\'FirstRow\'"});
+#line 67
+ testRunner.Then("I expect the following results:", ((string)(null)), table9, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Run SSIS proces with parameters as role")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Run Example SSIS proces (EN)")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("SSIS")]
         public virtual void RunSSISProcesWithParametersAsRole()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Run SSIS proces with parameters as role", null, ((string[])(null)));
-#line 64
+#line 71
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
 this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                         "Parameter",
                         "Value"});
-            table9.AddRow(new string[] {
+            table10.AddRow(new string[] {
                         "ExampleParameter",
                         "SomeParameterValue"});
-#line 65
+#line 72
  testRunner.When("the developer executes the ExamplePackage SSIS process in the ExampleSsisISPacPro" +
-                    "ject project with the following parameter:", ((string)(null)), table9, "When ");
-#line 68
+                    "ject project with the following parameter:", ((string)(null)), table10, "When ");
+#line 75
  testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
                         "description"});
-            table10.AddRow(new string[] {
+            table11.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 69
- testRunner.Then("I expect the following results:", ((string)(null)), table10, "Then ");
+#line 76
+ testRunner.Then("I expect the following results:", ((string)(null)), table11, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -340,32 +370,32 @@ this.FeatureBackground();
         public virtual void RunTypedSSISProcesWithParametersAsRole()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Run typed SSIS proces with parameters as role", null, ((string[])(null)));
-#line 73
+#line 80
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
 this.FeatureBackground();
 #line hidden
-            TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                         "Parameter",
                         "Value"});
-            table11.AddRow(new string[] {
+            table12.AddRow(new string[] {
                         "ExampleParameter",
                         "SomeParameterValue"});
-#line 74
+#line 81
  testRunner.When("the developer executes the ExamplePackage dwh SSIS process in the ExampleSsisISPa" +
-                    "cProject project with the following parameter:", ((string)(null)), table11, "When ");
-#line 77
+                    "cProject project with the following parameter:", ((string)(null)), table12, "When ");
+#line 84
  testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-            TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
                         "description"});
-            table12.AddRow(new string[] {
+            table13.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 78
- testRunner.Then("I expect the following results:", ((string)(null)), table12, "Then ");
+#line 85
+ testRunner.Then("I expect the following results:", ((string)(null)), table13, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
