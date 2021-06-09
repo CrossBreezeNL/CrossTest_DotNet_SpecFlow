@@ -6,10 +6,10 @@ Executes a SQL Agent job
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| Given | en | The SQL agent job ([a-zA-Z0-9_@$#]+) has just been executed |
-| When | en | The SQL agent job ([a-zA-Z0-9_@$#]+) is being executed |
-| Given | nl | Dat de SQL agent job ([a-zA-Z0-9_@$#]+) zojuist is uitgevoerd |
-| When | nl | De SQL agent job ([a-zA-Z0-9_@$#]+) op dit moment wordt uitgevoerd |
+| Given | en | The SQL agent job ([a-zA-Z0-9_@$#.]+) has just been executed |
+| When | en | The SQL agent job ([a-zA-Z0-9_@$#.]+) is being executed |
+| Given | nl | Dat de SQL agent job ([a-zA-Z0-9_@$#.]+) zojuist is uitgevoerd |
+| When | nl | De SQL agent job ([a-zA-Z0-9_@$#.]+) op dit moment wordt uitgevoerd |
 
 ### Arguments
 | Parameter    | Datatype          | Description          |
@@ -43,8 +43,8 @@ Executes a SQL Agent job as a specific role
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| When | en | (?:the|a|an) ([a-zA-Z]+) executes the ([a-zA-Z0-9_@$#]+) SQL agent job |
-| When | nl | (?:de|het|een) ([a-zA-Z]+) de ([a-zA-Z0-9_@$#]+) SQL agent job uitvoert |
+| When | en | (?:the|a|an) ([a-zA-Z]+) executes the ([a-zA-Z0-9_@$#.]+) SQL agent job |
+| When | nl | (?:de|het|een) ([a-zA-Z]+) de ([a-zA-Z0-9_@$#.]+) SQL agent job uitvoert |
 
 ### Arguments
 | Parameter    | Datatype          | Description          |

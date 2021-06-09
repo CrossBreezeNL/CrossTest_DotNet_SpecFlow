@@ -2,18 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>CrossBreeze.CrossTest</id>
-    <version>1.0.1.0</version>
+    <version>1.0.2.0</version>
     <title>CrossTest</title>
     <authors>Harmen Wessels, Jacob Siemaszko, Willem Otten</authors>
     <owners>CrossBreeze</owners>
     <license type="file">LICENSE.txt</license>
     <projectUrl>http://www.x-test.nl</projectUrl>
-    <PackageIcon>http://x-test.nl/logo/x-test-icon.png</PackageIcon>
+    <iconUrl>http://x-test.nl/logo/x-test-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>An open-source data solution testing library (using SpecFlow).</description>
-    <releaseNotes>Enable setting command timeout on databaseserver in config. 
-    Please note that with this version the crosstest section in the app.config needs to refer to CrossBreeze.CrossTest.SpecFlow.Core instead of CrossBreeze.CrossTest.SpecFlow. This should happen automatically by updating to this version of Crosstest</releaseNotes>
-    <copyright>Copyright CrossBreeze 2020</copyright>
+    <releaseNotes>Support for spaces in names of SQL Server agent jobs, tables, schemas, functions</releaseNotes>
+    <copyright>Copyright CrossBreeze 2021</copyright>
     <tags>Test Database DWH BI SQL T-SQL SSIS SSAS</tags>
     <dependencies>
       <dependency id="SpecFlow" version="[2.4.0,2.4.1]" />

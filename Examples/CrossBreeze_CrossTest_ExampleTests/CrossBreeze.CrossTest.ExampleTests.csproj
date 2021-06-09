@@ -75,11 +75,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ExampleTest.feature</DependentUpon>
     </Compile>
-    <Compile Include="FirstTest.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FirstTest.feature</DependentUpon>
-    </Compile>
     <Compile Include="ProcessSteps\ExampleSSISProcessSteps_EN.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

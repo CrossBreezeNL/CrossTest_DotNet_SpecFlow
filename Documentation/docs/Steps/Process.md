@@ -6,10 +6,10 @@ Execute a SSIS package without parameters
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| Given | en | the ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project have just been executed |
-| When | en | the ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project is being executed |
-| Given | nl | het ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project is zojuist uitgevoerd |
-| When | nl | het ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project op dit moment wordt uitgevoerd |
+| Given | en | the ([a-zA-Z0-9_@$#.]+) (SSIS) process in the ([a-zA-Z0-9_]+) project have just been executed |
+| When | en | the ([a-zA-Z0-9_@$#.]+) (SSIS) process in the ([a-zA-Z0-9_]+) project is being executed |
+| Given | nl | het ([a-zA-Z0-9_@$#.]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project is zojuist uitgevoerd |
+| When | nl | het ([a-zA-Z0-9_@$#.]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project op dit moment wordt uitgevoerd |
 
 ### Arguments
 | Parameter    | Datatype          | Description          |
@@ -35,10 +35,10 @@ Execute a SSIS package with specific parameters
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| Given | en | the ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project have just been executed with the following parameters?: |
-| When | en | the ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project is being executed with the following parameters?: |
-| Given | nl | het ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project zojuist is uitgevoerd met de volgende parameters?: |
-| When | nl | het ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project op dit moment wordt uitgevoerd met de volgende parameters?: |
+| Given | en | the ([a-zA-Z0-9_@$#.]+) (SSIS) process in the ([a-zA-Z0-9_]+) project have just been executed with the following parameters?: |
+| When | en | the ([a-zA-Z0-9_@$#.]+) (SSIS) process in the ([a-zA-Z0-9_]+) project is being executed with the following parameters?: |
+| Given | nl | het ([a-zA-Z0-9_@$#.]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project zojuist is uitgevoerd met de volgende parameters?: |
+| When | nl | het ([a-zA-Z0-9_@$#.]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project op dit moment wordt uitgevoerd met de volgende parameters?: |
 
 ### Arguments
 | Parameter    | Datatype          | Description          |
@@ -69,10 +69,10 @@ Execute a SSIS package with default parameters and naming convention from a temp
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| Given | en | the ([a-zA-Z0-9_@$#]+) ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project have just been executed |
-| When | en | the ([a-zA-Z0-9_@$#]+) ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project is being executed |
-| Given | nl | het ([a-zA-Z0-9_@$#]+) ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project is zojuist uitgevoerd |
-| When | nl | het ([a-zA-Z0-9_@$#]+) ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project op dit moment wordt uitgevoerd |
+| Given | en | the ([a-zA-Z0-9_@$#.]+) ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project have just been executed |
+| When | en | the ([a-zA-Z0-9_@$#.]+) ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project is being executed |
+| Given | nl | het ([a-zA-Z0-9_@$#.]+) ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project is zojuist uitgevoerd |
+| When | nl | het ([a-zA-Z0-9_@$#.]+) ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project op dit moment wordt uitgevoerd |
 
 ### Arguments
 | Parameter    | Datatype          | Description          |
@@ -99,10 +99,10 @@ Execute a SSIS package with default parameters from a template and specific para
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| Given | en | the ([a-zA-Z0-9_@$#]+) ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project have just been executed with the following parameters?: |
-| When | en | the ([a-zA-Z0-9_@$#]+) ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project is being executed with the following parameters?: |
-| Given | nl | het ([a-zA-Z0-9_@$#]+) ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project zojuist is uitgevoerd met de volgende parameters?: |
-| When | nl | het ([a-zA-Z0-9_@$#]+) ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project op dit moment wordt uitgevoerd met de volgende parameters?: |
+| Given | en | the ([a-zA-Z0-9_@$#.]+) ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project have just been executed with the following parameters?: |
+| When | en | the ([a-zA-Z0-9_@$#.]+) ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project is being executed with the following parameters?: |
+| Given | nl | het ([a-zA-Z0-9_@$#.]+) ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project zojuist is uitgevoerd met de volgende parameters?: |
+| When | nl | het ([a-zA-Z0-9_@$#.]+) ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project op dit moment wordt uitgevoerd met de volgende parameters?: |
 
 ### Arguments
 | Parameter    | Datatype          | Description          |
@@ -134,8 +134,8 @@ Execute a SSIS package as a specific user role
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| When | en | (?:the|a|an) ([a-zA-Z]+) executes the ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project |
-| When | nl | (?:de|het|een) ([a-zA-Z]+) het ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project uitvoert |
+| When | en | (?:the|a|an) ([a-zA-Z]+) executes the ([a-zA-Z0-9_@$#.]+) (SSIS) process in the ([a-zA-Z0-9_]+) project |
+| When | nl | (?:de|het|een) ([a-zA-Z]+) het ([a-zA-Z0-9_@$#.]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project uitvoert |
 
 ### Arguments
 | Parameter    | Datatype          | Description          |
@@ -162,8 +162,8 @@ Execute a templated SSIS package as a specific user role
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| When | en | (?:the|a|an) ([a-zA-Z]+) executes the ([a-zA-Z0-9_@$#]+) ([a-zA-Z0-9_@$#-]+) (SSIS) process in the ([a-zA-Z0-9_]+) project |
-| When | nl | (?:de|het|een) ([a-zA-Z]+) het ([a-zA-Z0-9_@$#]+) ([a-zA-Z0-9_@$#-]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project uitvoert |
+| When | en | (?:the|a|an) ([a-zA-Z]+) executes the ([a-zA-Z0-9_@$#.]+) ([a-zA-Z0-9_@$#-]+) (SSIS) process in the ([a-zA-Z0-9_]+) project |
+| When | nl | (?:de|het|een) ([a-zA-Z]+) het ([a-zA-Z0-9_@$#.]+) ([a-zA-Z0-9_@$#-]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project uitvoert |
 
 ### Arguments
 | Parameter    | Datatype          | Description          |
@@ -191,8 +191,8 @@ Execute a templated SSIS package as a specific user role and with parameters
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| When | en | (?:the|a|an) ([a-zA-Z]+) executes the ([a-zA-Z0-9_@$#]+) ([a-zA-Z0-9_@$#-]+) (SSIS) process in the ([a-zA-Z0-9_]+) project with the following parameters?: |
-| When | nl | (?:de|het|een) ([a-zA-Z]+) het ([a-zA-Z0-9_@$#]+) ([a-zA-Z0-9_@$#-]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project uitvoert met de volgende parameters?: |
+| When | en | (?:the|a|an) ([a-zA-Z]+) executes the ([a-zA-Z0-9_@$#.]+) ([a-zA-Z0-9_@$#-]+) (SSIS) process in the ([a-zA-Z0-9_]+) project with the following parameters?: |
+| When | nl | (?:de|het|een) ([a-zA-Z]+) het ([a-zA-Z0-9_@$#.]+) ([a-zA-Z0-9_@$#-]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project uitvoert met de volgende parameters?: |
 
 ### Arguments
 | Parameter    | Datatype          | Description          |
@@ -225,8 +225,8 @@ Execute a SSIS package with parameters as a specific user role
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| When | en | (?:the|a|an) ([a-zA-Z]+) executes the ([a-zA-Z0-9_@$#]+) (SSIS) process in the ([a-zA-Z0-9_]+) project with the following parameters?: |
-| When | nl | (?:de|het|een) ([a-zA-Z]+) het ([a-zA-Z0-9_@$#]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project uitvoert met de volgende parameters?: |
+| When | en | (?:the|a|an) ([a-zA-Z]+) executes the ([a-zA-Z0-9_@$#.]+) (SSIS) process in the ([a-zA-Z0-9_]+) project with the following parameters?: |
+| When | nl | (?:de|het|een) ([a-zA-Z]+) het ([a-zA-Z0-9_@$#.]+) (SSIS) proces in het ([a-zA-Z0-9_]+) project uitvoert met de volgende parameters?: |
 
 ### Arguments
 | Parameter    | Datatype          | Description          |

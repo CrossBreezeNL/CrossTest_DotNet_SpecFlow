@@ -21,8 +21,13 @@ Click on the header of a version number to go to the documentation of that speci
 [//]: # (>         * [X] Some issue...)
 
 ## [Version 1.0](../1.0/)
+- [ ] 1.0.2 <sup>09-06-2021</sup>
+> !!! success "Enhanced features"
+>     * [ ] Database steps
+>           - [X] Support spaces in SQL agent job names
+>           - [X] Support spaces in database object names (tables, schemas, functions)
+
 - [ ] 1.0.1 <sup>27-11-2020</sup>
-> Initial release
 > !!! success "New features"
 >     * [ ] Configuration
 >         * [ ] Microsoft SQL Server Database
