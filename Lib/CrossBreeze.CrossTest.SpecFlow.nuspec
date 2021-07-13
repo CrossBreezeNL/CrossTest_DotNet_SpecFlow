@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>CrossBreeze.CrossTest</id>
-    <version>1.0.2.0</version>
+    <version>1.0.2.1</version>
     <title>CrossTest</title>
     <authors>Harmen Wessels, Jacob Siemaszko, Willem Otten</authors>
     <owners>CrossBreeze</owners>
@@ -21,7 +21,7 @@
       <!-- Not strictly a depedency for this NuGet package, but the user will need it to execute the tests. -->
       <dependency id="MSTest.TestAdapter" version="1.4.0" />
       <!-- In the SMO library the STrace namespace exists and is needed for SSIS package execution. -->
-      <dependency id="Microsoft.SqlServer.SqlManagementObjects" version="140.17283.0" />
+      <dependency id="Microsoft.SqlServer.SqlManagementObjects" version="150.18208.0" />
     </dependencies>
     <!-- Add the framework assemblies that should be referenced in the C# project. -->
     <frameworkAssemblies>

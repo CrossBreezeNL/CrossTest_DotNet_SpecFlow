@@ -5,130 +5,19 @@
     <section name="crossTest" type="CrossBreeze.CrossTest.SpecFlow.Configuration.CrossTestConfig, CrossBreeze.CrossTest.SpecFlow.Core" />
   </configSections>
   
-  <!-- The SpecFlow configuration. -->
   <specFlow>
-    <!-- Set the language of your specflow files (see https://docs.cucumber.io/gherkin/reference/#overview). -->
-    <language feature="en" />
-    <!-- Set the unit test provider, the CrossTest default is 'mstest.v2' (see https://github.com/techtalk/SpecFlow/wiki/Configuration#unittestprovider). -->
-    <unitTestProvider name="mstest.v2" />
     <stepAssemblies>
       <stepAssembly assembly="CrossBreeze.CrossTest.SpecFlow" />
     </stepAssemblies>
   </specFlow>
 
-  <!-- The CrossTest configuration -->
   <crossTest>
-
-    <!-- Test configuration. -->
     <test>
-
-      <!-- The naming conventions. -->
-      <namingConvention>
-        <tableHeader parameterName="Parameter" parameterValue="Value" />
-      </namingConvention>
-
-      <!-- The object templates which can be used for databases objects and processes. -->
-      <objectTemplates>
-        <!-- The table types which can be used while filling tables. The attributes defined here will be used as columns for the table. -->
-        <objectTemplate name="staging" prefix="[Staging].[" suffix="]" />
-        <objectTemplate name="staging-storage" parentTemplate="staging">
-          <attributes>
-            <attribute name="StageDateTime" value="2000-01-01 00:00:00.00" />
-          </attributes>
-        </objectTemplate>
-        <objectTemplate name="staging-hist-storage" parentTemplate="staging-storage" appendPrefix="HIST_">
-          <attributes>
-            <attribute name="RecordHash" value="0x00000000000000000000000000000000" />
-            <attribute name="RecordEndDateTime" value="9999-12-31 00:00:00.00" />
-          </attributes>
-        </objectTemplate>
-        <!-- The following objectTemplate can, for example, be applied on a T-SQL procedure or a SSIS process. -->
-        <objectTemplate name="load-staging" parentTemplate="staging" appendPrefix="Load_">
-          <attributes>
-            <attribute name="ParentProcessID" value="1" />
-            <attribute name="ProcessDateTime" value="2000-01-01 00:00:00.00" />
-          </attributes>
-        </objectTemplate>
-        
-        <!-- DataVault storage object types. -->
-        <objectTemplate name="datavault" prefix="[DataVault].[" suffix="]" />
-        <objectTemplate name="datavault-storage" parentTemplate="datavault">
-          <attributes>
-            <attribute name="RecordLoadProcessID" value="1" />
-            <attribute name="RecordLoadDateTime" value="2000-01-01 00:00:00.00" />
-          </attributes>
-        </objectTemplate>
-        <objectTemplate name="sourcelink" parentTemplate="datavault-storage" appendPrefix="SL_" />
-        <objectTemplate name="hub" parentTemplate="datavault-storage" appendPrefix="H_" />
-        <objectTemplate name="link" parentTemplate="datavault-storage" appendPrefix="L_" />
-        <objectTemplate name="satellite" parentTemplate="datavault-storage" appendPrefix="S_">
-          <attributes>
-            <attribute name="RecordHash" value="0x00000000000000000000000000000000" />
-            <attribute name="RecordEndDateTime" value="9999-12-31 00:00:00.00" />
-          </attributes>
-        </objectTemplate>
-        <!-- The following objectTemplate can, for example, be applied on a T-SQL procedure or a SSIS process. -->
-        <objectTemplate name="dwh" parentTemplate="datavault" appendPrefix="Load_">
-          <attributes>
-            <attribute name="ParentProcessID" value="1" />
-            <attribute name="ProcessDateTime" value="2000-01-01 00:00:00.00" />
-          </attributes>
-        </objectTemplate>
-
-        <!-- DataMart storage object types. -->
-        <objectTemplate name="datamart" prefix="[DataMart].[" suffix="]">
-          <attributes>
-            <attribute name="RecordHash" value="0x00000000000000000000000000000000" />
-            <attribute name="RecordEndDateTime" value="9999-12-31 00:00:00.00" />
-          </attributes>
-        </objectTemplate>
-        <objectTemplate name="dimension" parentTemplate="datamart" />
-        <objectTemplate name="fact" parentTemplate="datamart" />
-
-        <!-- The function types which can be used while calling functions. -->
-        <objectTemplate name="business-rule" prefix="[BusinessRule].[udf_" suffix="]" />
-        <objectTemplate name="derive" parentTemplate="business-rule" appendPrefix="Derive_" />
-        <objectTemplate name="calculate" parentTemplate="business-rule" appendPrefix="Calculate_" />
-      </objectTemplates>
-
     </test>
-
-    <!-- Database configuration. -->
     <database>
-      
-      <!-- The database servers which are used, the connectionStringName points to the name of the connectionStrings element defined in this app config. -->
-      <servers>
-        <server name="ExampleMsSqlServer" connectionName="ExampleMsSqlConnection" type="MsSql" />
-      </servers>
-      
     </database>
-
-    <!-- Process configuration. -->
     <process>
-
-      <!-- The SSIS process types are: IsPacProjectProcess, DBProjectProcess, FileProcess -->
-      <projects>
-        <!-- Example SSIS ISPac project. -->
-        <project name="ExampleSsisISPacProject" processType="ISPac" isPacFileLocation="ExampleSsis.ispac">
-          <!-- The project connections can be configured here. -->
-          <connections>
-            <!-- The connectionStringName points to the name of the connectionStrings element defined in this app config. -->
-            <connection name="ExamplePackageConnectioName" connectionName="ExampleConfigConnectionName" />
-          </connections>
-        </project>
-        <!-- Example SSIS ISServer project. -->
-        <project name="ExampleSssisISServerProject" processType="ISServer" ssisConnectionName="ExampleMsSqlConnection" ssisFolder="ExampleSsisFolder" ssisProject="ExampleSsisProject" ssisEnvironmentFolder="." ssisEnvironmentName="ExampleSsisEnvironment" />
-      </projects>
-
     </process>
-    
   </crossTest>
-
-  <!-- The connection strings. -->
-  <connectionStrings>
-    <!-- Define the database servers (and optionally database names) to use. -->
-    <add name="ExampleMsSqlConnection" connectionString="Data Source=localhost;Integrated Security=SSPI;" />
-    <add name="ExampleConfigConnectionName" connectionString="Data Source=localhost;Initial Catalog=ExampleDatabase;Provider=SQLNCLI11.1;Integrated Security=SSPI;" />
-  </connectionStrings>
-  
+ 
 </configuration>
