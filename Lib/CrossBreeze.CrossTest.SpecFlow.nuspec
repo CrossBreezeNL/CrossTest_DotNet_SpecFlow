@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>CrossBreeze.CrossTest</id>
-    <version>1.0.2.1</version>
+    <version>1.0.2.2</version>
     <title>CrossTest</title>
     <authors>Harmen Wessels, Jacob Siemaszko, Willem Otten</authors>
     <owners>CrossBreeze</owners>
