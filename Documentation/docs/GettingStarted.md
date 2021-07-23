@@ -21,7 +21,7 @@ To install the plugin:
  * Now click on the 'Online' category en search for 'Specflow'.
  * Install the 'Specflow for Visual Studio &lt;your version&gt;' plugin.
 
-![Install Specflow for Visual Studio plugin](./img/VS_Specflow_Plugin.png)
+![Install Specflow for Visual Studio plugin](./img/VS_SpecFlow_Plugin.png)
 
 ### Create a Visual Studio project and include the NuGet package.
 Create a new Visual Studio project of type Visual C# Class Library. After the project is created you can remove the default 'Class1.cs' file which is created.
@@ -55,7 +55,7 @@ This is all configuration needed for running the first test. For an explanation 
 
 Add a new Specflow Feature file to your project by right clicking on the project name, go to 'Add' and click on 'New item'. The window 'Add New Item' will appear as shown below.
 
-![Add new Specflow Feature file](./img/Create_New_Specflow_Feature.png)
+![Add new Specflow Feature file](./img/Create_New_SpecFlow_Feature.png)
 
 Click on the 'Specflow Feature File', set the 'Name' to 'FirstTest.feature' and click 'Add'. Now a new feature file is created with a sample Specflow test. This test won't be able to execute because there are sentences used which are not implemented. Now we update the contents of the test to the following to use some CrossTest sentenses.
 
