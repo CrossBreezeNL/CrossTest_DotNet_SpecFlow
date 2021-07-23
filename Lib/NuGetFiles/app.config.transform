@@ -6,6 +6,7 @@
   </configSections>
   
   <specFlow>
+    <unitTestProvider name="mstest.v2" />
     <stepAssemblies>
       <stepAssembly assembly="CrossBreeze.CrossTest.SpecFlow" />
     </stepAssemblies>

@@ -21,6 +21,19 @@ Click on the header of a version number to go to the documentation of that speci
 [//]: # (>         * [X] Some issue...)
 
 ## [Version 1.0](../1.0/)
+- [ ] 1.0.2.2 <sup>23-07-2021</sup>
+> !!! success "Enhanced features"
+>     * [ ] Database steps
+>           - [X] Support dots in SQL agent job names
+>     * [ ] Process steps
+>           - [X] Support dots in process names
+
+- [ ] 1.0.2.1 <sup>13-07-2021</sup>
+> !!! warning "Bug fixes")
+>     * [ ] Process steps
+>         * [ ] Microsoft SQL Server Integration Services
+>             - [X] Fixed execution of SSAS task in SSIS package
+
 - [ ] 1.0.2 <sup>09-06-2021</sup>
 > !!! success "Enhanced features"
 >     * [ ] Database steps

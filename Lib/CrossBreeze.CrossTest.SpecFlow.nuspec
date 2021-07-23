@@ -11,7 +11,7 @@
     <iconUrl>http://x-test.nl/logo/x-test-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>An open-source data solution testing library (using SpecFlow).</description>
-    <releaseNotes>Support for spaces in names of SQL Server agent jobs, tables, schemas, functions</releaseNotes>
+    <releaseNotes>Fixed issues with step binding.</releaseNotes>
     <copyright>Copyright CrossBreeze 2021</copyright>
     <tags>Test Database DWH BI SQL T-SQL SSIS SSAS</tags>
     <dependencies>
