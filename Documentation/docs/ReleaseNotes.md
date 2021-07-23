@@ -27,9 +27,12 @@ Click on the header of a version number to go to the documentation of that speci
 >           - [X] Support dots in SQL agent job names
 >     * [ ] Process steps
 >           - [X] Support dots in process names
+> !!! warning "Bug fixes"
+>     * [ ] Binding
+>           - [X] Fixed issue with new step binding which occured as of 1.0.2.
 
 - [ ] 1.0.2.1 <sup>13-07-2021</sup>
-> !!! warning "Bug fixes")
+> !!! warning "Bug fixes"
 >     * [ ] Process steps
 >         * [ ] Microsoft SQL Server Integration Services
 >             - [X] Fixed execution of SSAS task in SSIS package
