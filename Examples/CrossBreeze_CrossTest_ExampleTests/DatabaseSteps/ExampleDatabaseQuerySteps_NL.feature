@@ -28,6 +28,7 @@ Dan verwacht ik het volgende resultaat:
          | ExampleColumn | 
          | 1             |	
 
+@ExectedToFail
 Scenario: Test command timeout failure
 Als ik de volgende SQL query uitvoer:
     """

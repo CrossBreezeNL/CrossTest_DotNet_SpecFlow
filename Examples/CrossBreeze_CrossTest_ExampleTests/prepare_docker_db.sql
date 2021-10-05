@@ -30,7 +30,7 @@ Create function [dbo].[GetExampleStagingTableWith Space]() Returns TABLE
 AS 
 	Return
 		Select [ExampleColumnWith Space], [StageDateTime]
-		FROM [ExampleStagingTableWith Space]
+		FROM [Schema With Space].[ExampleStagingTableWith Space]
 GO
 
 CREATE DATABASE [TestDB]
