@@ -21,6 +21,12 @@ Click on the header of a version number to go to the documentation of that speci
 [//]: # (>         * [X] Some issue...)
 
 ## [Version 1.0](../1.0/)
+- [ ] 1.0.2.3 <sup>18-03-2022</sup>
+> !!! success "Enhanced features"
+>     * [ ] Process steps
+>         * [ ] Microsoft SQL Server Integration Services
+>             - [X] Updated SQL Server client tools dependency from SQL Server 2017 to SQL Server 2019, this means running SSIS tasks now requires SQL Server 2019 be installed on the system running the tests.
+
 - [ ] 1.0.2.2 <sup>23-07-2021</sup>
 > !!! success "Enhanced features"
 >     * [ ] Database steps
