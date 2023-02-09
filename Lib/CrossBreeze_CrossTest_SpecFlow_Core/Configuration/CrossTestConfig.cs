@@ -23,5 +23,10 @@ namespace CrossBreeze.CrossTest.SpecFlow.Configuration
         [ConfigurationProperty("database")]
         [XDoc(Description ="Database configurations")]
         public DatabaseConfig Database => this["database"] as DatabaseConfig;
+
+        // Process
+        [ConfigurationProperty("process")]
+        [XDoc(Description = "Process configurations")]
+        public ProcessConfig Process => this["process"] as ProcessConfig;
     }
 }
