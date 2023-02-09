@@ -107,7 +107,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Process
             }
 
             // Execute the process.
-            ETLHelper.ExecuteProcess((ETLHelper.ProcessType)Enum.Parse(typeof(ETLHelper.ProcessType), processType), projectName, fqProcessName, parameters);
+            ETLHelper.ExecuteProcess((Configuration.Process.ProcessType)Enum.Parse(typeof(Configuration.Process.ProcessType), processType), projectName, fqProcessName, parameters);
         }
         #endregion
 
