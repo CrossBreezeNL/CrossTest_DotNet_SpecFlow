@@ -5,7 +5,7 @@ using System.Configuration;
 namespace CrossBreeze.CrossTest.Process.Ssis.Configuration
 {
     [XDoc(Title ="Process configuration", Description ="A configuration for a type of process.")]
-    public class ProcessProjectConfig : ConfigurationElement
+    public class SsisProcessProjectConfig : ConfigurationElement
     {
 
         // Name
