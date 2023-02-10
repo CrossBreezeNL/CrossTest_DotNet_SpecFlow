@@ -284,7 +284,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Lib\CrossBreeze_CrossTest_SpecFlow_Core\CrossBreeze.CrossTest.SpecFlow.Core.csproj">
-      <Project>{5c1e7a76-ae72-4062-a769-d6c52ac3bb41}</Project>
+      <Project>{50fc9cbc-f979-40a3-b238-ec256362d5b3}</Project>
       <Name>CrossBreeze.CrossTest.SpecFlow.Core</Name>
     </ProjectReference>
   </ItemGroup>
