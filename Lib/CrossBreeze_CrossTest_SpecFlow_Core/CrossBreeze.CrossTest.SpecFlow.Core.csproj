@@ -75,10 +75,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CrossBreeze.CrossTest.Process.Adf\CrossBreeze.CrossTest.Process.Adf.csproj">
-      <Project>{86fe8ae2-7d9b-4804-8ae4-c4866497b712}</Project>
-      <Name>CrossBreeze.CrossTest.Process.Adf</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CrossBreeze_CrossDoc\CrossBreeze.CrossDoc.csproj">
       <Project>{6ba29fee-5f8b-4292-b6c6-4a66fb3852af}</Project>
       <Name>CrossBreeze.CrossDoc</Name>
@@ -88,6 +84,10 @@
     <ProjectReference Include="..\CrossBreeze_CrossTest_Database\CrossBreeze.CrossTest.Database.csproj">
       <Project>{cf8f6829-2d76-420e-81fc-aa1a7203eb26}</Project>
       <Name>CrossBreeze.CrossTest.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CrossBreeze_CrossTest_Process_Adf\CrossBreeze.CrossTest.Process.Adf.csproj">
+      <Project>{86fe8ae2-7d9b-4804-8ae4-c4866497b712}</Project>
+      <Name>CrossBreeze.CrossTest.Process.Adf</Name>
     </ProjectReference>
     <ProjectReference Include="..\CrossBreeze_CrossTest_Process_SSIS\CrossBreeze.CrossTest.Process.Ssis.csproj">
       <Project>{f6b68129-2708-4769-9698-7cde2ab00583}</Project>
