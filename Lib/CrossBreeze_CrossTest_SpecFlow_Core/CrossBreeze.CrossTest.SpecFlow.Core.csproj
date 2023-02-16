@@ -85,14 +85,6 @@
       <Project>{cf8f6829-2d76-420e-81fc-aa1a7203eb26}</Project>
       <Name>CrossBreeze.CrossTest.Database</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CrossBreeze_CrossTest_Process_Adf\CrossBreeze.CrossTest.Process.Adf.csproj">
-      <Project>{86fe8ae2-7d9b-4804-8ae4-c4866497b712}</Project>
-      <Name>CrossBreeze.CrossTest.Process.Adf</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CrossBreeze_CrossTest_Process_SSIS\CrossBreeze.CrossTest.Process.Ssis.csproj">
-      <Project>{f6b68129-2708-4769-9698-7cde2ab00583}</Project>
-      <Name>CrossBreeze.CrossTest.Process.Ssis</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Readme.txt" />

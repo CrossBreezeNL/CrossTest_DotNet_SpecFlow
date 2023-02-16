@@ -283,6 +283,14 @@
     <Content Include="DatabaseSteps\SupportFiles\testQueryfile.sql" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Lib\CrossBreeze_CrossTest_Process_Adf\CrossBreeze.CrossTest.Process.Adf.csproj">
+      <Project>{86fe8ae2-7d9b-4804-8ae4-c4866497b712}</Project>
+      <Name>CrossBreeze.CrossTest.Process.Adf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Lib\CrossBreeze_CrossTest_Process_SSIS\CrossBreeze.CrossTest.Process.Ssis.csproj">
+      <Project>{f6b68129-2708-4769-9698-7cde2ab00583}</Project>
+      <Name>CrossBreeze.CrossTest.Process.Ssis</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Lib\CrossBreeze_CrossTest_SpecFlow_Core\CrossBreeze.CrossTest.SpecFlow.Core.csproj">
       <Project>{50fc9cbc-f979-40a3-b238-ec256362d5b3}</Project>
       <Name>CrossBreeze.CrossTest.SpecFlow.Core</Name>

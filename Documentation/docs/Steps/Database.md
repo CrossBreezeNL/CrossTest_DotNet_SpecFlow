@@ -1,17 +1,28 @@
-# Step documentation for Database
+# Database
+This page describes the Database steps.
 
 ## Execute SQL agent job
 Executes a SQL Agent job
 
+### Hooks
+Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
+
+| Type          | Tag(s)         | Description      |
+|:---           |:---              |:---           |
+| Hook_type | @Tag_code and  | Hook_description |
+
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| Given | en | The SQL agent job ([a-zA-Z0-9_@$#.]+) has just been executed |
-| When | en | The SQL agent job ([a-zA-Z0-9_@$#.]+) is being executed |
-| Given | nl | Dat de SQL agent job ([a-zA-Z0-9_@$#.]+) zojuist is uitgevoerd |
-| When | nl | De SQL agent job ([a-zA-Z0-9_@$#.]+) op dit moment wordt uitgevoerd |
+| Given | en | The SQL agent job ([a-zA-Z0-9_@$#\s]+) has just been executed |
+| When | en | The SQL agent job ([a-zA-Z0-9_@$#\s]+) is being executed |
+| Given | nl | Dat de SQL agent job ([a-zA-Z0-9_@$#\s]+) zojuist is uitgevoerd |
+| When | nl | De SQL agent job ([a-zA-Z0-9_@$#\s]+) op dit moment wordt uitgevoerd |
+
 
 ### Arguments
+The details of every argument of the step are listed below.
+
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |job name | string | The name of the job |
@@ -37,16 +48,27 @@ Executes a SQL Agent job
 ```gherkin
  Als de SQL agent job ExampleSqlJob op dit moment wordt uitgevoerd
 ```
+
 ## Execute SQL agent job as role
 Executes a SQL Agent job as a specific role
+
+### Hooks
+Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
+
+| Type          | Tag(s)         | Description      |
+|:---           |:---              |:---           |
+| Hook_type | @Tag_code | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| When | en | (?:the|a|an) ([a-zA-Z]+) executes the ([a-zA-Z0-9_@$#.]+) SQL agent job |
-| When | nl | (?:de|het|een) ([a-zA-Z]+) de ([a-zA-Z0-9_@$#.]+) SQL agent job uitvoert |
+| When | en | (?:the|a|an) ([a-zA-Z\s]+) executes the ([a-zA-Z0-9_@$#.]+) SQL agent job |
+| When | nl | (?:de|het|een) ([a-zA-Z\s]+) de ([a-zA-Z0-9_@$#.]+) SQL agent job uitvoert |
+
 
 ### Arguments
+The details of every argument of the step are listed below.
+
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |role name | string | The name of the role |
@@ -63,3 +85,5 @@ Executes a SQL Agent job as a specific role
 ```gherkin
  Als de developer de ExampleSqlJob SQL agent job uitvoert
 ```
+
+

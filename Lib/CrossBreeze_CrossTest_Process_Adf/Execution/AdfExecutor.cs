@@ -76,13 +76,16 @@ namespace CrossBreeze.CrossTest.Process.Adf
 
 
         /// <summary>
-        /// Execute a Adf package which resides in a azure data factory.
+        /// Execute a Adf pipeline which resides in a azure data factory.
         /// </summary>
-        /// <param name="serverAndInstanceName">The server and instance name of the Adf catalog</param>
-        /// <param name="folderName">The folder the package resides in</param>
-        /// <param name="projectName">The project the package resides in</param>
-        /// <param name="packageName">The name of the package to execute</param>
-        /// <param name="parameters">The parameters to use for the package execution</param>
+        /// <param name="tenantID">The instance id of the whole azure environment</param>
+        /// <param name="subscriptionId">The subsciption from where the costs will be billed</param>
+        /// <param name="applicationId">This is an application that would be made only for this purpose</param>
+        /// <param name="clientSecret">The secret of the application</param>
+        /// <param name="resourceGroupName">The group where the pipeline and its datafactory would be created</param>
+        /// <param name="dataFactoryName">The dataactory where the pipeline exists</param>
+        /// <param name="pipelineName">The pipeline that should be run</param>
+        /// <param name="parameters">The optional parameters of the pipeline</param>
         private static async Task ExecuteAdfPipelineAsync(string tenantID, string subscriptionId, string applicationId, string clientSecret,
             string resourceGroupName, string dataFactoryName, string pipelineName, IDictionary<string, string> parameters)
         {

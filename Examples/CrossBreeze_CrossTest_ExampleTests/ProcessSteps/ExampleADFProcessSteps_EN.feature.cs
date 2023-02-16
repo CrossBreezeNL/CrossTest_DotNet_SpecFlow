@@ -116,8 +116,8 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line 21
- testRunner.When("the CrossTestPipeline SSIS process in the ExampleAdfPipeline project is being exe" +
-                    "cuted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the CrossTestPipeline ADF process in the ExampleAdfPipeline project is being exec" +
+                    "uted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 22
  testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -146,8 +146,8 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line 29
- testRunner.When("the CrossTestPipelineWithParameters adfTemplate SSIS process in the ExampleAdfPip" +
-                    "eline project is being executed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the CrossTestPipelineWithParameters adfTemplate ADF process in the ExampleAdfPipe" +
+                    "line project is being executed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 30
  testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -186,8 +186,8 @@ this.FeatureBackground();
                         "uri",
                         "DotNet"});
 #line 36
- testRunner.When("the CrossTestPipelineWithParameters SSIS process in the ExampleAdfPipeline projec" +
-                    "t is being executed with the following parameter:", ((string)(null)), table3, "When ");
+ testRunner.When("the CrossTestPipelineWithParameters ADF process in the ExampleAdfPipeline project" +
+                    " is being executed with the following parameter:", ((string)(null)), table3, "When ");
 #line 40
  testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -223,8 +223,8 @@ this.FeatureBackground();
                         "uri",
                         "Java"});
 #line 46
- testRunner.When("the CrossTestPipelineWithParameters adfTemplate SSIS process in the ExampleAdfPip" +
-                    "eline project is being executed with the following parameter:", ((string)(null)), table5, "When ");
+ testRunner.When("the CrossTestPipelineWithParameters adfTemplate ADF process in the ExampleAdfPipe" +
+                    "line project is being executed with the following parameter:", ((string)(null)), table5, "When ");
 #line 49
  testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden

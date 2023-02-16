@@ -18,7 +18,7 @@ Background:
         """
 
 Scenario: Run ADF proces
-	When the CrossTestPipeline SSIS process in the ExampleAdfPipeline project is being executed
+	When the CrossTestPipeline ADF process in the ExampleAdfPipeline project is being executed
 	And I retrieve the contents of the [dbo].[testTable] table
 	Then I expect the following results:
         | id | description |
@@ -26,14 +26,14 @@ Scenario: Run ADF proces
 
 
 Scenario: Run typed ADF proces
-	When the CrossTestPipelineWithParameters adfTemplate SSIS process in the ExampleAdfPipeline project is being executed
+	When the CrossTestPipelineWithParameters adfTemplate ADF process in the ExampleAdfPipeline project is being executed
 	And I retrieve the contents of the [dbo].[testTable] table
 	Then I expect the following results:
         | id | description |
 		| 1  | 'FirstRow'  |
 
 Scenario: Run ADF proces with parameters
-	When the CrossTestPipelineWithParameters SSIS process in the ExampleAdfPipeline project is being executed with the following parameter:
+	When the CrossTestPipelineWithParameters ADF process in the ExampleAdfPipeline project is being executed with the following parameter:
 		| Parameter     | Value						|
 		| baseUrl		| https://x-test.nl/		|
 		| uri			| DotNet					|
@@ -43,7 +43,7 @@ Scenario: Run ADF proces with parameters
 		| 1  | 'FirstRow'  |
 
 Scenario: Run typed ADF proces with parameters
-	When the CrossTestPipelineWithParameters adfTemplate SSIS process in the ExampleAdfPipeline project is being executed with the following parameter:
+	When the CrossTestPipelineWithParameters adfTemplate ADF process in the ExampleAdfPipeline project is being executed with the following parameter:
 		| Parameter     | Value		|
 		| uri			| Java		|
 	And I retrieve the contents of the [dbo].[testTable] table

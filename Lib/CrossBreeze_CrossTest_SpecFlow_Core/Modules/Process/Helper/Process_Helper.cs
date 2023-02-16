@@ -3,6 +3,7 @@ using CrossBreeze.CrossTest.SpecFlow.Helpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using TechTalk.SpecFlow;
 
 namespace CrossBreeze.CrossTest.SpecFlow.Modules.Process
@@ -71,6 +72,41 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Process
         )
         {
             ExecuteProcessHelper(roleName, processName, objectTemplateName, processType, projectName, parameterTable);
+        }
+
+        public static void ExecuteProcess(string AssemblyName, string className, string methodName, object[] parameterForTheMethod)
+        {
+            MethodInfo mi = null;
+            ConstructorInfo ci = null;
+            Type type = null;
+            object responder = null;
+            System.Type[] objectTypes;
+            int count = 0;
+            try
+            {
+                //Load the assembly and get it's information
+                type = System.Reflection.Assembly.Load(AssemblyName).GetType(AssemblyName + "." + className);
+                //Get the Passed parameter types to find the method type
+                objectTypes = new System.Type[parameterForTheMethod.GetUpperBound(0) + 1];
+                foreach (object objectParameter in parameterForTheMethod)
+
+                {
+                    if (objectParameter != null)
+                        objectTypes[count] = objectParameter.GetType();
+                    count++;
+                }
+
+                //Get the reference of the method
+                mi = type.GetMethod(methodName, objectTypes);
+                //ci = type.GetConstructor(Type.EmptyTypes);
+                //responder = ci.Invoke(null);
+                //Invoke the method
+                mi.Invoke(responder, parameterForTheMethod);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         #region Helpers
