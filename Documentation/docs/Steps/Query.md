@@ -4,12 +4,6 @@ This page describes the Query steps.
 ## Execute query
 Executes a query against a database
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -59,12 +53,6 @@ The details of every argument of the step are listed below.
 ## Execute query from file
 Executes queries from a file against a database
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |

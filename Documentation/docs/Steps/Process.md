@@ -2,14 +2,8 @@
 This page describes the Process steps.
 
 ## Execute process
-Execute a SSIS package without parameters
+Execute a package without parameters. A package can be either SSIS or ADF package. 
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -25,8 +19,8 @@ The details of every argument of the step are listed below.
 
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
-|process name | string | Name of the proces (SSIS package) |
-|process type | string | Type of process to run, for now only SSIS is supported |
+|process name | string | Name of the process |
+|process type | string | Type of process to run |
 |project name | string | Refers to a project configured in the config's process section |
 
 ### Examples
@@ -42,14 +36,8 @@ The details of every argument of the step are listed below.
 ```
 
 ## Execute process with parameters
-Execute a SSIS package with specific parameters
+Execute a package with specific parameters. A package can be either SSIS or ADF package. 
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -65,8 +53,8 @@ The details of every argument of the step are listed below.
 
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
-|process name | string | Name of the proces (SSIS package) |
-|process type | string | Type of process to run, for now only SSIS is supported |
+|process name | string | Name of the process |
+|process type | string | Type of process to run |
 |project name | string | Refers to a project configured in the config's process section |
 |parameter table | Table | A table with the process parameters, structured as \| Parameter \| Value \|. See [ParameterTable](../Tables#parametertable). |
 
@@ -87,14 +75,8 @@ The details of every argument of the step are listed below.
 ```
 
 ## Execute templated process
-Execute a SSIS package with default parameters and naming convention from a template
+Execute a package with default parameters and naming convention from a template. A package can be either SSIS or ADF package. 
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -110,9 +92,9 @@ The details of every argument of the step are listed below.
 
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
-|process name | string | Name of the proces (SSIS package) |
+|process name | string | Name of the process |
 |process template | string | Refers to a object template configured in the config's test section |
-|process type | string | Type of process to run, for now only SSIS is supported |
+|process type | string | Type of process to run |
 |project name | string | Refers to a project configured in the config's process section |
 
 ### Examples
@@ -128,14 +110,8 @@ The details of every argument of the step are listed below.
 ```
 
 ## Execute templated process with parameters
-Execute a SSIS package with default parameters from a template and specific parameters
+Execute a package with default parameters from a template and specific parameters. A package can be either SSIS or ADF package. 
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -151,9 +127,9 @@ The details of every argument of the step are listed below.
 
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
-|process name | string | Name of the proces (SSIS package) |
+|process name | string | Name of the proces |
 |process template | string | Refers to a object template configured in the config's test section |
-|process type | string | Type of process to run, for now only SSIS is supported |
+|process type | string | Type of process to run |
 |project name | string | Refers to a project configured in the config's process section |
 |parameter table | Table | A table with the process parameters, structured as \| Parameter \| Value \|. See [ParameterTable](../Tables#parametertable). |
 
@@ -174,14 +150,8 @@ The details of every argument of the step are listed below.
 ```
 
 ## Execute process as role
-Execute a SSIS package as a specific user role
+Execute a package as a specific user role. A package can be either SSIS or ADF package. 
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -196,8 +166,8 @@ The details of every argument of the step are listed below.
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |role name | string | Role under which the process is executed |
-|process name | string | Name of the proces (SSIS package) |
-|process type | string | Type of process to run, for now only SSIS is supported |
+|process name | string | Name of the process |
+|process type | string | Type of process to run |
 |project name | string | Refers to a project configured in the config's process section |
 
 ### Examples
@@ -213,14 +183,8 @@ The details of every argument of the step are listed below.
 ```
 
 ## Execute templated process as role
-Execute a templated SSIS package as a specific user role
+Execute a templated package as a specific user role. A package can be either SSIS or ADF package. 
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -235,9 +199,9 @@ The details of every argument of the step are listed below.
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |role name | string | Role under which the process is executed |
-|process name | string | Name of the proces (SSIS package) |
+|process name | string | Name of the process |
 |object template name | string | Refers to a object template configured in the config's test section |
-|process type | string | Type of process to run, for now only SSIS is supported |
+|process type | string | Type of process to run |
 |project name | string | Refers to a project configured in the config's process section |
 
 ### Examples
@@ -253,14 +217,8 @@ The details of every argument of the step are listed below.
 ```
 
 ## Execute templated process as role with parameters
-Execute a templated SSIS package as a specific user role and with parameters
+Execute a templated package as a specific user role and with parameters. A package can be either SSIS or ADF package. 
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -275,9 +233,9 @@ The details of every argument of the step are listed below.
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |role name | string | Role under which the process is executed |
-|process name | string | Name of the proces (SSIS package) |
+|process name | string | Name of the process |
 |object template name | string | Refers to a object template configured in the config's test section |
-|process type | string | Type of process to run, for now only SSIS is supported |
+|process type | string | Type of process to run |
 |project name | string | Refers to a project configured in the config's process section |
 |parameter table | Table | A table with the process parameters, structured as \| Parameter \| Value \|. See [ParameterTable](../Tables#parametertable). |
 
@@ -298,14 +256,8 @@ The details of every argument of the step are listed below.
 ```
 
 ## Execute process with parameters as role
-Execute a SSIS package with parameters as a specific user role
+Execute a package with parameters as a specific user role. A package can be either SSIS or ADF package. 
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -320,8 +272,8 @@ The details of every argument of the step are listed below.
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |role name | string | Role under which the process is executed |
-|process name | string | Name of the proces (SSIS package) |
-|process type | string | Type of process to run, for now only SSIS is supported |
+|process name | string | Name of the process |
+|process type | string | Type of process to run |
 |project name | string | Refers to a project configured in the config's process section |
 |parameter table | Table | A table with the process parameters, structured as \| Parameter \| Value \|. See [ParameterTable](../Tables#parametertable). |
 

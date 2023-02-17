@@ -4,12 +4,6 @@ This page describes the Context steps.
 ## Specify target database server
 Specify the database against which the database test steps are to be executed.
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -52,12 +46,6 @@ The details of every argument of the step are listed below.
 ## Specify target database
 Specify the server against which the database test steps are to be executed
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -105,7 +93,7 @@ Below the hooks are given which are configured for this step. This means if you 
 
 | Type          | Tag(s)         | Description      |
 |:---           |:---              |:---           |
-| Hook_type | @Tag_code | Hook_description |
+| Before | @Transactional | If the @Transactional tag is set on a scenario a transaction will automatically be started at the beginnng of the scenario. |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -116,11 +104,6 @@ Below the hooks are given which are configured for this step. This means if you 
 | When | nl | de test binnen een transactie uitgevoerd wordt |
 
 
-### Arguments
-The details of every argument of the step are listed below.
-
-| Parameter    | Datatype          | Description          |
-|:---          |:---               |:---                  |
 
 ### Examples
 

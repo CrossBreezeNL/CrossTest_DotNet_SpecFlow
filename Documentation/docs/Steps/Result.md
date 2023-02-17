@@ -4,12 +4,6 @@ This page describes the Result steps.
 ## Compare expected and actual result
 Compare expected and actual result
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |

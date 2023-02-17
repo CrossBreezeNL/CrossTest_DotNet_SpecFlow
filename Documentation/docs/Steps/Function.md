@@ -4,12 +4,6 @@ This page describes the Function steps.
 ## Execute database function
 Execute a table valued database function without parameters
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -57,12 +51,6 @@ The details of every argument of the step are listed below.
 ## Execute database function with parameters
 Execute a table valued database function with parameters
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -115,12 +103,6 @@ The details of every argument of the step are listed below.
 ## Execute templated function
 Execute a table valued database function using an object template
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -152,12 +134,6 @@ The details of every argument of the step are listed below.
 ## Execute templated function with parameters
 Execute a table valued database function using an object template and with parameters
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |

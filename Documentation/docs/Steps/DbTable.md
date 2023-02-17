@@ -4,12 +4,6 @@ This page describes the DbTable steps.
 ## Load data into templated table
 Loads data into a table that conforms to a configured table template
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -48,12 +42,6 @@ The details of every argument of the step are listed below.
 ## Load data into table
 Loads data into a table
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -91,12 +79,6 @@ The details of every argument of the step are listed below.
 ## Retrieve data from table
 Retrieves data from a table
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code and  | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -140,12 +122,6 @@ The details of every argument of the step are listed below.
 ## Delete data from table
 Deletes data from a table
 
-### Hooks
-Below the hooks are given which are configured for this step. This means if you add the specified tag(s) on a scenario, the step will be executed automatically before or after (see Type) the scenario.
-
-| Type          | Tag(s)         | Description      |
-|:---           |:---              |:---           |
-| Hook_type | @Tag_code | Hook_description |
 
 ### Sentences
 | Type          | Language         | Sentence      |
