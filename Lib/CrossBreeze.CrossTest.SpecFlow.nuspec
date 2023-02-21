@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>CrossBreeze.CrossTest</id>
-    <version>1.0.2.3</version>
+    <version>1.0.3.0</version>
     <title>CrossTest</title>
     <authors>Harmen Wessels, Jacob Siemaszko, Willem Otten</authors>
     <owners>CrossBreeze</owners>
@@ -12,7 +12,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>An open-source data solution testing library (using SpecFlow).</description>
     <releaseNotes>Changed SQL Server client tools dependency to SQL Server version 2019.</releaseNotes>
-    <copyright>Copyright CrossBreeze 2022</copyright>
+    <copyright>Copyright © CrossBreeze 2023</copyright>
     <tags>Test Database DWH BI SQL T-SQL SSIS SSAS</tags>
     <dependencies>
       <dependency id="SpecFlow" version="[2.4.0,2.4.1]" />
@@ -20,8 +20,6 @@
       <dependency id="MSTest.TestFramework" version="1.4.0" />
       <!-- Not strictly a depedency for this NuGet package, but the user will need it to execute the tests. -->
       <dependency id="MSTest.TestAdapter" version="1.4.0" />
-      <!-- In the SMO library the STrace namespace exists and is needed for SSIS package execution. -->
-      <dependency id="Microsoft.SqlServer.SqlManagementObjects" version="150.18208.0" />
     </dependencies>
     <!-- Add the framework assemblies that should be referenced in the C# project. -->
     <frameworkAssemblies>

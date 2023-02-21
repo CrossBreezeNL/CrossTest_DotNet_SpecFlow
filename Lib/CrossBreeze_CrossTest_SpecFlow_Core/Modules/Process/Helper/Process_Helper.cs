@@ -77,7 +77,6 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Process
         public static void ExecuteProcess(string AssemblyName, string className, string methodName, object[] parameterForTheMethod)
         {
             MethodInfo mi = null;
-            ConstructorInfo ci = null;
             Type type = null;
             object responder = null;
             System.Type[] objectTypes;

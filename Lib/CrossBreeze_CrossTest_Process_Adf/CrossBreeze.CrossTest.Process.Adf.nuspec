@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>CrossBreeze.CrossTest.Process.Adf</id>
+    <version>1.0.3.0</version>
+    <title>CrossTest ADF Process Plugin</title>
+    <authors>Moo Othman</authors>
+    <owners>CrossBreeze</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="file">LICENSE.txt</license>
+    <iconUrl>http://x-test.nl/logo/x-test-icon.png</iconUrl>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>http://www.x-test.nl</projectUrl>
+    <description>ADF Process plugin for CrossTest</description>
+    <releaseNotes>Initial version</releaseNotes>
+    <copyright>Copyright © CrossBreeze 2023</copyright>
+    <tags>Test Database DWH BI ADF</tags>
+    <dependencies>
+      <dependency id="Microsoft.Azure.Management.DataFactory" version="9.1.0"  />
+      <dependency id="Microsoft.Identity.Client" version="4.49.1" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="..\NuGetFiles\LICENSE.txt" target="" />
+  </files>
+</package>
