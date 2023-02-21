@@ -127,48 +127,5 @@ namespace CrossBreeze.CrossTest.Process.Adf
 
             Console.WriteLine("Press Any Key to Exit...");
         }
-
-        /// <summary>
-        /// Get the typed value using the TypeCode and the valueString.
-        /// </summary>
-        /// <param name="typeCode">The type code of the required output type.</param>
-        /// <param name="valueString">The string containting the textual version of the value.</param>
-        /// <returns></returns>
-        private static object GetTypedValue(TypeCode typeCode, string valueString)
-        {
-            // Get the package parameter datatype to choose how to parse the value.
-            switch (typeCode)
-            {
-                // Boolean
-                case TypeCode.Boolean:
-                    return Boolean.Parse(valueString);
-                case TypeCode.DateTime:
-                    return DateTime.Parse(valueString);
-                case TypeCode.Decimal:
-                    return Decimal.Parse(valueString);
-                case TypeCode.Double:
-                    return Double.Parse(valueString);
-                // Int16
-                case TypeCode.Int16:
-                    return Int16.Parse(valueString);
-                // Int32
-                case TypeCode.Int32:
-                    return Int32.Parse(valueString);
-                // Int64
-                case TypeCode.Int64:
-                    return Int64.Parse(valueString);
-                // UInt16
-                case TypeCode.UInt16:
-                    return UInt16.Parse(valueString);
-                // UInt32
-                case TypeCode.UInt32:
-                    return UInt32.Parse(valueString);
-                // UInt64
-                case TypeCode.UInt64:
-                    return UInt64.Parse(valueString);
-                default:
-                    return valueString;
-            }
-        }
     }
 }
