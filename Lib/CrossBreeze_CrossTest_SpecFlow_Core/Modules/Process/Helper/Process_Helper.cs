@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using TechTalk.SpecFlow;
+using CrossBreeze.CrossTest.SpecFlow.Configuration.Process;
 
 namespace CrossBreeze.CrossTest.SpecFlow.Modules.Process
 {
@@ -142,7 +143,21 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Process
             }
 
             // Execute the process.
-            ETLHelper.ExecuteProcess((Configuration.Process.ProcessType)Enum.Parse(typeof(Configuration.Process.ProcessType), processType), projectName, fqProcessName, parameters);
+            var methodParameters = new object[3];
+            methodParameters[0] = projectName;
+            methodParameters[1] = processName;
+            methodParameters[2] = parameters;
+            var processTypeParsed = (Configuration.Process.ProcessType)Enum.Parse(typeof(Configuration.Process.ProcessType), processType);
+            switch (processTypeParsed)
+            {
+                case ProcessType.SSIS:
+                    Process_Helper.ExecuteProcess("CrossBreeze.CrossTest.Process.Ssis", "SsisExecutor", "ExecuteSsisProcess", methodParameters);
+                    break;
+
+                case ProcessType.ADF:
+                    Process_Helper.ExecuteProcess("CrossBreeze.CrossTest.Process.Adf", "AdfExecutor", "ExecuteAdfProcess", methodParameters);
+                    break;
+            }
         }
         #endregion
 
