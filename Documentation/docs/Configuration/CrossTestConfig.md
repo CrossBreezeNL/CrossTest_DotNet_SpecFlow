@@ -3,6 +3,12 @@
 ## CrossTest
 The CrossTest configuration to configure all information needed for the steps to execute.
 
+In order to use this service you must add the following section node to the configSections of your App.config
+```xml
+<configSections>
+		<section name="crossTest" type="CrossBreeze.CrossTest.SpecFlow.Configuration.CrossTestConfig, CrossBreeze.CrossTest.SpecFlow.Core" />
+</configSections>
+```
 ### Example
 ```xml
 <CrossTest>
@@ -24,6 +30,13 @@ The CrossTest configuration to configure all information needed for the steps to
 ## CrossTestSsis
 The CrossTestSsis configuration to configure all information needed for the steps to execute.
 
+In order to use this service you must add the following section node to the configSections of your App.config
+```xml
+<configSections>
+		<section name="crossTestSsis" type="CrossBreeze.CrossTest.Process.Ssis.Configuration.SsisProcessesConfig, CrossBreeze.CrossTest.Process.Ssis" />
+</configSections>
+```
+
 ### Example
 ```xml
 <CrossTestSsis>
@@ -43,6 +56,13 @@ The CrossTestSsis configuration to configure all information needed for the step
 
 ## CrossTestAdf
 The CrossTestAdf configuration to configure all information needed for the steps to execute.
+
+In order to use this service you must add the following section node to the configSections of your App.config
+```xml
+<configSections>
+		<section name="crossTestAdf" type="CrossBreeze.CrossTest.Process.Adf.Configuration.AdfProcessesConfig, CrossBreeze.CrossTest.Process.Adf" />
+</configSections>
+```
 
 ### Example
 ```xml
