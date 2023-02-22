@@ -35,6 +35,13 @@ GO
 
 CREATE DATABASE [TestDB]
 GO
+USE [TestDB];
+GO
+CREATE TABLE [TestTable] (
+    [id] int,
+    [description] varchar(50)
+);
+GO
 
 /****** Object:  Schema [Source]    Script Date: 2020-04-16 10:11:04 PM ******/
 CREATE SCHEMA [Source]

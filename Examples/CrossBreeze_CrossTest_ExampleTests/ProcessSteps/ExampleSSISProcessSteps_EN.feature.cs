@@ -94,11 +94,9 @@ namespace CrossBreeze.CrossTest.ExampleTests.ProcessSteps
 #line 6
  testRunner.Given("the ExampleMsSqlServer database server is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
- testRunner.And("the Tempdb database is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
+ testRunner.And("the TestDB database is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 8
- testRunner.When("I execute the following SQL query:", "IF (object_ID(\'testTable\') IS NOT NULL)\r\nBEGIN\r\nDROP TABLE testTable\r\nEND\r\n\r\nCREA" +
-                    "TE TABLE testTable (id INT, description VARCHAR(50))", ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And("the table [dbo].[TestTable] is empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
         }
         
@@ -109,16 +107,16 @@ namespace CrossBreeze.CrossTest.ExampleTests.ProcessSteps
         public virtual void RunSSISProces()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Run SSIS proces", null, ((string[])(null)));
-#line 18
-this.ScenarioInitialize(scenarioInfo);
+#line 10
+ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
 this.FeatureBackground();
-#line 19
+#line 11
  testRunner.When("the ExamplePackage SSIS process in the ExampleSsisISPacProject project is being e" +
                     "xecuted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 20
- testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+ testRunner.And("I retrieve the contents of the [dbo].[TestTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -126,7 +124,7 @@ this.FeatureBackground();
             table1.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 21
+#line 13
  testRunner.Then("I expect the following results:", ((string)(null)), table1, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -139,16 +137,16 @@ this.FeatureBackground();
         public virtual void RunTypedSSISProces()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Run typed SSIS proces", null, ((string[])(null)));
-#line 25
+#line 17
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
 this.FeatureBackground();
-#line 26
+#line 18
  testRunner.When("the ExamplePackage dwh SSIS process in the ExampleSsisISPacProject project is bei" +
                     "ng executed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 27
- testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 19
+ testRunner.And("I retrieve the contents of the [dbo].[TestTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -156,7 +154,7 @@ this.FeatureBackground();
             table2.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 28
+#line 20
  testRunner.Then("I expect the following results:", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -169,7 +167,7 @@ this.FeatureBackground();
         public virtual void RunSSISProcesWithParameters()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Run SSIS proces with parameters", null, ((string[])(null)));
-#line 32
+#line 24
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
@@ -181,11 +179,11 @@ this.FeatureBackground();
             table3.AddRow(new string[] {
                         "ExampleParameter",
                         "SomeParameterValue"});
-#line 33
+#line 25
  testRunner.When("the ExamplePackage SSIS process in the ExampleSsisISPacProject project is being e" +
                     "xecuted with the following parameter:", ((string)(null)), table3, "When ");
-#line 36
- testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 28
+ testRunner.And("I retrieve the contents of the [dbo].[TestTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -193,7 +191,7 @@ this.FeatureBackground();
             table4.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 37
+#line 29
  testRunner.Then("I expect the following results:", ((string)(null)), table4, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -206,7 +204,7 @@ this.FeatureBackground();
         public virtual void RunTypedSSISProcesWithParameters()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Run typed SSIS proces with parameters", null, ((string[])(null)));
-#line 41
+#line 33
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
@@ -218,11 +216,11 @@ this.FeatureBackground();
             table5.AddRow(new string[] {
                         "ExampleParameter",
                         "SomeParameterValue"});
-#line 42
+#line 34
  testRunner.When("the ExamplePackage dwh SSIS process in the ExampleSsisISPacProject project is bei" +
                     "ng executed with the following parameter:", ((string)(null)), table5, "When ");
-#line 45
- testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 37
+ testRunner.And("I retrieve the contents of the [dbo].[TestTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -230,7 +228,7 @@ this.FeatureBackground();
             table6.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 46
+#line 38
  testRunner.Then("I expect the following results:", ((string)(null)), table6, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -243,16 +241,16 @@ this.FeatureBackground();
         public virtual void RunSSISProcesAsRole()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Run SSIS proces as role", null, ((string[])(null)));
-#line 50
+#line 42
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
 this.FeatureBackground();
-#line 51
+#line 43
  testRunner.When("the developer executes the ExamplePackage SSIS process in the ExampleSsisISPacPro" +
                     "ject project", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 52
- testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 44
+ testRunner.And("I retrieve the contents of the [dbo].[TestTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -260,7 +258,7 @@ this.FeatureBackground();
             table7.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 53
+#line 45
  testRunner.Then("I expect the following results:", ((string)(null)), table7, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -273,16 +271,16 @@ this.FeatureBackground();
         public virtual void RunTypedSSISProcesAsRole()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Run typed SSIS proces as role", null, ((string[])(null)));
-#line 57
+#line 49
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
 this.FeatureBackground();
-#line 58
+#line 50
  testRunner.When("the developer executes the ExamplePackage dwh SSIS process in the ExampleSsisISPa" +
                     "cProject project", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 59
- testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 51
+ testRunner.And("I retrieve the contents of the [dbo].[TestTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -290,7 +288,7 @@ this.FeatureBackground();
             table8.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 60
+#line 52
  testRunner.Then("I expect the following results:", ((string)(null)), table8, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -303,16 +301,16 @@ this.FeatureBackground();
         public virtual void RunTypedSSISProcesAsRoleWithSpace()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Run typed SSIS proces as role with space", null, ((string[])(null)));
-#line 64
+#line 56
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
 this.FeatureBackground();
-#line 65
+#line 57
  testRunner.When("the Data Warhouse Developer executes the ExamplePackage dwh SSIS process in the E" +
                     "xampleSsisISPacProject project", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 66
- testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 58
+ testRunner.And("I retrieve the contents of the [dbo].[TestTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -320,7 +318,7 @@ this.FeatureBackground();
             table9.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 67
+#line 59
  testRunner.Then("I expect the following results:", ((string)(null)), table9, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -333,7 +331,7 @@ this.FeatureBackground();
         public virtual void RunSSISProcesWithParametersAsRole()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Run SSIS proces with parameters as role", null, ((string[])(null)));
-#line 71
+#line 63
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
@@ -345,11 +343,11 @@ this.FeatureBackground();
             table10.AddRow(new string[] {
                         "ExampleParameter",
                         "SomeParameterValue"});
-#line 72
+#line 64
  testRunner.When("the developer executes the ExamplePackage SSIS process in the ExampleSsisISPacPro" +
                     "ject project with the following parameter:", ((string)(null)), table10, "When ");
-#line 75
- testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 67
+ testRunner.And("I retrieve the contents of the [dbo].[TestTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -357,7 +355,7 @@ this.FeatureBackground();
             table11.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 76
+#line 68
  testRunner.Then("I expect the following results:", ((string)(null)), table11, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -370,7 +368,7 @@ this.FeatureBackground();
         public virtual void RunTypedSSISProcesWithParametersAsRole()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Run typed SSIS proces with parameters as role", null, ((string[])(null)));
-#line 80
+#line 72
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
@@ -382,11 +380,11 @@ this.FeatureBackground();
             table12.AddRow(new string[] {
                         "ExampleParameter",
                         "SomeParameterValue"});
-#line 81
+#line 73
  testRunner.When("the developer executes the ExamplePackage dwh SSIS process in the ExampleSsisISPa" +
                     "cProject project with the following parameter:", ((string)(null)), table12, "When ");
-#line 84
- testRunner.And("I retrieve the contents of the [dbo].[testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 76
+ testRunner.And("I retrieve the contents of the [dbo].[TestTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -394,7 +392,7 @@ this.FeatureBackground();
             table13.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 85
+#line 77
  testRunner.Then("I expect the following results:", ((string)(null)), table13, "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -403,4 +401,3 @@ this.FeatureBackground();
 }
 #pragma warning restore
 #endregion
-
