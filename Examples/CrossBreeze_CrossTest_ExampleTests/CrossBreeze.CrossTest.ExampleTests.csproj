@@ -80,6 +80,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>FirstTest.feature</DependentUpon>
     </Compile>
+    <Compile Include="ProcessSteps\ExampleADFProcessSteps_NL.feature.cs">
+      <DependentUpon>ExampleADFProcessSteps_NL.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="ProcessSteps\ExampleADFProcessSteps_EN.feature.cs">
       <DependentUpon>ExampleADFProcessSteps_EN.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -147,6 +152,10 @@
     <None Include="DatabaseSteps\ExampleDatabaseQuerySteps_EN.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ExampleDatabaseQuerySteps_EN.feature.cs</LastGenOutput>
+    </None>
+    <None Include="ProcessSteps\ExampleADFProcessSteps_NL.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ExampleADFProcessSteps_NL.feature.cs</LastGenOutput>
     </None>
     <None Include="ProcessSteps\ExampleADFProcessSteps_EN.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  
+  <configSections>
+    <section xdt:Transform="Insert" name="crossTestSsis" type="CrossBreeze.CrossTest.Process.Ssis.Configuration.SsisProcessesConfig, CrossBreeze.CrossTest.Process.Ssis" />
+  </configSections>
+  
+  <crossTestSsis xdt:Transform="Insert">
+		<SsisProcesses>
+			<!-- The SSIS process types are: IsPacProjectProcess, DBProjectProcess, FileProcess -->
+			<!-- Example SSIS ISPac project. -->
+		</SsisProcesses>
+	</crossTestSsis>
+ 
+</configuration>

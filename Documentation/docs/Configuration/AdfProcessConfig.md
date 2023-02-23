@@ -28,3 +28,16 @@ A configuration for a type of process.
 | resourceGroupName | String | The resourceGroup on which the datafactory is located               |
 | dataFactoryName | String | The datafactory on which the pipeline is located               |
 | processType      | AdfProcessType      |  Only "AdfPipeline" is allowed at this moment. |
+
+### Template
+In Order to use a template you must edit the crossTest node in your app.config. Under the test childnode add the following:
+```xml
+<objectTemplates>
+    <!-- The following objectTemplate can, for example, be applied on a T-SQL procedure, a SSIS process or a ADF pipeline. -->
+    <objectTemplate name="..." appendPrefix="...">
+        <attributes>
+            <attribute name="..." value="..." />
+        </attributes>
+    </objectTemplate>
+</objectTemplates>
+```

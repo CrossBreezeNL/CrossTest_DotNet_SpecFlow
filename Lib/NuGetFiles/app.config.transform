@@ -17,8 +17,6 @@
     </test>
     <database>
     </database>
-    <process>
-    </process>
   </crossTest>
  
 </configuration>
