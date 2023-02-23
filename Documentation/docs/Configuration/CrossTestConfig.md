@@ -3,7 +3,10 @@
 ## CrossTest
 The CrossTest configuration to configure all information needed for the steps to execute.
 
-In order to use this service you must add the following section node to the configSections of your App.config
+In order to use this service you must install the NuGet package CrossBreeze.CrossTest
+![crossTest_NuGet_package](../img/NuGet_CrossTest_Package.png)
+
+Make sure the following section node has been added to the configSections of your App.config
 ```xml
 <configSections>
 		<section name="crossTest" type="CrossBreeze.CrossTest.SpecFlow.Configuration.CrossTestConfig, CrossBreeze.CrossTest.SpecFlow.Core" />
@@ -30,7 +33,10 @@ In order to use this service you must add the following section node to the conf
 ## CrossTestSsis
 The CrossTestSsis configuration to configure all information needed for the steps to execute.
 
-In order to use this service you must add the following section node to the configSections of your App.config
+In order to use this service you must install the NuGet package CrossBreeze.CrossTest.Process.Ssis
+![ssis_NuGet_package](../img/ssis_nuget_package.png)
+
+Make sure the following section node has been added to the configSections of your App.config
 ```xml
 <configSections>
 		<section name="crossTestSsis" type="CrossBreeze.CrossTest.Process.Ssis.Configuration.SsisProcessesConfig, CrossBreeze.CrossTest.Process.Ssis" />
@@ -57,7 +63,10 @@ In order to use this service you must add the following section node to the conf
 ## CrossTestAdf
 The CrossTestAdf configuration to configure all information needed for the steps to execute.
 
-In order to use this service you must add the following section node to the configSections of your App.config
+In order to use this service you must install the NuGet package CrossBreeze.CrossTest.Process.Adf
+![adf_NuGet_package](../img/adf_nuget_package.png)
+
+Make sure the following section node has been added to the configSections of your App.config
 ```xml
 <configSections>
 		<section name="crossTestAdf" type="CrossBreeze.CrossTest.Process.Adf.Configuration.AdfProcessesConfig, CrossBreeze.CrossTest.Process.Adf" />

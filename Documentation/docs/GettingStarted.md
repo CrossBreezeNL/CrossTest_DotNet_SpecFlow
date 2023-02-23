@@ -48,7 +48,7 @@ Before we can run our first test we need to setup basic configuration for CrossT
 For our first test, we only need to specify the proper Micosoft SQL Server connection string.
 Open the App.config file in the project and add the `connectionStrings` and the `ExampleMsSqlConnection` key so it contains a valid connection string. In our example there is a database instance installed with the host 'localhost'.
 
-```
+```xml
 <crossTest>
 		<database>
 			<!--Add-->

@@ -5,11 +5,17 @@ A collection of database server configurations.
 
 ### Example
 ```xml
-<Database>
+<database>
+    <!--Add-->
     <servers>
         <server>...</server>
     </servers>
-</Database>
+</database>
+<!--Add-->
+<connectionStrings>
+	<!-- Define the database servers to use. The name is the name of the server and the connection string should be without a database. -->
+	<add name="{connectionName}" connectionString="Data Source={source};User Id={username};Password={password};" />
+</connectionStrings>
 ```
 
 ### Attributes

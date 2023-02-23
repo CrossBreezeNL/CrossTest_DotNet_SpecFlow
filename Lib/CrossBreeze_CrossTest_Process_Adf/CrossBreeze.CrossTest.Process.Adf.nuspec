@@ -19,9 +19,6 @@
       <dependency id="Microsoft.Identity.Client" version="4.49.1" />
       <dependency id="CrossBreeze.CrossTest" version="1.0.3" />
     </dependencies>
-    <frameworkAssemblies>
-      <frameworkAssembly assemblyName="System" />
-    </frameworkAssemblies>
     <contentFiles>
       <files include="..\NuGetFiles\ADF\app.config.transform" buildAction="Content" />
     </contentFiles>
@@ -29,5 +26,6 @@
   <files>
     <file src="..\NuGetFiles\LICENSE.txt" target="" />
     <file src=".\bin\Release\CrossBreeze.CrossTest.Process.Adf.dll" target="lib\net45" />
+    <file src="..\NuGetFiles\ADF\app.config.transform" target="content" />
   </files>
 </package>

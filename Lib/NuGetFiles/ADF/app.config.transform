@@ -1,11 +1,11 @@
-<?xml version="1.0"?>
-<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
   
   <configSections>
-		<section xdt:Transform="Insert" name="crossTestAdf" type="CrossBreeze.CrossTest.Process.Adf.Configuration.AdfProcessesConfig, CrossBreeze.CrossTest.Process.Adf" />
+		<section name="crossTestAdf" type="CrossBreeze.CrossTest.Process.Adf.Configuration.AdfProcessesConfig, CrossBreeze.CrossTest.Process.Adf" />
   </configSections>
   
-  <crossTestAdf xdt:Transform="Insert">
+  <crossTestAdf>
 		<AdfProcesses>
 		</AdfProcesses>
 	</crossTestAdf>

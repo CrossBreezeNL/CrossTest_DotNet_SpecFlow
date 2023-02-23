@@ -26,5 +26,6 @@
   <files>
     <file src="..\NuGetFiles\LICENSE.txt" target="" />
     <file src=".\bin\Release\CrossBreeze.CrossTest.Process.Ssis.dll" target="lib\net45" />
+    <file src="..\NuGetFiles\SSIS\app.config.transform" target="content" />
   </files>
 </package>
