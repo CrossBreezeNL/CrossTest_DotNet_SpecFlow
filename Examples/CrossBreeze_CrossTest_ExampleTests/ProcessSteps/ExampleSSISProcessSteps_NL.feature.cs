@@ -94,11 +94,9 @@ namespace CrossBreeze.CrossTest.ExampleTests.ProcessSteps
 #line 6
  testRunner.Given("de ExampleMsSqlServer database server wordt gebruikt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Gegeven ");
 #line 7
- testRunner.And("de tempdb database wordt gebruikt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
-#line hidden
+ testRunner.And("de TestDB database wordt gebruikt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line 8
- testRunner.When("ik de volgende SQL query uitvoer:", "IF (object_ID(\'testTable\') IS NOT NULL)\r\nBEGIN\r\nDROP TABLE testTable\r\nEND\r\n\r\nCREA" +
-                    "TE TABLE testTable (id INT, description VARCHAR(50))", ((TechTalk.SpecFlow.Table)(null)), "Als ");
+ testRunner.And("dat de tabel [dbo].[TestTable] leeg is", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
         }
         
@@ -109,16 +107,16 @@ namespace CrossBreeze.CrossTest.ExampleTests.ProcessSteps
         public virtual void VoerSSISProcesUit()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voer SSIS proces uit", null, ((string[])(null)));
-#line 18
+#line 10
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
 this.FeatureBackground();
-#line 19
+#line 11
  testRunner.When("het ExamplePackage SSIS proces in het ExampleSsisISPacProject project op dit mome" +
                     "nt wordt uitgevoerd", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
-#line 20
- testRunner.And("ik de inhoud van de tabel [dbo].[testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+#line 12
+ testRunner.And("ik de inhoud van de tabel [dbo].[TestTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -126,7 +124,7 @@ this.FeatureBackground();
             table1.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 21
+#line 13
  testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table1, "Dan ");
 #line hidden
             this.ScenarioCleanup();
@@ -139,16 +137,16 @@ this.FeatureBackground();
         public virtual void VoerGetypeerdSSISProcesUit()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voer getypeerd SSIS proces uit", null, ((string[])(null)));
-#line 25
+#line 17
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
 this.FeatureBackground();
-#line 26
+#line 18
  testRunner.When("het ExamplePackage dwh SSIS proces in het ExampleSsisISPacProject project op dit " +
                     "moment wordt uitgevoerd", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
-#line 27
- testRunner.And("ik de inhoud van de tabel [dbo].[testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+#line 19
+ testRunner.And("ik de inhoud van de tabel [dbo].[TestTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -156,7 +154,7 @@ this.FeatureBackground();
             table2.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 28
+#line 20
  testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table2, "Dan ");
 #line hidden
             this.ScenarioCleanup();
@@ -169,7 +167,7 @@ this.FeatureBackground();
         public virtual void VoerSSISProcesUitMetParameters()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voer SSIS proces uit met parameters", null, ((string[])(null)));
-#line 32
+#line 24
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
@@ -181,11 +179,11 @@ this.FeatureBackground();
             table3.AddRow(new string[] {
                         "ExampleParameter",
                         "SomeParameterValue"});
-#line 33
+#line 25
  testRunner.When("het ExamplePackage SSIS proces in het ExampleSsisISPacProject project op dit mome" +
                     "nt wordt uitgevoerd met de volgende parameter:", ((string)(null)), table3, "Als ");
-#line 36
- testRunner.And("ik de inhoud van de tabel [dbo].[testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+#line 28
+ testRunner.And("ik de inhoud van de tabel [dbo].[TestTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
             TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -193,7 +191,7 @@ this.FeatureBackground();
             table4.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 37
+#line 29
  testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table4, "Dan ");
 #line hidden
             this.ScenarioCleanup();
@@ -206,7 +204,7 @@ this.FeatureBackground();
         public virtual void VoerGetypeerdSSISProcesUitMetParameters()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voer getypeerd SSIS proces uit met parameters", null, ((string[])(null)));
-#line 41
+#line 33
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
@@ -218,11 +216,11 @@ this.FeatureBackground();
             table5.AddRow(new string[] {
                         "ExampleParameter",
                         "SomeParameterValue"});
-#line 42
+#line 34
  testRunner.When("het ExamplePackage dwh SSIS proces in het ExampleSsisISPacProject project op dit " +
                     "moment wordt uitgevoerd met de volgende parameter:", ((string)(null)), table5, "Als ");
-#line 45
- testRunner.And("ik de inhoud van de tabel [dbo].[testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+#line 37
+ testRunner.And("ik de inhoud van de tabel [dbo].[TestTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -230,7 +228,7 @@ this.FeatureBackground();
             table6.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 46
+#line 38
  testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table6, "Dan ");
 #line hidden
             this.ScenarioCleanup();
@@ -243,16 +241,16 @@ this.FeatureBackground();
         public virtual void VoerSSISProcesUitAlsRol()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voer SSIS proces uit als rol", null, ((string[])(null)));
-#line 50
+#line 42
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
 this.FeatureBackground();
-#line 51
+#line 43
  testRunner.When("de developer het ExamplePackage SSIS proces in het ExampleSsisISPacProject projec" +
                     "t uitvoert", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
-#line 52
- testRunner.And("ik de inhoud van de tabel [dbo].[testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+#line 44
+ testRunner.And("ik de inhoud van de tabel [dbo].[TestTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
             TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -260,7 +258,7 @@ this.FeatureBackground();
             table7.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 53
+#line 45
  testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table7, "Dan ");
 #line hidden
             this.ScenarioCleanup();
@@ -273,16 +271,16 @@ this.FeatureBackground();
         public virtual void VoerGetypeerdSSISProcesUitAlsRol()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voer getypeerd SSIS proces uit als rol", null, ((string[])(null)));
-#line 57
+#line 49
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
 this.FeatureBackground();
-#line 58
+#line 50
  testRunner.When("de developer het ExamplePackage dwh SSIS proces in het ExampleSsisISPacProject pr" +
                     "oject uitvoert", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
-#line 59
- testRunner.And("ik de inhoud van de tabel [dbo].[testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+#line 51
+ testRunner.And("ik de inhoud van de tabel [dbo].[TestTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
             TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -290,7 +288,7 @@ this.FeatureBackground();
             table8.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 60
+#line 52
  testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table8, "Dan ");
 #line hidden
             this.ScenarioCleanup();
@@ -303,7 +301,7 @@ this.FeatureBackground();
         public virtual void VoerSSISProcesUitMetParametersAlsRol()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voer SSIS proces uit met parameters als rol", null, ((string[])(null)));
-#line 64
+#line 56
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
@@ -315,11 +313,11 @@ this.FeatureBackground();
             table9.AddRow(new string[] {
                         "ExampleParameter",
                         "SomeParameterValue"});
-#line 65
+#line 57
  testRunner.When("de developer het ExamplePackage SSIS proces in het ExampleSsisISPacProject projec" +
                     "t uitvoert met de volgende parameter:", ((string)(null)), table9, "Als ");
-#line 68
- testRunner.And("ik de inhoud van de tabel [dbo].[testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+#line 60
+ testRunner.And("ik de inhoud van de tabel [dbo].[TestTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
             TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -327,7 +325,7 @@ this.FeatureBackground();
             table10.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 69
+#line 61
  testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table10, "Dan ");
 #line hidden
             this.ScenarioCleanup();
@@ -340,7 +338,7 @@ this.FeatureBackground();
         public virtual void VoerGetypeerdSSISProcesUitMetParametersAlsRol()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Voer getypeerd SSIS proces uit met parameters als rol", null, ((string[])(null)));
-#line 73
+#line 65
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
@@ -352,11 +350,11 @@ this.FeatureBackground();
             table11.AddRow(new string[] {
                         "ExampleParameter",
                         "SomeParameterValue"});
-#line 74
+#line 66
  testRunner.When("de developer het ExamplePackage dwh SSIS proces in het ExampleSsisISPacProject pr" +
                     "oject uitvoert met de volgende parameter:", ((string)(null)), table11, "Als ");
-#line 77
- testRunner.And("ik de inhoud van de tabel [dbo].[testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+#line 69
+ testRunner.And("ik de inhoud van de tabel [dbo].[TestTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
             TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                         "id",
@@ -364,7 +362,7 @@ this.FeatureBackground();
             table12.AddRow(new string[] {
                         "1",
                         "\'FirstRow\'"});
-#line 78
+#line 70
  testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table12, "Dan ");
 #line hidden
             this.ScenarioCleanup();
@@ -373,4 +371,3 @@ this.FeatureBackground();
 }
 #pragma warning restore
 #endregion
-
