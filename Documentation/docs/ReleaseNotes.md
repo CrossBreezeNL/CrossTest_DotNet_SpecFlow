@@ -21,24 +21,27 @@ Click on the header of a version number to go to the documentation of that speci
 [//]: # (>         * [X] Some issue...)
 
 ## [Version 1.0](../1.0/)
-- [ ] 1.0.3.0 <sup>21-02-2023</sup>
+- [ ] 1.0.3.0 <sup>27-02-2023</sup>
 > !!! success "New features"
 >     * [ ] Configuration
->         * [ ] Core
->             - [X] Updated config
+>         * [ ] Azure Data Factory
+>             - [X] Specify data factory connections (TenantID, SubscriptionID, ApplicationID, Application Secret, ResourceGroup, DataFactory)
+>             - [X] Specify pipeline parameters
 >     * [ ] Process steps
 >         * [ ] Azure Data Factory
 >             - [X] Execute a ADF pipeline
 >             - [X] Execute a ADF pipeline with parameters
 >             - [X] Execute a ADF pipeline with template parameters
 >             - [X] Execute a ADF pipeline with template parameters and its own parameters
->     * [ ] Process
->         * [ ] Azure Data Factory
->             - [X] Specify data factory connections (TenantID, SubscriptionID, ApplicationID, Application Secret, ResourceGroup, DataFactory)
->             - [X] Specify pipeline parameters
+> !!! success "Enhanced features"
+>     * [ ] Configuration
+>         * [ ] Process
+>             - [X] Process configuration removed
 >         * [ ] Microsoft SQL Server Integration Services
->             - [X] Refactored config to a seperated section 
->             - [X] Created a seperated Nuget package
+>             - [X] Moved SSIS process configuration to a seperated section
+>     * [ ] Process
+>         * [ ] Microsoft SQL Server Integration Services
+>             - [X] Moved implementation to a seperated NuGet package
 
 - [ ] 1.0.2.3 <sup>18-03-2022</sup>
 > !!! success "Enhanced features"
