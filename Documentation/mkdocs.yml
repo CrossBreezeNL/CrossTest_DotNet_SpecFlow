@@ -42,11 +42,14 @@ nav:
   - 'ObjectTemplateAttributeConfig' : 'Configuration/ObjectTemplateAttributeConfig.md'
   - 'DatabaseConfig' : 'Configuration/DatabaseConfig.md'
   - 'DatabaseServerConfig' : 'Configuration/DatabaseServerConfig.md'
-  - 'ProcessConfig' : 'Configuration/ProcessConfig.md'
-  - 'ProcessProjectConfig' : 'Configuration/ProcessProjectConfig.md'
-  - 'SsisProjectConnection' : 'Configuration/SsisProjectConnection.md'
   - 'DatabaseServerType' : 'Configuration/DatabaseServerType.md'
+  - 'SsisProcessesConfig' : 'Configuration/SsisProcessesConfig.md'
+  - 'SsisProcessProjectConfig' : 'Configuration/SsisProcessProjectConfig.md'
+  - 'SsisProjectConnection' : 'Configuration/SsisProjectConnection.md'
   - 'SsisProcessType' : 'Configuration/SsisProcessType.md'
+  - 'AdfProcessesConfig' : 'Configuration/AdfProcessesConfig.md'
+  - 'AdfProcessProjectConfig' : 'Configuration/AdfProcessProjectConfig.md'
+  - 'AdfProcessType' : 'Configuration/AdfProcessType.md'
 
 # Extra
 extra:

@@ -1,11 +1,11 @@
-# Config documentation for SsisProcessConfig
+# Config documentation for SsisProcessProjectConfig
 
 ## Process configuration
 A configuration for a type of process.
 
 ### Example
 ```xml
-<SsisProcess 
+<SsisProcessProject 
   name="..." 
   isPacFileLocation="..." 
   ssisConnectionName="..." 
@@ -19,7 +19,7 @@ A configuration for a type of process.
     <connections>
         <connection>...</connection>
     </connections>
-</SsisProcess>
+</SsisProcessProject>
 ```
 
 ### Attributes
