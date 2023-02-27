@@ -15,7 +15,7 @@
     <copyright>Copyright © CrossBreeze 2023</copyright>
     <tags>Test Database DWH BI SQL T-SQL SSAS</tags>
     <dependencies>
-      <dependency id="SpecFlow" version="2.4.1" />
+      <dependency id="SpecFlow" version="3.9.74" />
       <dependency id="Microsoft.AnalysisServices.AdomdClient.retail.amd64" version="15.12.1" />
       <dependency id="MSTest.TestFramework" version="1.4.0" />
       <!-- Not strictly a depedency for this NuGet package, but the user will need it to execute the tests. -->
