@@ -98,18 +98,18 @@ In this example we use the connection to a database server as defined in the App
 
 Now open the 'Test Explorer' window by going to the main menu, click on 'Test', then choose 'Windows' and click on 'Test Explorer'. If everything works you should now see the 'CheckMsdbVersion' test.
 
-![Visual Studio Test Explorer - CheckMsdbVersion](./img/VS_TestExporer_CheckMsdbVersion.PNG)
+![Visual Studio Test Explorer - CheckMsdbVersion](./img/VS_TestExporer_CheckMsdbVersion.png)
 
 !!!tip
     If the test doesn't appear then check the following: In Visual Studio from the menu bar select "Tools > Options > Specflow". Then set "Enable SpecFlowSingleFileGenerator Custom Tool" to True. Finally try to perform a rebuild on the C# project.
 
 Now run the test by right clicking on the test and click on 'Run Selected Test'. If your SQL Server version is 2017 the test will probably succeed and the test should turn green.
 
-![Visual Studio Test Explorer - CheckMsdbVersion Success](./img/VS_TestExporer_CheckMsdbVersion_Success.PNG)
+![Visual Studio Test Explorer - CheckMsdbVersion Success](./img/VS_TestExporer_CheckMsdbVersion_Success.png)
 
 If the test fails (or you make it fail by changing the expected version :smile:) you will see the test will turn red and more information will be shown in the test detail window (below or on the right of the test overview).
 
-![Visual Studio Test Explorer - CheckMsdbVersion Failure](./img/VS_TestExporer_CheckMsdbVersion_Failure.PNG)
+![Visual Studio Test Explorer - CheckMsdbVersion Failure](./img/VS_TestExporer_CheckMsdbVersion_Failure.png)
 
 To get a more readable version of the output, click on the 'Output' link (in blue) at the bottom of the message. This will open the 'Test Output' window.
 
