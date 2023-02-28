@@ -101,7 +101,7 @@ Now open the 'Test Explorer' window by going to the main menu, click on 'Test', 
 ![Visual Studio Test Explorer - CheckMsdbVersion](./img/VS_TestExporer_CheckMsdbVersion.png)
 
 !!!tip
-    If the test doesn't appear then check the following: In Visual Studio from the menu bar select "Tools > Options > Specflow". Then set "Enable SpecFlowSingleFileGenerator Custom Tool" to True. Finally try to perform a rebuild on the C# project.
+    If the test doesn't appear try to perform a rebuild on the C# project.
 
 Now run the test by right clicking on the test and click on 'Run Selected Test'. If your SQL Server version is 2017 the test will probably succeed and the test should turn green.
 
