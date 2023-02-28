@@ -16,10 +16,12 @@
     <tags>Test Database DWH BI SQL T-SQL SSAS</tags>
     <dependencies>
       <dependency id="SpecFlow" version="3.9.74" />
+      <dependency id="SpecFlow.MsTest" version="3.9.74" />
+      <dependency id="Microsoft.NET.Test.Sdk" version="17.5.0" />
       <dependency id="Microsoft.AnalysisServices.AdomdClient.retail.amd64" version="15.12.1" />
-      <dependency id="MSTest.TestFramework" version="1.4.0" />
+      <dependency id="MSTest.TestFramework" version="3.0.2" />
       <!-- Not strictly a depedency for this NuGet package, but the user will need it to execute the tests. -->
-      <dependency id="MSTest.TestAdapter" version="1.4.0" />
+      <dependency id="MSTest.TestAdapter" version="3.0.2" />
     </dependencies>
     <!-- Add the framework assemblies that should be referenced in the C# project. -->
     <frameworkAssemblies>
@@ -28,6 +30,7 @@
     <!-- The content files element is used by PackageReference in projects. -->
     <contentFiles>
       <files include=".\NuGetFiles\app.config.transform" buildAction="Content" />
+      <files include=".\NuGetFiles\specflow.json" buildAction="Content" />
     </contentFiles>
   </metadata>
   <files>
@@ -38,5 +41,6 @@
     <file src=".\CrossBreeze_CrossTest_SpecFlow_Steps\Generated\CrossBreeze.CrossTest.SpecFlow.dll" target="lib\net45" />
     <!-- The content file definition when using packages.config in projects. -->
     <file src=".\NuGetFiles\app.config.transform" target="content" />
+    <file src=".\NuGetFiles\specflow.json" target="content" />
   </files>
 </package>

@@ -4,13 +4,6 @@
   <configSections>
     <section name="crossTest" type="CrossBreeze.CrossTest.SpecFlow.Configuration.CrossTestConfig, CrossBreeze.CrossTest.SpecFlow.Core" />
   </configSections>
-  
-  <specFlow>
-    <unitTestProvider name="mstest.v2" />
-    <stepAssemblies>
-      <stepAssembly assembly="CrossBreeze.CrossTest.SpecFlow" />
-    </stepAssemblies>
-  </specFlow>
 
   <crossTest>
     <test>
