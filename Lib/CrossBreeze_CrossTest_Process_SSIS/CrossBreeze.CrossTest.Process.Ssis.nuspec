@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>CrossBreeze.CrossTest.Process.Ssis</id>
-    <version>1.0.3.0</version>
+    <version>1.1.0.0</version>
     <title>CrossTest SSIS Process Plugin</title>
     <authors>Harmen Wessels, Jacob Siemaszko, Willem Otten, Moo Othman</authors>
     <owners>CrossBreeze</owners>
