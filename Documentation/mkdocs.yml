@@ -43,12 +43,12 @@ nav:
   - 'DatabaseConfig' : 'Configuration/DatabaseConfig.md'
   - 'DatabaseServerConfig' : 'Configuration/DatabaseServerConfig.md'
   - 'DatabaseServerType' : 'Configuration/DatabaseServerType.md'
-  - 'SsisProcessesConfig' : 'Configuration/SsisProcessesConfig.md'
-  - 'SsisProcessProjectConfig' : 'Configuration/SsisProcessProjectConfig.md'
+  - 'crossTestSsisConfig' : 'Configuration/crossTestSsisConfig.md'
+  - 'SsisProcessConfig' : 'Configuration/SsisProcessConfig.md'
   - 'SsisProjectConnection' : 'Configuration/SsisProjectConnection.md'
   - 'SsisProcessType' : 'Configuration/SsisProcessType.md'
-  - 'AdfProcessesConfig' : 'Configuration/AdfProcessesConfig.md'
-  - 'AdfProcessProjectConfig' : 'Configuration/AdfProcessProjectConfig.md'
+  - 'crossTestAdfConfig' : 'Configuration/crossTestAdfConfig.md'
+  - 'AdfProcessConfig' : 'Configuration/AdfProcessConfig.md'
   - 'AdfProcessType' : 'Configuration/AdfProcessType.md'
 
 # Extra

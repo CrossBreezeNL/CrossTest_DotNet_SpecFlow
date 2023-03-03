@@ -1,11 +1,11 @@
-# Config documentation for AdfProcessProjectConfig
+# Config documentation for AdfProcessConfig
 
 ## Process configuration
 A configuration for a type of process.
 
 ### Example
 ```xml
-<AdfProcessProject 
+<AdfProcess 
   name="..." 
   tenantID="..." 
   subscriptionId="..." 

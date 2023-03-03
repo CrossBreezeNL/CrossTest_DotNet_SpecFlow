@@ -42,7 +42,6 @@
   <ItemGroup>
     <Compile Include="Configuration\CrossTestConfig.cs" />
     <Compile Include="Configuration\Database\DatabaseConfig.cs" />
-    <Compile Include="Configuration\Process\ProcessConfig.cs" />
     <Compile Include="Configuration\Process\ProcessType.cs" />
     <Compile Include="Configuration\Test\ObjectTemplateConfig.cs" />
     <Compile Include="Configuration\Test\TestConfig.cs" />

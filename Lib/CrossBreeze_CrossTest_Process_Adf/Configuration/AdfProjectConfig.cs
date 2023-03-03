@@ -6,7 +6,7 @@ using System.Configuration;
 namespace CrossBreeze.CrossTest.Process.Adf.Configuration
 {
     [XDoc(Title = "Process configuration", Description = "A configuration for a type of process.")]
-    public class AdfProcessProjectConfig : ConfigurationElement
+    public class AdfProcessConfig : ConfigurationElement
     {
         // Name
         [ConfigurationProperty("name", IsKey = true)]

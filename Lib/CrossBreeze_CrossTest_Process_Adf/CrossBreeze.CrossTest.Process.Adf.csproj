@@ -89,7 +89,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Configuration\AdfProcessesConfig.cs" />
+    <Compile Include="Configuration\crossTestAdfConfig.cs" />
     <Compile Include="Configuration\AdfProcessType.cs" />
     <Compile Include="Configuration\AdfProjectConfig.cs" />
     <Compile Include="Configuration\AdfProjectConnection.cs" />

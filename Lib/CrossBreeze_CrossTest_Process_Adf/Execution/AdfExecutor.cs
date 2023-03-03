@@ -45,11 +45,11 @@ namespace CrossBreeze.CrossTest.Process.Adf
         public static void ExecuteAdfProcess(string projectName, string pipelineName, Dictionary<string, string> parameters = null)
         {
             // Check whether the Adf process config exists
-            if (AdfProcessesConfig.GetConfig() == null)
+            if (crossTestAdfConfig.GetConfig() == null)
                 throw new Exception(string.Format("No Adf process configuration exists!"));
 
             // Get the Adf project configuration for the given project name.
-            AdfProcessProjectConfig AdfProjectConfig = AdfProcessesConfig.GetConfig().AdfProcesses[projectName];
+            AdfProcessConfig AdfProjectConfig = crossTestAdfConfig.GetConfig().AdfProcesses[projectName];
             if (AdfProjectConfig == null)
                 throw new Exception(string.Format("The specified Adf process config '{0}' doens't exist!", projectName));
 

@@ -3,11 +3,11 @@ using CrossBreeze.CrossDoc.CustomAttributes;
 
 namespace CrossBreeze.CrossTest.Process.Adf.Configuration
 {
-    public class AdfProcessesConfig : ConfigurationSection
+    public class crossTestAdfConfig : ConfigurationSection
     {
-        public static AdfProcessesConfig GetConfig()
+        public static crossTestAdfConfig GetConfig()
         {
-            return (AdfProcessesConfig)System.Configuration.ConfigurationManager.GetSection("crossTestAdf") ?? new AdfProcessesConfig();
+            return (crossTestAdfConfig)System.Configuration.ConfigurationManager.GetSection("crossTestAdf") ?? new crossTestAdfConfig();
         }
 
         // Process
@@ -19,16 +19,16 @@ namespace CrossBreeze.CrossTest.Process.Adf.Configuration
         // ProjectsConfigElementCollection
         public class AdfProcessConfigElementCollection : ConfigurationElementCollection
         {
-            public new AdfProcessProjectConfig this[string Name] => (AdfProcessProjectConfig)BaseGet(Name);
+            public new AdfProcessConfig this[string Name] => (AdfProcessConfig)BaseGet(Name);
 
             protected override ConfigurationElement CreateNewElement()
             {
-                return new AdfProcessProjectConfig();
+                return new AdfProcessConfig();
             }
 
             protected override object GetElementKey(ConfigurationElement element)
             {
-                return ((AdfProcessProjectConfig)element).Name;
+                return ((AdfProcessConfig)element).Name;
             }
         }
     }

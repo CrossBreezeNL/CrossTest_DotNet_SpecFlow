@@ -24,7 +24,7 @@ namespace CrossTestDocumenter
             // Load CrossBreeze CrossTest Ssis assembly
             Assembly ssisProcessConfigAssembly = Assembly.LoadFrom("C:\\Git\\Repos\\CrossBreeze\\CrossTest\\Crosstest_DotNet_SpecFlow\\Lib\\CrossBreeze_CrossTest_Process_Ssis\\bin\\Debug\\CrossBreeze.CrossTest.Process.Ssis.dll");
             // Get the Ssis Config type.
-            Type ssisConfigType = ssisProcessConfigAssembly.GetType("CrossBreeze.CrossTest.Process.Ssis.Configuration.SsisProcessesConfig");
+            Type ssisConfigType = ssisProcessConfigAssembly.GetType("CrossBreeze.CrossTest.Process.Ssis.Configuration.crossTestSsisConfig");
             // Create the specflow config documentation.
             new CrossTestConfigDocumenter().CreateConfigDocumentation
             (
@@ -35,7 +35,7 @@ namespace CrossTestDocumenter
             // Load CrossBreeze CrossTest Adf assembly
             Assembly AdfProcessConfigAssembly = Assembly.LoadFrom("C:\\Git\\Repos\\CrossBreeze\\CrossTest\\Crosstest_DotNet_SpecFlow\\Lib\\CrossBreeze_CrossTest_Process_Adf\\bin\\Debug\\CrossBreeze.CrossTest.Process.Adf.dll");
             // Get the Adf Config type.
-            Type AdfConfigType = AdfProcessConfigAssembly.GetType("CrossBreeze.CrossTest.Process.Adf.Configuration.AdfProcessesConfig");
+            Type AdfConfigType = AdfProcessConfigAssembly.GetType("CrossBreeze.CrossTest.Process.Adf.Configuration.crossTestAdfConfig");
             // Create the specflow config documentation.
             new CrossTestConfigDocumenter().CreateConfigDocumentation
             (

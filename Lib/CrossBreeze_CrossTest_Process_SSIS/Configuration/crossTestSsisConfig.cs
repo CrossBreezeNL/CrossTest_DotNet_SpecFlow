@@ -3,11 +3,11 @@ using CrossBreeze.CrossDoc.CustomAttributes;
 
 namespace CrossBreeze.CrossTest.Process.Ssis.Configuration
 {
-    public class SsisProcessesConfig : ConfigurationSection
+    public class crossTestSsisConfig : ConfigurationSection
     {
-        public static SsisProcessesConfig GetConfig()
+        public static crossTestSsisConfig GetConfig()
         {
-            return (SsisProcessesConfig)System.Configuration.ConfigurationManager.GetSection("crossTestSsis") ?? new SsisProcessesConfig();
+            return (crossTestSsisConfig)System.Configuration.ConfigurationManager.GetSection("crossTestSsis") ?? new crossTestSsisConfig();
         }
 
         // Process
@@ -19,16 +19,16 @@ namespace CrossBreeze.CrossTest.Process.Ssis.Configuration
         // ProjectsConfigElementCollection
         public class SsisProcessConfigElementCollection : ConfigurationElementCollection
         {
-            public new SsisProcessProjectConfig this[string Name] => (SsisProcessProjectConfig)BaseGet(Name);
+            public new SsisProcessConfig this[string Name] => (SsisProcessConfig)BaseGet(Name);
 
             protected override ConfigurationElement CreateNewElement()
             {
-                return new SsisProcessProjectConfig();
+                return new SsisProcessConfig();
             }
 
             protected override object GetElementKey(ConfigurationElement element)
             {
-                return ((SsisProcessProjectConfig)element).Name;
+                return ((SsisProcessConfig)element).Name;
             }
         }
     }

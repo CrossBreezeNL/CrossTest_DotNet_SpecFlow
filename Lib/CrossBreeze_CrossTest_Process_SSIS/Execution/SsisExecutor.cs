@@ -39,11 +39,11 @@ namespace CrossBreeze.CrossTest.Process.Ssis
         public static void ExecuteSsisProcess(string projectName, string packageName, Dictionary<string, string> parameters = null)
         {
             // Check whether the SSIS process config exists
-            if (SsisProcessesConfig.GetConfig() == null)
+            if (crossTestSsisConfig.GetConfig() == null)
                 throw new Exception(string.Format("No SSIS process configuration exists!"));
 
             // Get the SSIS project configuration for the given project name.
-            SsisProcessProjectConfig ssisProjectConfig = SsisProcessesConfig.GetConfig().SsisProcesses[projectName];
+            SsisProcessConfig ssisProjectConfig = crossTestSsisConfig.GetConfig().SsisProcesses[projectName];
             if (ssisProjectConfig == null)
                 throw new Exception(string.Format("The specified SSIS process config '{0}' doens't exist!", projectName));
 
