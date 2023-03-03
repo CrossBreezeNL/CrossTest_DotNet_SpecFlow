@@ -20,8 +20,8 @@ Click on the header of a version number to go to the documentation of that speci
 [//]: # (>     * [ ] Binding)
 [//]: # (>         * [X] Some issue...)
 
-## [Version 1.0](../1.0/)
-- [ ] 1.1.0.0 <sup>28-02-2023</sup>
+## [Version 1.1](../1.1/)
+- [ ] 1.1.0.0 <sup>03-03-2023</sup>
 > !!! success "New features"
 >     * [ ] Configuration
 >         * [ ] Azure Data Factory
@@ -45,6 +45,7 @@ Click on the header of a version number to go to the documentation of that speci
 >         * [ ] Microsoft SQL Server Integration Services
 >             - [X] Moved implementation to a seperated NuGet package
 
+## [Version 1.0](../1.0/)
 - [ ] 1.0.2.3 <sup>18-03-2022</sup>
 > !!! success "Enhanced features"
 >     * [ ] Process steps
