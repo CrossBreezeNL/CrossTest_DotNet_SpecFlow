@@ -17,7 +17,7 @@
     <dependencies>
       <!-- In the SMO library the STrace namespace exists and is needed for SSIS package execution. -->
       <dependency id="Microsoft.SqlServer.SqlManagementObjects" version="150.18208.0" />
-      <dependency id="CrossBreeze.CrossTest" version="1.0.3" />
+      <dependency id="CrossBreeze.CrossTest" version="1.1.0" />
     </dependencies>
     <contentFiles>
       <files include="..\NuGetFiles\SSIS\app.config.transform" buildAction="Content" />

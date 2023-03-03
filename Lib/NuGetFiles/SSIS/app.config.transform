@@ -2,7 +2,7 @@
 <configuration>
   
   <configSections>
-    <section name="crossTestSsis" type="CrossBreeze.CrossTest.Process.Ssis.Configuration.SsisProcessesConfig, CrossBreeze.CrossTest.Process.Ssis" />
+    <section name="crossTestSsis" type="CrossBreeze.CrossTest.Process.Ssis.Configuration.crossTestSsisConfig, CrossBreeze.CrossTest.Process.Ssis" />
   </configSections>
   
   <crossTestSsis>

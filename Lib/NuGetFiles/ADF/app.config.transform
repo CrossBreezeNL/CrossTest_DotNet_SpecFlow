@@ -2,7 +2,7 @@
 <configuration>
   
   <configSections>
-		<section name="crossTestAdf" type="CrossBreeze.CrossTest.Process.Adf.Configuration.AdfProcessesConfig, CrossBreeze.CrossTest.Process.Adf" />
+		<section name="crossTestAdf" type="CrossBreeze.CrossTest.Process.Adf.Configuration.crossTestAdfConfig, CrossBreeze.CrossTest.Process.Adf" />
   </configSections>
   
   <crossTestAdf>

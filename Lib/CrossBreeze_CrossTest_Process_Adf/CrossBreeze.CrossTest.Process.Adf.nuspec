@@ -17,7 +17,7 @@
     <dependencies>
       <dependency id="Microsoft.Azure.Management.DataFactory" version="9.1.0"  />
       <dependency id="Microsoft.Identity.Client" version="4.49.1" />
-      <dependency id="CrossBreeze.CrossTest" version="1.0.3" />
+      <dependency id="CrossBreeze.CrossTest" version="1.1.0" />
     </dependencies>
     <contentFiles>
       <files include="..\NuGetFiles\ADF\app.config.transform" buildAction="Content" />
