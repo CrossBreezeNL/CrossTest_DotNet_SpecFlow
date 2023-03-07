@@ -124,8 +124,9 @@ namespace CrossBreeze.CrossTest.Process.Adf
                 else
                     break;
             }
-
-            Console.WriteLine("Press Any Key to Exit...");
+            if (pipelineRun.Status == "Failed")
+                Console.WriteLine("Error Message: " + pipelineRun.Message);
+            Console.WriteLine("End piepline run");
         }
     }
 }

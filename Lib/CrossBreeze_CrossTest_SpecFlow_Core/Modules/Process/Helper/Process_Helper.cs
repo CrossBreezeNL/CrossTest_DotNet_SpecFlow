@@ -12,27 +12,29 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Process
     public static class Process_Helper
     {
 
-        public static void ExecuteProcess(string processName,string processType, string projectName)
+        public static void ExecuteProcess(ScenarioContext scenarioContext, string processName, string processType, string projectName)
         {
             ExecuteProcessHelper(null, processName, null, processType, projectName, null);
         }
 
-        public static void ExecuteProcessWithParameters(string processName, string processType, string projectName, Table parameterTable)
+        public static void ExecuteProcessWithParameters(
+            ScenarioContext scenarioContext, string processName, string processType, string projectName, Table parameterTable)
         {
-            ExecuteProcessHelper(null,processName,null,processType,projectName,parameterTable);
+            ExecuteProcessHelper(null, processName, null, processType, projectName, parameterTable);
         }
 
-        public static void ExecuteTemplatedProcess(string processName, string objectTemplateName, string processType, string projectName)
+        public static void ExecuteTemplatedProcess(ScenarioContext scenarioContext, string processName, string objectTemplateName, string processType, string projectName)
         {
             ExecuteProcessHelper(null, processName, objectTemplateName, processType, projectName, null);
         }
 
-        public static void ExecuteTemplatedProcessWithParameters(string processName, string objectTemplateName, string processType, string projectName, Table parameterTable)
+        public static void ExecuteTemplatedProcessWithParameters(ScenarioContext scenarioContext, string processName, string objectTemplateName, string processType, string projectName, Table parameterTable)
         {
             ExecuteProcessHelper(null, processName, objectTemplateName, processType, projectName, parameterTable);
         }
 
         public static void ExecuteProcessAsRole(
+            ScenarioContext scenarioContext,
             string roleName,
             string processName,
             string processType,
@@ -43,6 +45,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Process
         }
 
         public static void ExecuteTemplatedProcessAsRole(
+            ScenarioContext scenarioContext,
             string roleName,
             string processName,
             string objectTemplateName,
@@ -54,6 +57,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Process
         }
 
         public static void ExecuteProcessWithParametersAsRole(
+            ScenarioContext scenarioContext,
             string roleName,
             string processName,
             string processType,
@@ -64,6 +68,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Process
         }
 
         public static void ExecuteTemplatedProcessAsRoleWithParameters(
+            ScenarioContext scenarioContext,
             string roleName,
             string processName,
             string objectTemplateName,

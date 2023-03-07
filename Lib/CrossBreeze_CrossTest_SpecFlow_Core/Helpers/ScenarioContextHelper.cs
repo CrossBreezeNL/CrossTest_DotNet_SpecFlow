@@ -6,6 +6,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Helpers
 {
     public static class ScenarioContextHelper
     {
+
         public enum ScenarioObjectType
         {
             Result,
@@ -18,20 +19,20 @@ namespace CrossBreeze.CrossTest.SpecFlow.Helpers
             return Enum.GetName(scenarioObjectType.GetType(), scenarioObjectType);
         }
 
-        public static object GetScenarioContextObject(ScenarioObjectType scenarioObjectType)
+        public static object GetScenarioContextObject(ScenarioContext scenarioContext, ScenarioObjectType scenarioObjectType)
         {
-            return ScenarioContext.Current[getScenarioContextKey(scenarioObjectType)];
+            return scenarioContext[getScenarioContextKey(scenarioObjectType)];
         }
 
-        public static bool HasScenarioContextObject(ScenarioObjectType scenarioObjecType)
+        public static bool HasScenarioContextObject(ScenarioContext scenarioContext, ScenarioObjectType scenarioObjecType)
         {
-            return ScenarioContext.Current.ContainsKey(getScenarioContextKey(scenarioObjecType));
+            return scenarioContext.ContainsKey(getScenarioContextKey(scenarioObjecType));
         }
 
 
-        public static void SetScenarioContextObject(ScenarioObjectType scenarioObjectType, object scenarioObject)
+        public static void SetScenarioContextObject(ScenarioContext scenarioContext, ScenarioObjectType scenarioObjectType, object scenarioObject)
         {
-            ScenarioContext.Current.Add(getScenarioContextKey(scenarioObjectType), scenarioObject);
+            scenarioContext.Add(getScenarioContextKey(scenarioObjectType), scenarioObject);
         }
         #endregion
 

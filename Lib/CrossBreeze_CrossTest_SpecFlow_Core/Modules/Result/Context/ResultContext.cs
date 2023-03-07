@@ -1,5 +1,6 @@
 ﻿using CrossBreeze.CrossTest.SpecFlow.Helpers;
 using System.Data;
+using TechTalk.SpecFlow;
 
 namespace CrossBreeze.CrossTest.SpecFlow.Result.Context
 {
@@ -12,11 +13,11 @@ namespace CrossBreeze.CrossTest.SpecFlow.Result.Context
             this.ResultTable = resultTable;
         }
 
-        public static ResultContext GetResultContext()
+        public static ResultContext GetResultContext(ScenarioContext scenarioContext)
         {
-            if (!ScenarioContextHelper.HasScenarioContextObject(ScenarioContextHelper.ScenarioObjectType.Result))
-                ScenarioContextHelper.SetScenarioContextObject(ScenarioContextHelper.ScenarioObjectType.Result, new ResultContext());
-            return ScenarioContextHelper.GetScenarioContextObject(ScenarioContextHelper.ScenarioObjectType.Result) as ResultContext;
+            if (!ScenarioContextHelper.HasScenarioContextObject(scenarioContext, ScenarioContextHelper.ScenarioObjectType.Result))
+                ScenarioContextHelper.SetScenarioContextObject(scenarioContext, ScenarioContextHelper.ScenarioObjectType.Result, new ResultContext());
+            return ScenarioContextHelper.GetScenarioContextObject(scenarioContext, ScenarioContextHelper.ScenarioObjectType.Result) as ResultContext;
         }
     }
 }
