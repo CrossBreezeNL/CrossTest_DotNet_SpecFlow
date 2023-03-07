@@ -41,7 +41,7 @@ The CrossTest package and dependant packages have now been added to your project
 
 ![Packages are installed](./img/Packages_Installed.png)
 
-You might have some more dependencies in your project, since Visual Studio adds some by default. In the screenshot you see the minimal dependecies needed for executing tests. If you want to execute SSIS packages you also need the 'Microsoft.SqlServer.Diagnostics.Strace' reference.
+You might have some more dependencies in your project, since Visual Studio adds some by default. In the screenshot you see the minimal dependecies needed for executing tests.
 
 ### Configure CrossTest
 Before we can run our first test we need to setup basic configuration for CrossTest. 
@@ -120,6 +120,11 @@ To get a more readable version of the output, click on the 'Output' link (in blu
     Sadly this will also change the font for almost any menu and window. If you also think this should be a seperate setting in Visual Studio, please vote for it on the following page: [Test explorer UI font](https://developercommunity.visualstudio.com/content/problem/208608/test-explorer-ui-font.html).
 
     A workaround, to changing the font, is to right click in the output window and choose 'Copy all' and then paste the output in a simple editor like Notepad++.
+
+## Execute processes
+Within CrossTest there is support for executing different types of processes, like ETL processes. We have implemented add-ons for CrossTest to execute Microsoft SQL Server Intgeration Services and Azure Data Factory processes. For details on how to configure these add-ins, please see the [Configuration](./Configuration/index.md) section.
+
+If you want to execute SSIS packages might also need the 'Microsoft.SqlServer.Diagnostics.Strace' reference as a dependency in your C# project.
 
 ## Bugs & issues
 When you encounter an issue while using CrossTest please report it by sending an e-mail to [info@x-breeze.com](mailto:info@x-breeze.com?SUBJECT=CrossTest%20Specflow%20-%20Bug%20report) with the subject 'CrossTest Specflow - Bug report'.
