@@ -105,25 +105,24 @@ namespace CrossBreeze.CrossTest.Process.Adf
                 SubscriptionId = subscriptionId
             };
             Dictionary<string, object> dObjectParameters = parameters.ToDictionary(k => k.Key, k => (object)k.Value);
-            var run = await client.Pipelines.CreateRunWithHttpMessagesAsync(resourceGroupName, dataFactoryName, pipelineName, parameters: dObjectParameters);
-
             Console.WriteLine("Creating pipeline run...");
-
+            var run = await client.Pipelines.CreateRunWithHttpMessagesAsync(resourceGroupName, dataFactoryName, pipelineName, parameters: dObjectParameters);
             Console.WriteLine("Pipeline run ID: " + run.Body.RunId);
 
             // Monitor the pipeline run
-            Console.WriteLine("Checking pipeline run status...");
+            Console.WriteLine("Waiting for pipeline to complete...");
             PipelineRun pipelineRun;
             while (true)
             {
                 pipelineRun = client.PipelineRuns.Get(
                     resourceGroupName, dataFactoryName, run.Body.RunId);
-                Console.WriteLine("Status: " + pipelineRun.Status);
+                //Console.WriteLine("Status: " + pipelineRun.Status);
                 if (pipelineRun.Status == "InProgress" || pipelineRun.Status == "Queued")
                     System.Threading.Thread.Sleep(1000);
                 else
                     break;
             }
+            Console.WriteLine(string.Format("Pipeline completed with status '{0}'.", pipelineRun.Status));
 
             if (pipelineRun.Status == "Failed")
             {
@@ -131,7 +130,6 @@ namespace CrossBreeze.CrossTest.Process.Adf
                 throw new Exception(pipelineRun.Message);
             }
 
-            Console.WriteLine("End piepline run");
         }
     }
 }
