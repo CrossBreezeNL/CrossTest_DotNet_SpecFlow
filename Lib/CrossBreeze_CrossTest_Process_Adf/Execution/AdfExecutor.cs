@@ -125,10 +125,13 @@ namespace CrossBreeze.CrossTest.Process.Adf
                     break;
             }
 
-            Console.WriteLine("End piepline run");
             if (pipelineRun.Status == "Failed")
-                Console.WriteLine("Error Message: " + pipelineRun.Message);
+            {
+                Console.WriteLine(string.Format("The pipeline {0} failed during execution: {1}", pipelineName, pipelineRun.Message));
                 throw new Exception(pipelineRun.Message);
+            }
+
+            Console.WriteLine("End piepline run");
         }
     }
 }
