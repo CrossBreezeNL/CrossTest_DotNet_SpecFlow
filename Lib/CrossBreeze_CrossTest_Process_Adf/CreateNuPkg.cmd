@@ -1,5 +1,6 @@
 @echo off
 
-call nuget pack ./CrossBreeze.CrossTest.Process.Adf.nuspec
+SET nuget="../nuget.exe"
+call %nuget% pack ./CrossBreeze.CrossTest.Process.Adf.nuspec
 
 pause
