@@ -21,7 +21,7 @@ Click on the header of a version number to go to the documentation of that speci
 [//]: # (>         * [X] Some issue...)
 
 ## [Version 1.1](../1.1/)
-- [ ] 1.1.0.0 <sup>03-03-2023</sup>
+- [ ] 1.1.0.0 <sup>10-03-2023</sup>
 > !!! success "New features"
 >     * [ ] Configuration
 >         * [ ] Azure Data Factory
@@ -36,7 +36,7 @@ Click on the header of a version number to go to the documentation of that speci
 > !!! success "Enhanced features"
 >     * [ ] Configuration
 >         * [ ] SpecFlow
->             - [X] Upgrade package to version 3.9.74
+>             - [X] Upgrade package to version 3.9.74 and upgraded all other dependencies.
 >         * [ ] Process
 >             - [X] Process configuration removed
 >         * [ ] Microsoft SQL Server Integration Services

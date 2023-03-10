@@ -18,7 +18,7 @@
       <dependency id="SpecFlow" version="3.9.74" />
       <dependency id="SpecFlow.MsTest" version="3.9.74" />
       <dependency id="Microsoft.NET.Test.Sdk" version="17.5.0" />
-      <dependency id="Microsoft.AnalysisServices.AdomdClient.retail.amd64" version="15.12.1" />
+      <dependency id="Microsoft.AnalysisServices.AdomdClient.retail.amd64" version="19.55.3.1" />
       <dependency id="MSTest.TestFramework" version="3.0.2" />
       <!-- Not strictly a depedency for this NuGet package, but the user will need it to execute the tests. -->
       <dependency id="MSTest.TestAdapter" version="3.0.2" />

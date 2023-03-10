@@ -15,8 +15,8 @@
     <copyright>Copyright © CrossBreeze 2023</copyright>
     <tags>Test Database DWH BI ADF SpecFlow</tags>
     <dependencies>
-      <dependency id="Microsoft.Azure.Management.DataFactory" version="9.1.0"  />
-      <dependency id="Microsoft.Identity.Client" version="4.49.1" />
+      <dependency id="Microsoft.Azure.Management.DataFactory" version="9.2.0"  />
+      <dependency id="Microsoft.Identity.Client" version="4.50.0" />
       <dependency id="CrossBreeze.CrossTest" version="1.1.0" />
     </dependencies>
     <contentFiles>
