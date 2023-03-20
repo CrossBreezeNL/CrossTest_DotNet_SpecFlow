@@ -56,14 +56,23 @@
     <StartupObject />
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="BoDi, Version=1.5.0.0, Culture=neutral, PublicKeyToken=ff7cd5ea2744b496, processorArchitecture=MSIL">
+      <HintPath>..\packages\BoDi.1.5.0\lib\net45\BoDi.dll</HintPath>
+    </Reference>
+    <Reference Include="Gherkin, Version=26.0.3.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gherkin.26.0.3\lib\net462\Gherkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SpecFlow.Internal.Json, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.Internal.Json.1.0.8\lib\net45\SpecFlow.Internal.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ValueTuple, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.3.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -71,8 +80,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
-    <Reference Include="TechTalk.SpecFlow, Version=2.4.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
-      <HintPath>..\packages\SpecFlow.2.4.1\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+    <Reference Include="TechTalk.SpecFlow, Version=3.9.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.3.9.74\lib\net461\TechTalk.SpecFlow.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -83,7 +92,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -105,11 +113,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\packages\SpecFlow.2.4.1\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" />
+  <Import Project="..\packages\SpecFlow.3.9.74\build\SpecFlow.targets" Condition="Exists('..\packages\SpecFlow.3.9.74\build\SpecFlow.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\SpecFlow.2.4.1\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.2.4.1\build\SpecFlow.targets'))" />
+    <Error Condition="!Exists('..\packages\SpecFlow.3.9.74\build\SpecFlow.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SpecFlow.3.9.74\build\SpecFlow.targets'))" />
   </Target>
 </Project>

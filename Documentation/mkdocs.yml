@@ -1,8 +1,8 @@
 # Project information
-site_name: 'CrossTest v1.0'
+site_name: 'CrossTest v1.1'
 
 # Copyright
-copyright: 'Copyright &copy; 2020 - CrossBreeze'
+copyright: 'Copyright &copy; 2023 - CrossBreeze'
 
 # Configuration
 theme:
@@ -42,11 +42,14 @@ nav:
   - 'ObjectTemplateAttributeConfig' : 'Configuration/ObjectTemplateAttributeConfig.md'
   - 'DatabaseConfig' : 'Configuration/DatabaseConfig.md'
   - 'DatabaseServerConfig' : 'Configuration/DatabaseServerConfig.md'
-  - 'ProcessConfig' : 'Configuration/ProcessConfig.md'
-  - 'ProcessProjectConfig' : 'Configuration/ProcessProjectConfig.md'
-  - 'SsisProjectConnection' : 'Configuration/SsisProjectConnection.md'
   - 'DatabaseServerType' : 'Configuration/DatabaseServerType.md'
+  - 'crossTestSsisConfig' : 'Configuration/crossTestSsisConfig.md'
+  - 'SsisProcessConfig' : 'Configuration/SsisProcessConfig.md'
+  - 'SsisProjectConnection' : 'Configuration/SsisProjectConnection.md'
   - 'SsisProcessType' : 'Configuration/SsisProcessType.md'
+  - 'crossTestAdfConfig' : 'Configuration/crossTestAdfConfig.md'
+  - 'AdfProcessConfig' : 'Configuration/AdfProcessConfig.md'
+  - 'AdfProcessType' : 'Configuration/AdfProcessType.md'
 
 # Extra
 extra:

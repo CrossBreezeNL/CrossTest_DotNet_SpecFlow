@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RedirectMatch ^/DotNet/$ /DotNet/latest/
+</IfModule>

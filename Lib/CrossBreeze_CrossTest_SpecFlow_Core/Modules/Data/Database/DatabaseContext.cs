@@ -2,6 +2,7 @@
 using System.Data;
 using CrossBreeze.CrossTest.Database.Helpers;
 using CrossBreeze.CrossTest.Database.Configuration;
+using TechTalk.SpecFlow;
 
 namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Context
 {
@@ -14,7 +15,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Context
         private DatabaseServerConfig databaseServerConfig;
         #endregion Variables
 
-        public void SetDefaultDatabaseConnection(DatabaseServerType serverType, string connectionString, DatabaseServerConfig dbServerConfig)
+        public void SetDefaultDatabaseConnection(ScenarioContext scenarioContext, DatabaseServerType serverType, string connectionString, DatabaseServerConfig dbServerConfig)
         {
             //Store the databaseServer config entry
             this.databaseServerConfig = dbServerConfig;
@@ -34,7 +35,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Context
             DatabaseConnection = DatabaseServerHelper.GetConnection(serverType, connectionString);
         }
 
-        public void BeginTransaction()
+        public void BeginTransaction(ScenarioContext scenarioContext)
         {
             // Begin the transaction with Serializable isolation level.
             DatabaseTransaction = DatabaseConnection.BeginTransaction(IsolationLevel.Serializable);
@@ -62,11 +63,11 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Context
             DatabaseTransaction.Rollback();
         }
 
-        public static DatabaseContext GetDatabaseContext()
+        public static DatabaseContext GetDatabaseContext(ScenarioContext scenarioContext)
         {
-            if (!ScenarioContextHelper.HasScenarioContextObject(ScenarioContextHelper.ScenarioObjectType.DatabaseContext))
-                ScenarioContextHelper.SetScenarioContextObject(ScenarioContextHelper.ScenarioObjectType.DatabaseContext, new DatabaseContext());
-            return ScenarioContextHelper.GetScenarioContextObject(ScenarioContextHelper.ScenarioObjectType.DatabaseContext) as DatabaseContext;
+            if (!ScenarioContextHelper.HasScenarioContextObject(scenarioContext, ScenarioContextHelper.ScenarioObjectType.DatabaseContext))
+                ScenarioContextHelper.SetScenarioContextObject(scenarioContext, ScenarioContextHelper.ScenarioObjectType.DatabaseContext, new DatabaseContext());
+            return ScenarioContextHelper.GetScenarioContextObject(scenarioContext, ScenarioContextHelper.ScenarioObjectType.DatabaseContext) as DatabaseContext;
         }
     }
 }

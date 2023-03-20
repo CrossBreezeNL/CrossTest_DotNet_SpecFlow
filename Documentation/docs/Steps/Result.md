@@ -1,7 +1,9 @@
-# Step documentation for Result
+# Result
+This page describes the Result steps.
 
 ## Compare expected and actual result
 Compare expected and actual result
+
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -10,7 +12,10 @@ Compare expected and actual result
 | Then | nl | verwacht ik het volgende resultaat: |
 | Then | en | I expect the following result: |
 
+
 ### Arguments
+The details of every argument of the step are listed below.
+
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |expected results | Table | The table with the expected results. See [TestDataTable](../Tables#testdatatable). |
@@ -40,3 +45,5 @@ Compare expected and actual result
   | 1  | 'FirstRow'       |
   | 2  | 'SecondRow' |
 ```
+
+

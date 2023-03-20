@@ -1,7 +1,9 @@
-# Step documentation for Query
+# Query
+This page describes the Query steps.
 
 ## Execute query
 Executes a query against a database
+
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -11,7 +13,10 @@ Executes a query against a database
 | Given | nl | ik de ([a-zA-Z]+) query '(.*)' uitvoer |
 | When | nl | ik de volgende ([a-zA-Z]+) query uitvoer: |
 
+
 ### Arguments
+The details of every argument of the step are listed below.
+
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |query language name | string | The query language used (SQL\|MDX) |
@@ -44,8 +49,10 @@ Executes a query against a database
   Select 1 as ExampleColumn
   """
 ```
+
 ## Execute query from file
 Executes queries from a file against a database
+
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -53,7 +60,10 @@ Executes queries from a file against a database
 | Given | en | I execute the ([a-zA-Z]+) query file '(.*)' |
 | Given | nl | ik het ([a-zA-Z]+) query bestand '(.*)' uitvoer |
 
+
 ### Arguments
+The details of every argument of the step are listed below.
+
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |query language name | string | The query language used (SQL\|MDX) |
@@ -70,3 +80,5 @@ Executes queries from a file against a database
 ```gherkin
  Gegeven ik het SQL query bestand '.\DatabaseSteps\SupportFiles\testQueryFile.sql' uitvoer
 ```
+
+

@@ -10,7 +10,7 @@ namespace CrossBeeze.CrossTest.Process.PowerCenter
 {
     public class PowerCenterExecutor
     {
-        private Boolean isLoggedIn = false;
+        //private Boolean isLoggedIn = false;
         private string metaUrl = "http://10.1.0.5:7333/wsh/services/Metadata";
         private string diUrl = "http://10.1.0.5:7333/wsh/services/DataIntegration";
         private string sessionID;

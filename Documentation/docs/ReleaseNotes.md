@@ -20,6 +20,31 @@ Click on the header of a version number to go to the documentation of that speci
 [//]: # (>     * [ ] Binding)
 [//]: # (>         * [X] Some issue...)
 
+## [Version 1.1](../1.1/)
+- [ ] 1.1.0.0 <sup>10-03-2023</sup>
+> !!! success "New features"
+>     * [ ] Configuration
+>         * [ ] Azure Data Factory
+>             - [X] Specify data factory connections (TenantID, SubscriptionID, ApplicationID, Application Secret, ResourceGroup, DataFactory)
+>             - [X] Specify pipeline parameters
+>     * [ ] Process steps
+>         * [ ] Azure Data Factory
+>             - [X] Execute a ADF pipeline
+>             - [X] Execute a ADF pipeline with parameters
+>             - [X] Execute a ADF pipeline with template parameters
+>             - [X] Execute a ADF pipeline with template parameters and its own parameters
+> !!! success "Enhanced features"
+>     * [ ] Configuration
+>         * [ ] SpecFlow
+>             - [X] Upgrade package to version 3.9.74 and upgraded all other dependencies.
+>         * [ ] Process
+>             - [X] Process configuration removed
+>         * [ ] Microsoft SQL Server Integration Services
+>             - [X] Moved SSIS process configuration to a seperated section
+>     * [ ] Process
+>         * [ ] Microsoft SQL Server Integration Services
+>             - [X] Moved implementation to a seperated NuGet package
+
 ## [Version 1.0](../1.0/)
 - [ ] 1.0.2.3 <sup>18-03-2022</sup>
 > !!! success "Enhanced features"

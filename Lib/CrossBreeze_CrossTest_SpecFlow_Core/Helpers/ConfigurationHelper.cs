@@ -30,11 +30,6 @@ namespace CrossBreeze.CrossTest.SpecFlow.Helpers
             return GetConfig().Database;
         }
 
-        public static ProcessConfig GetProcessConfig()
-        {
-            return GetConfig().Process;
-        }
-
         /// <summary>
         /// Get the connection string for the given name of a connection.
         /// </summary>

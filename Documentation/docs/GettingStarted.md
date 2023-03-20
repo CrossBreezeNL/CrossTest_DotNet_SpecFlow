@@ -27,6 +27,7 @@ To install the plugin:
 Create a new Visual Studio project of type Visual C# Class Library. After the project is created you can remove the default 'Class1.cs' file which is created.
 
 ![Create new Visual Studio project](./img/New_VS_Project.png)
+![Create new Visual Studio project](./img/New_VS_Project2.png)
 
 Open the NuGet package manager on the newly created project.
 
@@ -40,12 +41,30 @@ The CrossTest package and dependant packages have now been added to your project
 
 ![Packages are installed](./img/Packages_Installed.png)
 
-You might have some more dependencies in your project, since Visual Studio adds some by default. In the screenshot you see the minimal dependecies needed for executing tests. If you want to execute SSIS packages you also need the 'Microsoft.SqlServer.Diagnostics.Strace' reference.
+You might have some more dependencies in your project, since Visual Studio adds some by default. In the screenshot you see the minimal dependecies needed for executing tests.
 
 ### Configure CrossTest
 Before we can run our first test we need to setup basic configuration for CrossTest. 
 For our first test, we only need to specify the proper Micosoft SQL Server connection string.
-Open the App.config file in the project and edit the `ExampleMsSqlConnection` key so it contains a valid connection string. In our example there is a database instance installed with the host and instance name 'localhost\LocalDev2017'.
+Open the App.config file in the project and add the `connectionStrings` and the `ExampleMsSqlConnection` key so it contains a valid connection string. In our example there is a database instance installed with the host 'localhost'.
+
+```xml
+<crossTest>
+		<database>
+			<!--Add-->
+			<servers>
+				<server name="ExampleMsSqlServer" connectionName="ExampleMsSqlConnection" type="MsSql" commandTimeout="10" />
+			</servers>
+		</database>
+		<test>
+		</test>
+</crossTest>
+<!--Add-->
+<connectionStrings>
+	<!-- Define the database servers to use. The name is the name of the server and the connection string should be without a database. -->
+	<add name="ExampleMsSqlConnection" connectionString="Data Source={source};User Id={username};Password={password};" />
+</connectionStrings>
+```
 
 ![App config connection string](./img/CrossTest_Basic_Config.png)
 
@@ -79,29 +98,33 @@ In this example we use the connection to a database server as defined in the App
 
 Now open the 'Test Explorer' window by going to the main menu, click on 'Test', then choose 'Windows' and click on 'Test Explorer'. If everything works you should now see the 'CheckMsdbVersion' test.
 
-![Visual Studio Test Explorer - CheckMsdbVersion](./img/VS_TestExporer_CheckMsdbVersion.PNG)
+![Visual Studio Test Explorer - CheckMsdbVersion](./img/VS_TestExporer_CheckMsdbVersion.png)
 
 !!!tip
     If the test doesn't appear try to perform a rebuild on the C# project.
 
 Now run the test by right clicking on the test and click on 'Run Selected Test'. If your SQL Server version is 2017 the test will probably succeed and the test should turn green.
 
-![Visual Studio Test Explorer - CheckMsdbVersion Success](./img/VS_TestExporer_CheckMsdbVersion_Success.PNG)
+![Visual Studio Test Explorer - CheckMsdbVersion Success](./img/VS_TestExporer_CheckMsdbVersion_Success.png)
 
 If the test fails (or you make it fail by changing the expected version :smile:) you will see the test will turn red and more information will be shown in the test detail window (below or on the right of the test overview).
 
-![Visual Studio Test Explorer - CheckMsdbVersion Failure](./img/VS_TestExporer_CheckMsdbVersion_Failure.PNG)
+![Visual Studio Test Explorer - CheckMsdbVersion Failure](./img/VS_TestExporer_CheckMsdbVersion_Failure.png)
 
 To get a more readable version of the output, click on the 'Output' link (in blue) at the bottom of the message. This will open the 'Test Output' window.
 
-![Visual Studio Test Output - CheckMsdbVersion Failure](./img/VS_TestOutput_CheckMsdbVersion_Failure.PNG)
-
+![Visual Studio Test Output - CheckMsdbVersion Failure](img/VS_TestOutput_CheckMsdbVersion_Failure.png)
 !!!tip
     By default the output of the test is shown in a smooth font (not all characters have the same width). To make the output even more readable you can choose a font where all characters have the same width, like 'Courier New'. To do this in the main menu go to 'Tools', click on 'Options'. In the 'Options' screen in the 'Environment' category choose 'Font and Colors'. Now at 'Show settings for' choose 'Environment and for the 'Display items' choose 'Plain text'. Now you can change the 'Font' to for example 'Consolas' or 'Courier New' and click 'OK' (all fixed-width fonts are bold in the drop-down).
     
     Sadly this will also change the font for almost any menu and window. If you also think this should be a seperate setting in Visual Studio, please vote for it on the following page: [Test explorer UI font](https://developercommunity.visualstudio.com/content/problem/208608/test-explorer-ui-font.html).
 
     A workaround, to changing the font, is to right click in the output window and choose 'Copy all' and then paste the output in a simple editor like Notepad++.
+
+## Execute processes
+Within CrossTest there is support for executing different types of processes, like ETL processes. We have implemented add-ons for CrossTest to execute Microsoft SQL Server Intgeration Services and Azure Data Factory processes. For details on how to configure these add-ins, please see the [Configuration](./Configuration/index.md) section.
+
+If you want to execute SSIS packages might also need the 'Microsoft.SqlServer.Diagnostics.Strace' reference as a dependency in your C# project.
 
 ## Bugs & issues
 When you encounter an issue while using CrossTest please report it by sending an e-mail to [info@x-breeze.com](mailto:info@x-breeze.com?SUBJECT=CrossTest%20Specflow%20-%20Bug%20report) with the subject 'CrossTest Specflow - Bug report'.

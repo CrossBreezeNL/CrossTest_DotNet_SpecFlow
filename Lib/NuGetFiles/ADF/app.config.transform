@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  
+  <configSections>
+		<section name="crossTestAdf" type="CrossBreeze.CrossTest.Process.Adf.Configuration.crossTestAdfConfig, CrossBreeze.CrossTest.Process.Adf" />
+  </configSections>
+  
+  <crossTestAdf>
+		<AdfProcesses>
+		</AdfProcesses>
+	</crossTestAdf>
+ 
+</configuration>

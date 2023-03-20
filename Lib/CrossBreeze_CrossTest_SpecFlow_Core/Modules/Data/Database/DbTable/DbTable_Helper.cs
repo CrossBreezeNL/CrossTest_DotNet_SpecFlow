@@ -18,15 +18,17 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.DbTable
         #region DatabaseTableSteps
 
         public static void LoadDataIntoTable(
+            ScenarioContext scenarioContext,
             string destinationTableName,
             Table dataToWrite
         )
         {
             // Write the data to the destionation table.
-            WriteDataToTable(destinationTableName, dataToWrite);
+            WriteDataToTable(scenarioContext, destinationTableName, dataToWrite);
         }
 
         public static void LoadDataIntoTemplatedTable(
+            ScenarioContext scenarioContext,
             string objectTemplateName,
             string destinationTableName,
             Table dataToWrite
@@ -37,16 +39,17 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.DbTable
             // Assert the table template is known.
             Assert.IsNotNull(objectTemplateConfig, string.Format("The object template '{0}' is not found in the config!", objectTemplateName));
             // Write the data to the destionation table.
-            WriteDataToTable(destinationTableName, dataToWrite, objectTemplateConfig);
+            WriteDataToTable(scenarioContext, destinationTableName, dataToWrite, objectTemplateConfig);
         }
 
         public static void RetrieveDataFromTable(
+            ScenarioContext scenarioContext,
             string tableOrViewSchema,
             string tableOrViewName
         )
         {
             // Create the SqlCommand.
-            IDbCommand sqlFunctionCallCommand = DatabaseContext.GetDatabaseContext().CreateDbCommand();
+            IDbCommand sqlFunctionCallCommand = DatabaseContext.GetDatabaseContext(scenarioContext).CreateDbCommand();
             // Set the command type to text.
             sqlFunctionCallCommand.CommandType = CommandType.Text;
 
@@ -56,16 +59,17 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.DbTable
             // Execute the function.
             IDataReader tableOrViewDataReader = sqlFunctionCallCommand.ExecuteReader();
             // Store the result table in the ResultContext.
-            ResultContext.GetResultContext().SetResultTable(DataHelper.GetDataTableFromDataReader(tableOrViewDataReader));
+            ResultContext.GetResultContext(scenarioContext).SetResultTable(DataHelper.GetDataTableFromDataReader(tableOrViewDataReader));
             tableOrViewDataReader.Close();
         }
 
         public static void DeleteDataFromTable(
+            ScenarioContext scenarioContext,
             string tableOrViewSchema,
             string tableOrViewName)
         {
             // Create the SqlCommand.
-            IDbCommand sqlFunctionCallCommand = DatabaseContext.GetDatabaseContext().CreateDbCommand();
+            IDbCommand sqlFunctionCallCommand = DatabaseContext.GetDatabaseContext(scenarioContext).CreateDbCommand();
             // Set the command type to text.
             sqlFunctionCallCommand.CommandType = CommandType.Text;
 
@@ -78,7 +82,8 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.DbTable
         #endregion
 
         #region Helpers
-        private static void WriteDataToTable(String destinationTableName, Table dataToWrite, ObjectTemplateConfig objectTemplateConfig = null)
+        private static void WriteDataToTable(
+            ScenarioContext scenarioContext, String destinationTableName, Table dataToWrite, ObjectTemplateConfig objectTemplateConfig = null)
         {
             Dictionary<string, string> templateTableColumns = new Dictionary<string, string>();
             // If a table template is given, process it's columns.
@@ -89,12 +94,12 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.DbTable
             List<string> insertColumnsList = TableExtensions.GetSelectedColumnsStringFromTable(dataToWrite, templateTableColumns.Keys.ToList<string>());
 
             // Get the target column types from the target table.
-            Dictionary<string, Type> targetColumnTypes = DataHelper.GetColumnTypesFromDBObject(DatabaseContext.GetDatabaseContext().DatabaseConnection, DatabaseContext.GetDatabaseContext().DatabaseTransaction, destinationTableName, insertColumnsList);
+            Dictionary<string, Type> targetColumnTypes = DataHelper.GetColumnTypesFromDBObject(DatabaseContext.GetDatabaseContext(scenarioContext).DatabaseConnection, DatabaseContext.GetDatabaseContext(scenarioContext).DatabaseTransaction, destinationTableName, insertColumnsList);
 
             // Convert the data to write to a DataTable using the target table columns data types.
             DataTable dataTableToWrite = TableExtensions.ToDataTable(dataToWrite, targetColumnTypes, templateTableColumns);
 
-            DataHelper.PutDataTable(DatabaseContext.GetDatabaseContext().DatabaseConnection, DatabaseContext.GetDatabaseContext().DatabaseTransaction, dataTableToWrite, destinationTableName);
+            DataHelper.PutDataTable(DatabaseContext.GetDatabaseContext(scenarioContext).DatabaseConnection, DatabaseContext.GetDatabaseContext(scenarioContext).DatabaseTransaction, dataTableToWrite, destinationTableName);
         }
         #endregion
 

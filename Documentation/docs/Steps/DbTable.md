@@ -1,7 +1,9 @@
-# Step documentation for DbTable
+# DbTable
+This page describes the DbTable steps.
 
 ## Load data into templated table
 Loads data into a table that conforms to a configured table template
+
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -9,7 +11,10 @@ Loads data into a table that conforms to a configured table template
 | Given | en | the ([a-zA-Z0-9_@$#-]+) table (.+) is loaded with the following data: |
 | Given | nl | de ([a-zA-Z0-9_@$#-]+) tabel (.+) met de volgende data geladen wordt: |
 
+
 ### Arguments
+The details of every argument of the step are listed below.
+
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |table template | string | The name of the object template, referring to an object template from the config |
@@ -33,8 +38,10 @@ Loads data into a table that conforms to a configured table template
   | 1  | 'FirstRow'       |
   | 2  | 'SecondRow' |
 ```
+
 ## Load data into table
 Loads data into a table
+
 
 ### Sentences
 | Type          | Language         | Sentence      |
@@ -42,7 +49,10 @@ Loads data into a table
 | Given | en | the table (.+) is loaded with the following data: |
 | Given | nl | de tabel (.+) met de volgende data geladen wordt: |
 
+
 ### Arguments
+The details of every argument of the step are listed below.
+
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |table name | string | The name of the table to write the data to |
@@ -65,18 +75,23 @@ Loads data into a table
   | 1  | 'FirstRow'       |
   | 2  | 'SecondRow' |
 ```
+
 ## Retrieve data from table
 Retrieves data from a table
+
 
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| When | en | I retrieve the contents of the \[([a-zA-Z0-9_@$#]+)\].\[([a-zA-Z0-9_@$#]+)\] (?:table|view) |
-| When | en | I retrieve the contents of the ([a-zA-Z0-9_@$#]+).([a-zA-Z0-9_@$#]+) (?:table|view) |
-| When | nl | ik de inhoud van de (?:tabel|view) ([a-zA-Z0-9_@$#]+).([a-zA-Z0-9_@$#]+) ophaal |
-| When | nl | ik de inhoud van de (?:tabel|view) \[([a-zA-Z0-9_@$#]+)\].\[([a-zA-Z0-9_@$#]+)\] ophaal |
+| When | en | I retrieve the contents of the \[([a-zA-Z0-9_@$#\s]+)\].\[([a-zA-Z0-9_@$#\s]+)\] (?:table|view) |
+| When | en | I retrieve the contents of the ([a-zA-Z0-9_@$#\s]+).([a-zA-Z0-9_@$#\s]+) (?:table|view) |
+| When | nl | ik de inhoud van de (?:tabel|view) ([a-zA-Z0-9_@$#\s]+).([a-zA-Z0-9_@$#\s]+) ophaal |
+| When | nl | ik de inhoud van de (?:tabel|view) \[([a-zA-Z0-9_@$#\s]+)\].\[([a-zA-Z0-9_@$#\s]+)\] ophaal |
+
 
 ### Arguments
+The details of every argument of the step are listed below.
+
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |schema name | string | The name of the table or view's schema |
@@ -103,18 +118,23 @@ Retrieves data from a table
 ```gherkin
  Als ik de inhoud van de tabel [dbo].[#testTable] ophaal
 ```
+
 ## Delete data from table
 Deletes data from a table
+
 
 ### Sentences
 | Type          | Language         | Sentence      |
 |:---           |:---              |:---           |
-| Given | en | the table \[([a-zA-Z0-9_@$#]+)\].\[([a-zA-Z0-9_@$#]+)\] is empty |
-| Given | nl | dat de tabel \[([a-zA-Z0-9_@$#]+)\].\[([a-zA-Z0-9_@$#]+)\] leeg is |
-| Given | en | the table ([a-zA-Z0-9_@$#]+).([a-zA-Z0-9_@$#]+) is empty |
-| Given | nl | dat de tabel ([a-zA-Z0-9_@$#]+).([a-zA-Z0-9_@$#]+) leeg is |
+| Given | en | the table \[([a-zA-Z0-9_@$#\s]+)\].\[([a-zA-Z0-9_@$#\s]+)\] is empty |
+| Given | nl | dat de tabel \[([a-zA-Z0-9_@$#\s]+)\].\[([a-zA-Z0-9_@$#\s]+)\] leeg is |
+| Given | en | the table ([a-zA-Z0-9_@$#\s]+).([a-zA-Z0-9_@$#\s]+) is empty |
+| Given | nl | dat de tabel ([a-zA-Z0-9_@$#\s]+).([a-zA-Z0-9_@$#\s]+) leeg is |
+
 
 ### Arguments
+The details of every argument of the step are listed below.
+
 | Parameter    | Datatype          | Description          |
 |:---          |:---               |:---                  |
 |schema name | string | The name of the table schema |
@@ -141,3 +161,5 @@ Deletes data from a table
 ```gherkin
  Gegeven dat de tabel [dbo].[#testTable] leeg is
 ```
+
+

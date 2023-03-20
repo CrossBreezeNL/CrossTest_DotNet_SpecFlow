@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>CrossBreeze.CrossTest.Process.Adf</id>
+    <version>1.1.0.0</version>
+    <title>CrossTest ADF Process Plugin</title>
+    <authors>Moo Othman</authors>
+    <owners>CrossBreeze</owners>
+    <license type="file">LICENSE.txt</license>
+    <projectUrl>http://www.x-test.nl</projectUrl>
+    <iconUrl>http://x-test.nl/img/x-test-icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ADF Process plugin for CrossTest</description>
+    <releaseNotes>Initial version</releaseNotes>
+    <copyright>Copyright © CrossBreeze 2023</copyright>
+    <tags>Test Database DWH BI ADF SpecFlow</tags>
+    <dependencies>
+      <dependency id="Microsoft.Azure.Management.DataFactory" version="9.2.0"  />
+      <dependency id="Microsoft.Identity.Client" version="4.50.0" />
+      <dependency id="CrossBreeze.CrossTest" version="1.1.0" />
+    </dependencies>
+    <contentFiles>
+      <files include="..\NuGetFiles\ADF\app.config.transform" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="..\NuGetFiles\LICENSE.txt" target="" />
+    <file src=".\bin\Release\CrossBreeze.CrossTest.Process.Adf.dll" target="lib\net45" />
+    <file src="..\NuGetFiles\ADF\app.config.transform" target="content" />
+  </files>
+</package>

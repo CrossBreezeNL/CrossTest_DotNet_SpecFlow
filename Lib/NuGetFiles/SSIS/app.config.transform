@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  
+  <configSections>
+    <section name="crossTestSsis" type="CrossBreeze.CrossTest.Process.Ssis.Configuration.crossTestSsisConfig, CrossBreeze.CrossTest.Process.Ssis" />
+  </configSections>
+  
+  <crossTestSsis>
+		<SsisProcesses>
+			<!-- The SSIS process types are: IsPacProjectProcess, DBProjectProcess, FileProcess -->
+			<!-- Example SSIS ISPac project. -->
+		</SsisProcesses>
+	</crossTestSsis>
+ 
+</configuration>

@@ -7,27 +7,31 @@
   DTS:CreatorName="VM-DEV-WO-IV\Willem"
   DTS:DTSID="{E4F8EE49-406A-41EE-BA5B-A2D33F47F5DD}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.2000.167"
+  DTS:LastModifiedProductVersion="16.0.5131.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="ExamplePackage"
   DTS:PackageType="5"
-  DTS:ProtectionLevel="2"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{ED30D751-9800-4CDB-86FB-75D48FFA0EC7}">
+  DTS:VersionBuild="58"
+  DTS:VersionGUID="{2EA32EBB-5FFD-49FC-BACA-39992E797591}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[tempdb]"
+      DTS:refId="Package.ConnectionManagers[TestDB]"
       DTS:CreationName="OLEDB"
       DTS:DelayValidation="True"
       DTS:DTSID="{18C1633C-16A7-41B2-AEE0-40B66EE797D4}"
-      DTS:ObjectName="tempdb">
+      DTS:ObjectName="TestDB">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="User ID=SA;# Data Source=localhost; Password=Test1234_; Initial Catalog=tempdb;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=(local);User ID=SA;Initial Catalog=TestDB;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-ExamplePackage-{18C1633C-16A7-41B2-AEE0-40B66EE797D4}tempdb;# data source=localhost;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAACJxcuMKL4EiLjl7d5vJTVQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABLOPoD0qPbGP8+4IzPzm0FMNHGp+gr+PzGcuQtDpg7DwAAAAAOgAAAAAIAACAAAAD7cZiDIj+WbvDKjqLcyoTItjuGdvKze6vWTjy8DZCpXSAAAAB3J7A9CG3e9lFVztSvo+jXAUWUT/QziqKTpsQ4YNNz6EAAAAAdxvmNRRQL1n/qnAqCvlUwNMpg4ozavlZ3lRkM7EqVGuSGYGlQ7tjmXsPfR2FThnMepF8KSG36ks3uTJv9W2XQ</DTS:Password>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -113,7 +117,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -147,8 +151,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[tempdb]"
-                  connectionManagerRefId="Package.ConnectionManagers[tempdb]"
+                  connectionManagerID="Package.ConnectionManagers[TestDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[TestDB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -240,7 +244,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT CAST(1 AS INT) AS id, CAST('FirstRow' as VARCHAR(50)) AS description</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT CAST(1 AS INT) AS id, CAST('FirstRow' as VARCHAR(50)) AS description</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -266,8 +270,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[tempdb]"
-                  connectionManagerRefId="Package.ConnectionManagers[tempdb]"
+                  connectionManagerID="Package.ConnectionManagers[TestDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[TestDB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -370,7 +374,7 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="151,42"
+          Size="151.2,41.6"
           Id="Package\Data Flow Task"
           TopLeft="194,76" />
       </GraphLayout>
@@ -382,11 +386,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150,42"
+          Size="150.4,41.6"
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="256,45" />
         <NodeLayout
-          Size="171,42"
+          Size="171.2,41.6"
           Id="Package\Data Flow Task\OLE DB Destination"
           TopLeft="250,202" />
         <EdgeLayout

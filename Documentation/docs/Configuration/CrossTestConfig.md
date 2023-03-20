@@ -8,7 +8,6 @@ The CrossTest configuration to configure all information needed for the steps to
 <CrossTest>
     <test>...</test>
     <database>...</database>
-    <process>...</process>
 </CrossTest>
 ```
 
@@ -21,4 +20,3 @@ The CrossTest configuration to configure all information needed for the steps to
 |:---                   |:---                                                      |:---                          |:---        |:---                       |
 | test    | [TestConfig](../TestConfig)               | Configuration of test specifics such as default values, naming conventions etc    | No         |                           |
 | database    | [DatabaseConfig](../DatabaseConfig)               | Database configurations    | No         |                           |
-| process    | [ProcessConfig](../ProcessConfig)               | Process configurations    | No         |                           |

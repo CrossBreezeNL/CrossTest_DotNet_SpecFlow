@@ -16,41 +16,46 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Function
     {
 
         public static void ExecuteDatabaseFunction(
+            ScenarioContext scenarioContext,
             string schemaName,
             string functionName
         )
         {
-            ExecuteSchemaFunctionHelper(schemaName, functionName);
+            ExecuteSchemaFunctionHelper(scenarioContext, schemaName, functionName);
         }
 
 
         public static void ExecuteDatabaseFunctionWithParameters(
+            ScenarioContext scenarioContext,
             string schemaName,
             string functionName,
             Table parameterTable
         )
         {
-            ExecuteSchemaFunctionHelper(schemaName, functionName, parameterTable);
+            ExecuteSchemaFunctionHelper(scenarioContext, schemaName, functionName, parameterTable);
         }
 
         public static void ExecuteTemplatedFunction(
+            ScenarioContext scenarioContext,
             string functionName,
             string objectTemplateName
         )
         {
-            ExecuteTemplatedFunctionHelper(functionName, objectTemplateName);
+            ExecuteTemplatedFunctionHelper(scenarioContext, functionName, objectTemplateName);
         }
 
         public static void ExecuteTemplatedFunctionWithParameters(
+            ScenarioContext scenarioContext,
             string functionName,
             string objectTemplateName,
             Table parameterTable
         )
         {
-            ExecuteTemplatedFunctionHelper(functionName, objectTemplateName, parameterTable);
+            ExecuteTemplatedFunctionHelper(scenarioContext, functionName, objectTemplateName, parameterTable);
         }
 
         private static void ExecuteFunctionHelper(
+            ScenarioContext scenarioContext,
             string functionName,
             string objectTemplateName = null,
             Table parameterTable = null
@@ -76,7 +81,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Function
             }
 
             // Create the SqlCommand.
-            IDbCommand sqlFunctionCallCommand = DatabaseContext.GetDatabaseContext().CreateDbCommand();
+            IDbCommand sqlFunctionCallCommand = DatabaseContext.GetDatabaseContext(scenarioContext).CreateDbCommand();
             // Set the command type to text.
             sqlFunctionCallCommand.CommandType = CommandType.Text;
 
@@ -111,7 +116,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Function
 
             // Execute the function.
             IDataReader functionDataReader = sqlFunctionCallCommand.ExecuteReader();
-            ResultContext.GetResultContext().SetResultTable(DataHelper.GetDataTableFromDataReader(functionDataReader));
+            ResultContext.GetResultContext(scenarioContext).SetResultTable(DataHelper.GetDataTableFromDataReader(functionDataReader));
             functionDataReader.Close();
         }
 
@@ -122,6 +127,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Function
         /// <param name="functionName"></param>
         /// <param name="parameterTable"></param>
         private static void ExecuteSchemaFunctionHelper(
+            ScenarioContext scenarioContext,
             string schemaName,
             string functionName,
             Table parameterTable = null
@@ -131,7 +137,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Function
             string fqFunctionName = string.Format("[{0}].[{1}]", schemaName, functionName);
 
             // Execute the function.
-            ExecuteFunctionHelper(fqFunctionName, null, parameterTable);
+            ExecuteFunctionHelper(scenarioContext, fqFunctionName, null, parameterTable);
         }
 
         /// <summary>
@@ -141,13 +147,14 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Function
         /// <param name="objectTemplateName"></param>
         /// <param name="parameterTable"></param>
         private static void ExecuteTemplatedFunctionHelper(
+            ScenarioContext scenarioContext,
             string functionName,
             string objectTemplateName,
             Table parameterTable = null
         )
         {
             // Execute the function.
-            ExecuteFunctionHelper(functionName, objectTemplateName, parameterTable);
+            ExecuteFunctionHelper(scenarioContext, functionName, objectTemplateName, parameterTable);
         }
     }
 }
