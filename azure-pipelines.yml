@@ -68,6 +68,7 @@ jobs:
   - task: VSBuild@1
     inputs:
       solution: '**\CrossBreeze.CrossTest.sln'
+      vsVersion: '16.0'
       platform: 'Any CPU'
       configuration: 'Release'
   - task: SqlDacpacDeploymentOnMachineGroup@0
