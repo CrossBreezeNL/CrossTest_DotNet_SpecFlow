@@ -71,6 +71,7 @@ jobs:
       vsVersion: '16.0'
       platform: 'Any CPU'
       configuration: 'Release'
+      maximumCpuCount: true
   - task: SqlDacpacDeploymentOnMachineGroup@0
     inputs:
       TaskType: 'sqlQuery'
