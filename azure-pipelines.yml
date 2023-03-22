@@ -72,6 +72,7 @@ jobs:
       configuration: 'Release'
       clean: true
       maximumCpuCount: true
+      restoreNugetPackages: true
   - task: SqlDacpacDeploymentOnMachineGroup@0
     inputs:
       TaskType: 'sqlQuery'
