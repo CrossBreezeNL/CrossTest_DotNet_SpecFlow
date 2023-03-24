@@ -28,7 +28,7 @@ jobs:
         server="CrossBreeze"
         database="ExampleDatabase"
         login="saadmin"
-        password="Test1234"
+        password="Test1234_"
         startIP=0.0.0.0
         endIP=0.0.0.0
 
