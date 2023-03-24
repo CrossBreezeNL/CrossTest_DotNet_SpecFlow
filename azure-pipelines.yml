@@ -44,7 +44,7 @@ jobs:
 - job: buildslnAndRunTests
   dependsOn: createdb
   pool:
-    vmImage: 'windows-latest'
+    vmImage: 'windows-2019'
   steps:
   - task: NuGetToolInstaller@1
     displayName: Install NuGet
