@@ -81,7 +81,7 @@ jobs:
       DatabaseName: 'ExampleDatabase'
       AuthScheme: 'sqlServerAuthentication'
       SqlUsername: 'saadmin'
-      SqlPassword: 'Test1234'
+      SqlPassword: 'Test1234_'
   - task: VSTest@2
     inputs:
       testSelector: 'testAssemblies'
