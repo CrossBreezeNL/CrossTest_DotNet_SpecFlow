@@ -3,8 +3,8 @@
 Feature: Run Example ADF proces (EN)
 
 Background:
-	Given the ExampleMsSqlServer database server is used
-	And the Tempdb database is used
+	Given the MasterMsSqlServer database server is used
+	And the master database is used
 	When I execute the following SQL query:
         """
         IF (object_ID('testTable') IS NOT NULL)
@@ -14,7 +14,7 @@ Background:
 
 		CREATE TABLE testTable (id INT, description VARCHAR(50))
 		
-		insert into  [tempdb].[dbo].[testTable] values (1, 'FirstRow')
+		insert into  [master].[dbo].[testTable] values (1, 'FirstRow')
         """
 
 Scenario: Run ADF proces
