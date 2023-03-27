@@ -28,7 +28,7 @@ jobs:
         server="CrossBreeze"
         database="ExampleDatabase"
         login="saadmin"
-        password="Test1234"
+        password="Test1234_"
         startIP=0.0.0.0
         endIP=0.0.0.0
 
@@ -81,7 +81,7 @@ jobs:
       DatabaseName: 'ExampleDatabase'
       AuthScheme: 'sqlServerAuthentication'
       SqlUsername: 'saadmin'
-      SqlPassword: 'Test1234'
+      SqlPassword: 'Test1234_'
   - task: VSTest@2
     inputs:
       testSelector: 'testAssemblies'

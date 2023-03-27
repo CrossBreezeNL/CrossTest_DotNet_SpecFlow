@@ -1,25 +1,33 @@
 ﻿Feature: FirstTest
 
-Scenario: Check msdb version with identifier
-    # Make sure the ExampleMsSqlServer server is used.
-    Given the ExampleMsSqlServer database server is used
-    # Use the msdb database.
-    And the msdb database is used
-    # Get the data from the dbo.msdb_version table
-    When I retrieve the contents of the [dbo].[msdb_version] table
+Scenario: Check master version with identifier
+    # Make sure the MasterMsSqlServer server is used.
+    Given the MasterMsSqlServer database server is used
+    # Use the master database.
+    And the master database is used
+    # Get the version data from the SERVERPROPERTY function
+    When I execute the following SQL query:
+    """
+	SELECT SERVERPROPERTY ('ProductMajorVersion')  AS 'version_major'
+    ,  SERVERPROPERTY ('ProductMinorVersion')   AS 'version_minor'
+	"""
     # Check whether the result of the table is as expected.
     Then I expect the following results:
         | version_major | version_minor |
-        | 15            | 0             |
+        | 12            | 0             |
 
-Scenario: Check msdb version without identifier
-    # Make sure the ExampleMsSqlServer server is used.
-    Given the ExampleMsSqlServer database server is used
-    # Use the msdb database.
-    And the msdb database is used
-    # Get the data from the dbo.msdb_version table
-    When I retrieve the contents of the dbo.msdb_version table
+Scenario: Check master version without identifier
+    # Make sure the MasterMsSqlServer server is used.
+    Given the MasterMsSqlServer database server is used
+    # Use the master database.
+    And the master database is used
+    # Get the version data from the SERVERPROPERTY function
+    When I execute the following SQL query:
+    """
+	SELECT SERVERPROPERTY ('ProductMajorVersion')  AS 'version_major'
+    ,  SERVERPROPERTY ('ProductMinorVersion')   AS 'version_minor'
+	"""
     # Check whether the result of the table is as expected.
     Then I expect the following results:
         | version_major | version_minor |
-        | 15            | 0             |
+        | 12            | 0             |
