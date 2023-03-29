@@ -65,6 +65,12 @@ jobs:
       LogLevel: 'verbose'
       FailOnWarning: false
       DisableTelemetry: false
+  - task: FileTransform@1
+    inputs:
+      folderPath: '$(System.DefaultWorkingDirectory)/Examples/CrossBreeze_CrossTest_ExampleTests/Appconfig.ps1'
+      enableXmlTransform: true
+      fileType: 'xml'
+      targetFiles: '$(System.DefaultWorkingDirectory)/Examples/CrossBreeze_CrossTest_ExampleTests/App.config'
   - task: VSBuild@1
     inputs:
       solution: '**\CrossBreeze.CrossTest.sln'
