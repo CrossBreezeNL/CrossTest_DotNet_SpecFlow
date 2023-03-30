@@ -67,7 +67,7 @@ jobs:
       DisableTelemetry: false
   - task: FileTransform@1
     inputs:
-      folderPath: '$(System.DefaultWorkingDirectory)/Examples/CrossBreeze_CrossTest_ExampleTests/Appconfig.ps1'
+      folderPath: '$(System.DefaultWorkingDirectory)/**/*.zip'
       enableXmlTransform: true
       fileType: 'xml'
       targetFiles: '$(System.DefaultWorkingDirectory)/Examples/CrossBreeze_CrossTest_ExampleTests/App.config'
