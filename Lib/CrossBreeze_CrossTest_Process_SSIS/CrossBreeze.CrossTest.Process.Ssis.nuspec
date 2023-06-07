@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>CrossBreeze.CrossTest.Process.Ssis</id>
-    <version>1.1.0.0</version>
+    <version>1.1.1.0</version>
     <title>CrossTest SSIS Process Plugin</title>
     <authors>Harmen Wessels, Jacob Siemaszko, Willem Otten, Moo Othman</authors>
     <owners>CrossBreeze</owners>
@@ -11,13 +11,15 @@
     <iconUrl>http://x-test.nl/img/x-test-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>SSIS Process plugin for CrossTest</description>
-    <releaseNotes>Initial version</releaseNotes>
+    <releaseNotes>Updated dependencies to .NET Framework 4.7</releaseNotes>
     <copyright>Copyright © CrossBreeze 2023</copyright>
     <tags>Test Database DWH BI SSIS SpecFlow</tags>
     <dependencies>
-      <!-- In the SMO library the STrace namespace exists and is needed for SSIS package execution. -->
-      <dependency id="Microsoft.SqlServer.SqlManagementObjects" version="170.13.0" />
-      <dependency id="CrossBreeze.CrossTest" version="1.1.0" />
+      <group targetFramework=".NETFramework4.7">
+        <!-- In the SMO library the STrace namespace exists and is needed for SSIS package execution. -->
+        <dependency id="Microsoft.SqlServer.SqlManagementObjects" version="170.13.0" />
+        <dependency id="CrossBreeze.CrossTest" version="1.1.1" />
+      </group>
     </dependencies>
     <contentFiles>
       <files include="..\NuGetFiles\SSIS\app.config.transform" buildAction="Content" />
@@ -25,7 +27,7 @@
   </metadata>
   <files>
     <file src="..\NuGetFiles\LICENSE.txt" target="" />
-    <file src=".\bin\Release\CrossBreeze.CrossTest.Process.Ssis.dll" target="lib\net45" />
+    <file src=".\bin\Release\CrossBreeze.CrossTest.Process.Ssis.dll" target="lib\net47" />
     <file src="..\NuGetFiles\SSIS\app.config.transform" target="content" />
   </files>
 </package>
