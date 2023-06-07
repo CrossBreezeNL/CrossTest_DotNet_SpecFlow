@@ -15,16 +15,16 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Context
         )
         {
             // Find the server configuration in the config.
-            DatabaseServerConfig serverConfig = ConfigurationHelper.GetDatabaseConfig().Servers[databaseServerName];
+            DatabaseServerConfig dbServerConfig = ConfigurationHelper.GetDatabaseConfig().Servers[databaseServerName];
             // Assert the server config is found.
-            Assert.IsNotNull(serverConfig, string.Format("The server configuration for '{0}' cannot be found!", databaseServerName));
+            Assert.IsNotNull(dbServerConfig, string.Format("The server configuration for '{0}' cannot be found!", databaseServerName));
 
             // Create the SQL Connection to use.
-            string defaultConnectionString = ConfigurationHelper.GetConnectionString(serverConfig.ConnectionName);
+            string defaultConnectionString = ConfigurationHelper.GetConnectionString(dbServerConfig.ConnectionName);
             // Assert the connection string is configured.
             Assert.IsNotNull(defaultConnectionString, string.Format("The connection '{0}' is not configured!", databaseServerName));
             // Set the database connection.
-            DatabaseContext.GetDatabaseContext(scenarioContext).SetDefaultDatabaseConnection(scenarioContext, serverConfig.Type, defaultConnectionString, serverConfig);
+            DatabaseContext.GetDatabaseContext(scenarioContext).SetDefaultDatabaseConnection(scenarioContext, dbServerConfig, defaultConnectionString);
 
             // Open a connection to the database server.
             DatabaseContext.GetDatabaseContext(scenarioContext).DatabaseConnection.Open();

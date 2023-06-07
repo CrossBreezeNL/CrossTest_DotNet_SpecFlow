@@ -7,6 +7,7 @@ A configuration for a database server
 ```xml
 <DatabaseServer 
   name="..." 
+  accessToken="..." 
   commandTimeout="..." 
   connectionName="..." 
   type="..."
@@ -17,6 +18,7 @@ A configuration for a database server
 | Attribute            | Type                 | Description                               |
 |:---                  |:---                  |:---                                       |
 | name | String | The connection name that can be used in test scenario's to refer to this connection               |
+| accessToken | String | The access token to use for the connection.               |
 | commandTimeout | Int32 | Timeout on queries and statements in seconds.               |
 | connectionName | String | The name of the connection string defined in the config, that this database server config refers to.               |
 | type      | DatabaseServerType      |  See [DatabaseServerType](../DatabaseServerType) for allowed values. |

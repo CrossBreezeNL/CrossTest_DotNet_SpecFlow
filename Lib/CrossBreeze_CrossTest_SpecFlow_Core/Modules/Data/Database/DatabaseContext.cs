@@ -15,7 +15,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Context
         private DatabaseServerConfig databaseServerConfig;
         #endregion Variables
 
-        public void SetDefaultDatabaseConnection(ScenarioContext scenarioContext, DatabaseServerType serverType, string connectionString, DatabaseServerConfig dbServerConfig)
+        public void SetDefaultDatabaseConnection(ScenarioContext scenarioContext, DatabaseServerConfig dbServerConfig, string connectionString)
         {
             //Store the databaseServer config entry
             this.databaseServerConfig = dbServerConfig;
@@ -32,7 +32,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Context
                 }
             }
 
-            DatabaseConnection = DatabaseServerHelper.GetConnection(serverType, connectionString);
+            DatabaseConnection = DatabaseServerHelper.GetConnection(dbServerConfig, connectionString);
         }
 
         public void BeginTransaction(ScenarioContext scenarioContext)

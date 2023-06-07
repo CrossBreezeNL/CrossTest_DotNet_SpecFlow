@@ -26,6 +26,11 @@ namespace CrossBreeze.CrossTest.Database.Configuration
             }
         }
 
+        // AccessToken
+        [ConfigurationProperty("accessToken")]
+        [XDoc(Description = "The access token to use for the connection.")]
+        public string AccessToken => this["accessToken"] as string;
+
         // CommandTimeout
         // ConnectionName
         [ConfigurationProperty("commandTimeout")]

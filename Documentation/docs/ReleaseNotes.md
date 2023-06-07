@@ -21,6 +21,12 @@ Click on the header of a version number to go to the documentation of that speci
 [//]: # (>         * [X] Some issue...)
 
 ## [Version 1.1](../1.1/)
+- [ ] 1.1.1.0 <sup>05-06-2022</sup>
+> !!! success "Enhanced features"
+>     * [ ] Configuration
+>         * [ ] Microsoft SQL Server Database
+>             - Set access token for SqlConnection.
+
 - [ ] 1.1.0.0 <sup>10-03-2023</sup>
 > !!! success "New features"
 >     * [ ] Configuration

@@ -8,17 +8,21 @@ namespace CrossBreeze.CrossTest.Database.Helpers
 {
     public static class DatabaseServerHelper
     {
-        public static IDbConnection GetConnection(DatabaseServerType serverType, String connectionString)
+        public static IDbConnection GetConnection(DatabaseServerConfig dbServerConfig, String connectionString)
         {
             // Create the connection based on the server type.
-            switch (serverType)
+            switch (dbServerConfig.Type)
             {
                 case DatabaseServerType.MsSql:
-                    return new SqlConnection(connectionString);
+                    SqlConnection sqlConnection = new SqlConnection(connectionString);
+                    // If the access token is set in the db server config, set it on the SqlClient object.
+                    if (dbServerConfig.AccessToken != null && dbServerConfig.AccessToken.Length > 0)
+                        sqlConnection.AccessToken = dbServerConfig.AccessToken;
+                    return sqlConnection;
                 case DatabaseServerType.MsSsas:
                     return new AdomdConnection(connectionString);
                 default:
-                    throw new Exception(string.Format("The database connection type '{0}' is not supported.", Enum.GetName(typeof(DatabaseServerType), serverType)));
+                    throw new Exception(string.Format("The database connection type '{0}' is not supported.", Enum.GetName(typeof(DatabaseServerType), dbServerConfig.Type)));
             }
         }
     }

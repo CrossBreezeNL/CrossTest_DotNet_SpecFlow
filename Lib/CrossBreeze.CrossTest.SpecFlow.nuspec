@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>CrossBreeze.CrossTest</id>
-    <version>1.1.0.0</version>
+    <version>1.1.1.0</version>
     <title>CrossTest</title>
     <authors>Harmen Wessels, Jacob Siemaszko, Willem Otten, Moo Othman</authors>
     <owners>CrossBreeze</owners>
@@ -11,21 +11,23 @@
     <iconUrl>http://x-test.nl/img/x-test-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>An open-source data solution testing library (using SpecFlow).</description>
-    <releaseNotes>Changed SQL Server client tools dependency to SQL Server version 2019.</releaseNotes>
+    <releaseNotes>Added support for AccessToken on Sql Connection.</releaseNotes>
     <copyright>Copyright © CrossBreeze 2023</copyright>
     <tags>Test Database DWH BI SQL T-SQL SSAS</tags>
     <dependencies>
-      <dependency id="SpecFlow" version="3.9.74" />
-      <dependency id="SpecFlow.MsTest" version="3.9.74" />
-      <dependency id="Microsoft.NET.Test.Sdk" version="17.5.0" />
-      <dependency id="Microsoft.AnalysisServices.AdomdClient.retail.amd64" version="19.55.3.1" />
-      <dependency id="MSTest.TestFramework" version="3.0.2" />
-      <!-- Not strictly a depedency for this NuGet package, but the user will need it to execute the tests. -->
-      <dependency id="MSTest.TestAdapter" version="3.0.2" />
+      <group targetFramework=".NETFramework4.7">
+        <dependency id="SpecFlow" version="3.9.74" />
+        <dependency id="SpecFlow.MsTest" version="3.9.74" />
+        <dependency id="Microsoft.NET.Test.Sdk" version="17.5.0" />
+        <dependency id="Microsoft.AnalysisServices.AdomdClient.retail.amd64" version="19.55.3.1" />
+        <dependency id="MSTest.TestFramework" version="3.0.2" />
+        <!-- Not strictly a depedency for this NuGet package, but the user will need it to execute the tests. -->
+        <dependency id="MSTest.TestAdapter" version="3.0.2" />
+      </group>
     </dependencies>
     <!-- Add the framework assemblies that should be referenced in the C# project. -->
     <frameworkAssemblies>
-      <frameworkAssembly assemblyName="System" />
+      <frameworkAssembly assemblyName="System" targetFramework="net47" />
     </frameworkAssemblies>
     <!-- The content files element is used by PackageReference in projects. -->
     <contentFiles>
@@ -35,10 +37,10 @@
   </metadata>
   <files>
     <file src=".\NuGetFiles\LICENSE.txt" target="" />
-    <file src=".\CrossBreeze_CrossDoc\bin\Release\CrossBreeze.CrossDoc.dll" target="lib\net45" />
-    <file src=".\CrossBreeze_CrossTest_Database\bin\Release\CrossBreeze.CrossTest.Database.dll" target="lib\net45" />
-    <file src=".\CrossBreeze_CrossTest_SpecFlow_Core\bin\Release\CrossBreeze.CrossTest.SpecFlow.Core.dll" target="lib\net45" />
-    <file src=".\CrossBreeze_CrossTest_SpecFlow_Steps\Generated\CrossBreeze.CrossTest.SpecFlow.dll" target="lib\net45" />
+    <file src=".\CrossBreeze_CrossDoc\bin\Release\CrossBreeze.CrossDoc.dll" target="lib\net47" />
+    <file src=".\CrossBreeze_CrossTest_Database\bin\Release\CrossBreeze.CrossTest.Database.dll" target="lib\net47" />
+    <file src=".\CrossBreeze_CrossTest_SpecFlow_Core\bin\Release\CrossBreeze.CrossTest.SpecFlow.Core.dll" target="lib\net47" />
+    <file src=".\CrossBreeze_CrossTest_SpecFlow_Steps\Generated\CrossBreeze.CrossTest.SpecFlow.dll" target="lib\net47" />
     <!-- The content file definition when using packages.config in projects. -->
     <file src=".\NuGetFiles\app.config.transform" target="content" />
     <file src=".\NuGetFiles\specflow.json" target="content" />
