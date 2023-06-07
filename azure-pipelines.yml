@@ -65,12 +65,52 @@ jobs:
       LogLevel: 'verbose'
       FailOnWarning: false
       DisableTelemetry: false
-  - task: FileTransform@1
+  - task: AzurePowerShell@5
     inputs:
-      folderPath: '$(System.DefaultWorkingDirectory)/**/*.zip'
-      enableXmlTransform: true
-      fileType: 'xml'
-      targetFiles: '$(System.DefaultWorkingDirectory)/Examples/CrossBreeze_CrossTest_ExampleTests/App.config'
+      azureSubscription: 'CrossBreeze playground(86e4dc3f-92e9-44a5-adeb-c03bf6a846fd)'
+      ScriptType: 'InlineScript'
+      Inline: |
+        # Use this to update an app.config connection string
+        $filePath="C:\Users\MooOthman\Desktop\App.config"
+        $connectionString="Server=crossbreeze.database.windows.net;Database=ExampleDatabase;User Id=saadmin;Password=Test1234_;"
+        $sqlConnectionNameToBeTransformed="ExampleMsSqlConnection"
+        $connectionStringMaster="Server=crossbreeze.database.windows.net;Database=master;User Id=saadmin;Password=Test1234_;"
+        
+        # file not found, nothing to do
+        if (-Not (Test-Path $filePath))
+        {
+          Write-Output "File not found: $filePath"
+          return
+        }
+        # read the config in xml
+        [System.Xml.XmlDocument]$doc = new-object System.Xml.XmlDocument
+        $doc.Load($filePath)
+        
+        # add master db sql server
+        $newNode = $doc.CreateElement("server")
+        $newElement = $doc.configuration.crossTest.database.servers.AppendChild($newNode)
+        $newattribute = $newElement.SetAttribute("name","MasterMsSqlServer")
+        $newattribute = $newElement.SetAttribute("connectionName","MasterMsSqlConnection")
+        $newattribute = $newElement.SetAttribute("type","MsSql")
+        $newattribute = $newElement.SetAttribute("commandTimeout","10")
+        # add master db sql connection string
+        $newNode = $doc.CreateElement("add")
+        $newElement = $doc.configuration.connectionStrings.AppendChild($newNode)
+        $newattribute = $newElement.SetAttribute("name","MasterMsSqlConnection")
+        $newattribute = $newElement.SetAttribute("connectionString",$connectionStringMaster)
+        # find the connection string of example database and edit it
+        foreach($item in $doc.get_DocumentElement().connectionStrings.add)
+        {
+          # use your name here
+          if($item.name -eq $sqlConnectionNameToBeTransformed)
+          {
+            $item.connectionString = $connectionString
+          }           
+        }
+        # save the new file
+        $doc.Save($filePath)
+      azurePowerShellVersion: 'LatestVersion'
+    displayName: 'transform app.config'
   - task: VSBuild@1
     inputs:
       solution: '**\CrossBreeze.CrossTest.sln'
