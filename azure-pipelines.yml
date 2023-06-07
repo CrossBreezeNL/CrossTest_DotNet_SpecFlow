@@ -18,7 +18,7 @@ jobs:
   steps:
   - task: AzureCLI@1
     inputs:
-      azureSubscription: 'AzureSQLConnection'
+      azureSubscription: 'CrossBreeze playground(86e4dc3f-92e9-44a5-adeb-c03bf6a846fd)'
       scriptLocation: 'inlineScript'
       inlineScript: |
         #!/bin/bash
@@ -67,7 +67,7 @@ jobs:
       DisableTelemetry: false
   - task: AzurePowerShell@5
     inputs:
-      azureSubscription: 'AzureSQLConnection'
+      azureSubscription: 'CrossBreeze playground(86e4dc3f-92e9-44a5-adeb-c03bf6a846fd)'
       ScriptType: 'InlineScript'
       Inline: |
         # Use this to update an app.config connection string
@@ -159,7 +159,7 @@ jobs:
   steps:
   - task: AzureCLI@1
     inputs:
-      azureSubscription: 'AzureSQLConnection'
+      azureSubscription: 'CrossBreeze playground(86e4dc3f-92e9-44a5-adeb-c03bf6a846fd)'
       scriptLocation: 'inlineScript'
       inlineScript: |
         #!/bin/bash
