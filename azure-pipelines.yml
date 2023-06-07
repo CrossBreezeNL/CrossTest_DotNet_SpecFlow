@@ -18,7 +18,7 @@ jobs:
   steps:
   - task: AzureCLI@1
     inputs:
-      azureSubscription: 'AzureSQLConnection'
+      azureSubscription: 'CrossBreeze playground(86e4dc3f-92e9-44a5-adeb-c03bf6a846fd)'
       scriptLocation: 'inlineScript'
       inlineScript: |
         #!/bin/bash
@@ -31,7 +31,7 @@ jobs:
         password="Test1234_"
         startIP=0.0.0.0
         endIP=0.0.0.0
-
+        
         echo "Creating $server in $location..."
         az sql server create --name $server --resource-group $resource --location "$location" --admin-user $login --admin-password $password
         echo "Configuring firewall..."
@@ -67,7 +67,7 @@ jobs:
       DisableTelemetry: false
   - task: AzurePowerShell@5
     inputs:
-      azureSubscription: 'AzureSQLConnection'
+      azureSubscription: 'CrossBreeze playground(86e4dc3f-92e9-44a5-adeb-c03bf6a846fd)'
       ScriptType: 'InlineScript'
       Inline: |
         # Use this to update an app.config connection string
@@ -159,11 +159,11 @@ jobs:
   steps:
   - task: AzureCLI@1
     inputs:
-      azureSubscription: 'AzureSQLConnection'
+      azureSubscription: 'CrossBreeze playground(86e4dc3f-92e9-44a5-adeb-c03bf6a846fd)'
       scriptLocation: 'inlineScript'
       inlineScript: |
         #!/bin/bash
-
+        
         resource="CrossBreeze_AzureDevOps"
         server="CrossBreeze"
         database="ExampleDatabase"
