@@ -32,7 +32,7 @@ Dan verwacht ik het volgende resultaat:
 Scenario: Test command timeout failure
 Als ik de volgende SQL query uitvoer:
     """
-        	WAITFOR DELAY '00:00:11'
+        	WAITFOR DELAY '00:00:05'
 			SELECT 1 as ExampleColumn
 			
     """
@@ -44,7 +44,7 @@ Dan verwacht ik het volgende resultaat:
 Scenario: Test command timeout success
 Als ik de volgende SQL query uitvoer:
     """
-        	WAITFOR DELAY '00:00:09'
+        	WAITFOR DELAY '00:00:03'
 			SELECT 1 as ExampleColumn
 			
     """

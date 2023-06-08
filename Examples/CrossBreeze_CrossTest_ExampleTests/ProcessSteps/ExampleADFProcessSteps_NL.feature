@@ -4,7 +4,7 @@ Functionaliteit: Run Example ADF proces (NL)
 
 Achtergrond:
 	Gegeven de ExampleMsSqlServer database server wordt gebruikt
-	En de tempdb database wordt gebruikt
+	En de ExampleDatabase database wordt gebruikt
 	Als ik de volgende SQL query uitvoer:
         """
         IF (object_ID('testTable') IS NOT NULL)
@@ -14,7 +14,7 @@ Achtergrond:
 
 		CREATE TABLE testTable (id INT, description VARCHAR(50))
 		
-		insert into  [tempdb].[dbo].[testTable] values (1, 'FirstRow')
+		insert into  [dbo].[testTable] values (1, 'FirstRow')
         """
 
 Scenario: Voer ADF proces uit
