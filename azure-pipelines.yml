@@ -71,7 +71,7 @@ jobs:
       ScriptType: 'InlineScript'
       Inline: |
         # Use this to update an app.config connection string
-        $filePath="C:\Users\MooOthman\Desktop\App.config"
+        $filePath="$(System.DefaultWorkingDirectory)/Examples/CrossBreeze_CrossTest_ExampleTests/App.config"
         $connectionString="Server=crossbreeze.database.windows.net;Database=ExampleDatabase;User Id=saadmin;Password=Test1234_;"
         $sqlConnectionNameToBeTransformed="ExampleMsSqlConnection"
         $connectionStringMaster="Server=crossbreeze.database.windows.net;Database=master;User Id=saadmin;Password=Test1234_;"
@@ -111,6 +111,11 @@ jobs:
         $doc.Save($filePath)
       azurePowerShellVersion: 'LatestVersion'
     displayName: 'transform app.config'
+  - task: PowerShell@2
+    inputs:
+      targetType: 'inline'
+      script: 'Get-Content $(System.DefaultWorkingDirectory)/Examples/CrossBreeze_CrossTest_ExampleTests/App.config'
+    displayName: 'Check app.config'
   - task: VSBuild@1
     inputs:
       solution: '**\CrossBreeze.CrossTest.sln'
