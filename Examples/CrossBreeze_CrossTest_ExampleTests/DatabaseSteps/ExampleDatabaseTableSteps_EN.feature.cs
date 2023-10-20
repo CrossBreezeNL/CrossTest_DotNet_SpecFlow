@@ -106,8 +106,8 @@ namespace CrossBreeze.CrossTest.ExampleTests.DatabaseSteps
                     "Time] datetime2(2)\r\n)", ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 15
- testRunner.And("I execute the following SQL query:", "CREATE TABLE [#testTableIdentity] (\r\n[Id] int NOT NULL IDENTITY(1,1),\r\n[Descripti" +
-                    "on] varchar(50),\r\n[StageDateTime] datetime2(2)\r\n)\r\n", ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I execute the following SQL query:", "CREATE TABLE [#testTableIdentity] (\r\n\t[Id] int NOT NULL IDENTITY(1,1),\r\n\t[Descrip" +
+                    "tion] varchar(50),\r\n\t[StageDateTime] datetime2(2)\r\n)", ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
         }
         
@@ -119,7 +119,7 @@ namespace CrossBreeze.CrossTest.ExampleTests.DatabaseSteps
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Load data into table", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 26
+#line 24
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -132,32 +132,32 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table37 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description"});
-                table25.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'"});
-                table25.AddRow(new string[] {
+                table37.AddRow(new string[] {
                             "2",
                             "\'SecondRow\'"});
-#line 27
- testRunner.Given("the table [dbo].[#testTable] is loaded with the following data:", ((string)(null)), table25, "Given ");
+#line 25
+ testRunner.Given("the table [dbo].[#testTable] is loaded with the following data:", ((string)(null)), table37, "Given ");
 #line hidden
-#line 31
+#line 29
  testRunner.When("I retrieve the contents of the [dbo].[#testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table38 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description"});
-                table26.AddRow(new string[] {
+                table38.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'"});
-                table26.AddRow(new string[] {
+                table38.AddRow(new string[] {
                             "2",
                             "\'SecondRow\'"});
-#line 32
- testRunner.Then("I expect the following results:", ((string)(null)), table26, "Then ");
+#line 30
+ testRunner.Then("I expect the following results:", ((string)(null)), table38, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -171,7 +171,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Load data into templated table", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 37
+#line 35
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -184,35 +184,35 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table39 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description"});
-                table27.AddRow(new string[] {
+                table39.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'"});
-                table27.AddRow(new string[] {
+                table39.AddRow(new string[] {
                             "2",
                             "\'SecondRow\'"});
-#line 38
- testRunner.Given("the staging-storage table [dbo].[#testTable] is loaded with the following data:", ((string)(null)), table27, "Given ");
+#line 36
+ testRunner.Given("the staging-storage table [dbo].[#testTable] is loaded with the following data:", ((string)(null)), table39, "Given ");
 #line hidden
-#line 42
+#line 40
  testRunner.When("I retrieve the contents of the [dbo].[#testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table40 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description",
                             "StageDateTime"});
-                table28.AddRow(new string[] {
+                table40.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'",
                             "2000-01-01 00:00:00.00"});
-                table28.AddRow(new string[] {
+                table40.AddRow(new string[] {
                             "2",
                             "\'SecondRow\'",
                             "2000-01-01 00:00:00.00"});
-#line 43
- testRunner.Then("I expect the following results:", ((string)(null)), table28, "Then ");
+#line 41
+ testRunner.Then("I expect the following results:", ((string)(null)), table40, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -226,7 +226,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete data from table", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 48
+#line 46
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -239,18 +239,18 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 49
+#line 47
  testRunner.Given("the table [dbo].[#testTable] is empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 50
+#line 48
  testRunner.When("I retrieve the contents of the [dbo].[#testTable] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table41 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description",
                             "StageDateTime"});
-#line 51
- testRunner.Then("I expect the following results:", ((string)(null)), table29, "Then ");
+#line 49
+ testRunner.Then("I expect the following results:", ((string)(null)), table41, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -264,7 +264,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Load data into a table with identity column, specify identity column", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 54
+#line 52
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -277,32 +277,32 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table42 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description"});
-                table30.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "10",
                             "\'FirstRow\'"});
-                table30.AddRow(new string[] {
+                table42.AddRow(new string[] {
                             "20",
                             "\'SecondRow\'"});
-#line 55
- testRunner.Given("the table [dbo].[#testTableIdentity] is loaded with the following data:", ((string)(null)), table30, "Given ");
+#line 53
+ testRunner.Given("the table [dbo].[#testTableIdentity] is loaded with the following data:", ((string)(null)), table42, "Given ");
 #line hidden
-#line 60
+#line 58
  testRunner.When("I retrieve the contents of the [dbo].[#testTableIdentity] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table31 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table43 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description"});
-                table31.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "10",
                             "\'FirstRow\'"});
-                table31.AddRow(new string[] {
+                table43.AddRow(new string[] {
                             "20",
                             "\'SecondRow\'"});
-#line 61
- testRunner.Then("I expect the following results:", ((string)(null)), table31, "Then ");
+#line 59
+ testRunner.Then("I expect the following results:", ((string)(null)), table43, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -316,7 +316,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Load data into a table with identity column, do not specify the identity column", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 66
+#line 64
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -329,29 +329,29 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table32 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table44 = new TechTalk.SpecFlow.Table(new string[] {
                             "Description"});
-                table32.AddRow(new string[] {
+                table44.AddRow(new string[] {
                             "\'FirstRow\'"});
-                table32.AddRow(new string[] {
+                table44.AddRow(new string[] {
                             "\'SecondRow\'"});
-#line 67
-testRunner.Given("the table [dbo].[#testTableIdentity] is loaded with the following data:", ((string)(null)), table32, "Given ");
+#line 65
+ testRunner.Given("the table [dbo].[#testTableIdentity] is loaded with the following data:", ((string)(null)), table44, "Given ");
 #line hidden
-#line 72
+#line 69
  testRunner.When("I retrieve the contents of the [dbo].[#testTableIdentity] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table33 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table45 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description"});
-                table33.AddRow(new string[] {
+                table45.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'"});
-                table33.AddRow(new string[] {
+                table45.AddRow(new string[] {
                             "2",
                             "\'SecondRow\'"});
-#line 73
- testRunner.Then("I expect the following results:", ((string)(null)), table33, "Then ");
+#line 70
+ testRunner.Then("I expect the following results:", ((string)(null)), table45, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

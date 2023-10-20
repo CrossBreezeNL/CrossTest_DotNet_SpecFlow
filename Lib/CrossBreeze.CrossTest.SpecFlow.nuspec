@@ -2,16 +2,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>CrossBreeze.CrossTest</id>
-    <version>1.1.1.0</version>
+    <version>1.1.2.0</version>
     <title>CrossTest</title>
     <authors>Harmen Wessels, Jacob Siemaszko, Willem Otten, Moo Othman</authors>
     <owners>CrossBreeze</owners>
     <license type="file">LICENSE.txt</license>
-    <projectUrl>http://www.x-test.nl</projectUrl>
-    <iconUrl>http://x-test.nl/img/x-test-icon.png</iconUrl>
+    <projectUrl>https://test.crossbreeze.nl/DotNet/</projectUrl>
+    <iconUrl>https://test.crossbreeze.nl/img/x-test-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>An open-source data solution testing library (using SpecFlow).</description>
-    <releaseNotes>Added support for AccessToken on Sql Connection.</releaseNotes>
+    <releaseNotes>Added support for more SQL datatypes.</releaseNotes>
     <copyright>Copyright © CrossBreeze 2023</copyright>
     <tags>Test Database DWH BI SQL T-SQL SSAS</tags>
     <dependencies>

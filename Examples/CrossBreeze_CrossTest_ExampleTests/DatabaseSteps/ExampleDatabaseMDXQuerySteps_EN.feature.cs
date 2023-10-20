@@ -129,12 +129,12 @@ this.FeatureBackground();
 #line 10
 testRunner.When("I execute the following MDX query:", "SELECT ([Measures].[Quantity_Remaining]) On Columns\r\nFROM [Model]", ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
                             "[Measures].[Quantity_Remaining]"});
-                table15.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "10"});
 #line 16
-testRunner.Then("I expect the following results:", ((string)(null)), table15, "Then ");
+testRunner.Then("I expect the following results:", ((string)(null)), table25, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -174,16 +174,16 @@ from openquery(ClosedContracts, 'SELECT NON EMPTY { [Measures].[Quantity_Remaini
 	ON COLUMNS, NON EMPTY { ([DIM_Trader_Contract].[Trader_Name].[Trader_Name].ALLMEMBERS ) }
 	DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM [Model] ')", ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
                             "[DIM_Trader_Contract].[Trader_Name].[Trader_Name].[MEMBER_CAPTION]",
                             "[DIM_Trader_Contract].[Trader_Name].[Trader_Name].[MEMBER_UNIQUE_NAME]",
                             "[Measures].[Quantity_Remaining]"});
-                table16.AddRow(new string[] {
+                table26.AddRow(new string[] {
                             "",
                             "[DIM_Trader_Contract].[Trader_Name].&",
                             "10"});
 #line 32
-testRunner.Then("I expect the following results:", ((string)(null)), table16, "Then ");
+testRunner.Then("I expect the following results:", ((string)(null)), table26, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -127,12 +127,12 @@ this.FeatureBackground();
 #line 9
 testRunner.Given("ik de SQL query \'Select 1 as ExampleColumn\' uitvoer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Gegeven ");
 #line hidden
-                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table30 = new TechTalk.SpecFlow.Table(new string[] {
                             "ExampleColumn"});
-                table20.AddRow(new string[] {
+                table30.AddRow(new string[] {
                             "1"});
 #line 10
-testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table20, "Dan ");
+testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table30, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -162,12 +162,12 @@ this.FeatureBackground();
 #line 15
 testRunner.When("ik de volgende SQL query uitvoer:", "Select 1 as ExampleColumn", ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
-                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table31 = new TechTalk.SpecFlow.Table(new string[] {
                             "ExampleColumn"});
-                table21.AddRow(new string[] {
+                table31.AddRow(new string[] {
                             "1"});
 #line 20
-testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table21, "Dan ");
+testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table31, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -198,12 +198,12 @@ this.FeatureBackground();
 testRunner.Given("ik het SQL query bestand \'.\\DatabaseSteps\\SupportFiles\\testQueryFile.sql\' uitvoer" +
                         "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Gegeven ");
 #line hidden
-                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table32 = new TechTalk.SpecFlow.Table(new string[] {
                             "ExampleColumn"});
-                table22.AddRow(new string[] {
+                table32.AddRow(new string[] {
                             "1"});
 #line 27
-testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table22, "Dan ");
+testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table32, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -212,11 +212,11 @@ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table22
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Test command timeout failure")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Database query test steps (NL)")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExectedToFail")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("ExpectedToFail")]
         public void TestCommandTimeoutFailure()
         {
             string[] tagsOfScenario = new string[] {
-                    "ExectedToFail"};
+                    "ExpectedToFail"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test command timeout failure", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 32
@@ -235,12 +235,12 @@ this.FeatureBackground();
 #line 33
 testRunner.When("ik de volgende SQL query uitvoer:", "    \tWAITFOR DELAY \'00:00:11\'\r\nSELECT 1 as ExampleColumn\r\n", ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
-                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table33 = new TechTalk.SpecFlow.Table(new string[] {
                             "ExampleColumn"});
-                table23.AddRow(new string[] {
+                table33.AddRow(new string[] {
                             "1"});
 #line 40
-testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table23, "Dan ");
+testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table33, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -270,12 +270,12 @@ this.FeatureBackground();
 #line 45
 testRunner.When("ik de volgende SQL query uitvoer:", "    \tWAITFOR DELAY \'00:00:09\'\r\nSELECT 1 as ExampleColumn\r\n", ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
-                TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table34 = new TechTalk.SpecFlow.Table(new string[] {
                             "ExampleColumn"});
-                table24.AddRow(new string[] {
+                table34.AddRow(new string[] {
                             "1"});
 #line 52
-testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table24, "Dan ");
+testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table34, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -100,12 +100,12 @@ namespace CrossBreeze.CrossTest.ExampleTests.ProcessSteps
  testRunner.Given("de ExampleMsSqlServer database server wordt gebruikt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Gegeven ");
 #line hidden
 #line 7
- testRunner.And("de tempdb database wordt gebruikt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+ testRunner.And("de ExampleDatabase database wordt gebruikt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
 #line 8
  testRunner.When("ik de volgende SQL query uitvoer:", "IF (object_ID(\'testTable\') IS NOT NULL)\r\nBEGIN\r\nDROP TABLE testTable\r\nEND\r\n\r\nCREA" +
-                    "TE TABLE testTable (id INT, description VARCHAR(50))\r\n\r\ninsert into  [tempdb].[d" +
-                    "bo].[testTable] values (1, \'FirstRow\')", ((TechTalk.SpecFlow.Table)(null)), "Als ");
+                    "TE TABLE testTable (id INT, description VARCHAR(50))\r\n\r\ninsert into  [dbo].[test" +
+                    "Table] values (1, \'FirstRow\')", ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
         }
         
@@ -138,14 +138,14 @@ this.FeatureBackground();
 #line 22
  testRunner.And("ik de inhoud van de tabel [dbo].[testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
-                TechTalk.SpecFlow.Table table51 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table61 = new TechTalk.SpecFlow.Table(new string[] {
                             "id",
                             "description"});
-                table51.AddRow(new string[] {
+                table61.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'"});
 #line 23
- testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table51, "Dan ");
+ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table61, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -180,14 +180,14 @@ this.FeatureBackground();
 #line 29
  testRunner.And("ik de inhoud van de tabel [dbo].[testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
-                TechTalk.SpecFlow.Table table52 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table62 = new TechTalk.SpecFlow.Table(new string[] {
                             "id",
                             "description"});
-                table52.AddRow(new string[] {
+                table62.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'"});
 #line 30
- testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table52, "Dan ");
+ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table62, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -215,30 +215,30 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table53 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table63 = new TechTalk.SpecFlow.Table(new string[] {
                             "Parameter",
                             "Value"});
-                table53.AddRow(new string[] {
+                table63.AddRow(new string[] {
                             "baseUrl",
-                            "https://x-test.nl/"});
-                table53.AddRow(new string[] {
+                            "https://test.crossbreeze.nl/"});
+                table63.AddRow(new string[] {
                             "uri",
                             "DotNet"});
 #line 35
  testRunner.When("het CrossTestPipelineWithParameters ADF proces in het ExampleAdfPipeline project " +
-                        "op dit moment wordt uitgevoerd met de volgende parameter:", ((string)(null)), table53, "Als ");
+                        "op dit moment wordt uitgevoerd met de volgende parameter:", ((string)(null)), table63, "Als ");
 #line hidden
 #line 39
  testRunner.And("ik de inhoud van de tabel [dbo].[testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
-                TechTalk.SpecFlow.Table table54 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table64 = new TechTalk.SpecFlow.Table(new string[] {
                             "id",
                             "description"});
-                table54.AddRow(new string[] {
+                table64.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'"});
 #line 40
- testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table54, "Dan ");
+ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table64, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -266,27 +266,27 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table55 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table65 = new TechTalk.SpecFlow.Table(new string[] {
                             "Parameter",
                             "Value"});
-                table55.AddRow(new string[] {
+                table65.AddRow(new string[] {
                             "uri",
-                            "Java"});
+                            "DotNet"});
 #line 45
  testRunner.When("het CrossTestPipelineWithParameters adfTemplate ADF proces in het ExampleAdfPipel" +
-                        "ine project op dit moment wordt uitgevoerd met de volgende parameter:", ((string)(null)), table55, "Als ");
+                        "ine project op dit moment wordt uitgevoerd met de volgende parameter:", ((string)(null)), table65, "Als ");
 #line hidden
 #line 48
  testRunner.And("ik de inhoud van de tabel [dbo].[testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
-                TechTalk.SpecFlow.Table table56 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table66 = new TechTalk.SpecFlow.Table(new string[] {
                             "id",
                             "description"});
-                table56.AddRow(new string[] {
+                table66.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'"});
 #line 49
- testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table56, "Dan ");
+ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table66, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();

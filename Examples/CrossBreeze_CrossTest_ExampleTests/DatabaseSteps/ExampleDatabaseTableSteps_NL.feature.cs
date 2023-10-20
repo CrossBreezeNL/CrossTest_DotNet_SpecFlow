@@ -128,32 +128,32 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table34 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table46 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description"});
-                table34.AddRow(new string[] {
+                table46.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'"});
-                table34.AddRow(new string[] {
+                table46.AddRow(new string[] {
                             "2",
                             "\'SecondRow\'"});
 #line 17
- testRunner.Given("de tabel [dbo].[#testTable] met de volgende data geladen wordt:", ((string)(null)), table34, "Gegeven ");
+ testRunner.Given("de tabel [dbo].[#testTable] met de volgende data geladen wordt:", ((string)(null)), table46, "Gegeven ");
 #line hidden
 #line 21
  testRunner.When("ik de inhoud van de tabel [dbo].[#testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
-                TechTalk.SpecFlow.Table table35 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table47 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description"});
-                table35.AddRow(new string[] {
+                table47.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'"});
-                table35.AddRow(new string[] {
+                table47.AddRow(new string[] {
                             "2",
                             "\'SecondRow\'"});
 #line 22
- testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table35, "Dan ");
+ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table47, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -180,35 +180,35 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table36 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table48 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description"});
-                table36.AddRow(new string[] {
+                table48.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'"});
-                table36.AddRow(new string[] {
+                table48.AddRow(new string[] {
                             "2",
                             "\'SecondRow\'"});
 #line 28
- testRunner.Given("de staging-storage tabel [dbo].[#testTable] met de volgende data geladen wordt:", ((string)(null)), table36, "Gegeven ");
+ testRunner.Given("de staging-storage tabel [dbo].[#testTable] met de volgende data geladen wordt:", ((string)(null)), table48, "Gegeven ");
 #line hidden
 #line 32
  testRunner.When("ik de inhoud van de tabel [dbo].[#testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
-                TechTalk.SpecFlow.Table table37 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table49 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description",
                             "StageDateTime"});
-                table37.AddRow(new string[] {
+                table49.AddRow(new string[] {
                             "1",
                             "\'FirstRow\'",
                             "2000-01-01 00:00:00.00"});
-                table37.AddRow(new string[] {
+                table49.AddRow(new string[] {
                             "2",
                             "\'SecondRow\'",
                             "2000-01-01 00:00:00.00"});
 #line 33
- testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table37, "Dan ");
+ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table49, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -241,12 +241,12 @@ this.FeatureBackground();
 #line 40
  testRunner.When("ik de inhoud van de tabel [dbo].[#testTable] ophaal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
 #line hidden
-                TechTalk.SpecFlow.Table table38 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table50 = new TechTalk.SpecFlow.Table(new string[] {
                             "Id",
                             "Description",
                             "StageDateTime"});
 #line 41
- testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table38, "Dan ");
+ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table50, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -33,9 +33,9 @@ Scenario: Voer getypeerd ADF proces uit
 
 Scenario: Voer ADF proces uit met parameters
 	Als het CrossTestPipelineWithParameters ADF proces in het ExampleAdfPipeline project op dit moment wordt uitgevoerd met de volgende parameter:
-		| Parameter     | Value						|
-		| baseUrl		| https://x-breeze.com/		|
-		| uri			| crossgenerate					|
+		| Parameter | Value                        |
+		| baseUrl   | https://test.crossbreeze.nl/ |
+		| uri       | DotNet                       |
 	En ik de inhoud van de tabel [dbo].[testTable] ophaal
 	Dan verwacht ik het volgende resultaat:
         | id | description |
@@ -43,9 +43,9 @@ Scenario: Voer ADF proces uit met parameters
 
 Scenario: Voer getypeerd ADF proces uit met parameters
 	Als het CrossTestPipelineWithParameters adfTemplate ADF proces in het ExampleAdfPipeline project op dit moment wordt uitgevoerd met de volgende parameter:
-		| Parameter     | Value		|
-		| uri			| crossgenerate		|
+		| Parameter | Value  |
+		| uri       | DotNet |
 	En ik de inhoud van de tabel [dbo].[testTable] ophaal
 	Dan verwacht ik het volgende resultaat:
         | id | description |
-		| 1  | 'FirstRow'  |
+        | 1  | 'FirstRow'  |

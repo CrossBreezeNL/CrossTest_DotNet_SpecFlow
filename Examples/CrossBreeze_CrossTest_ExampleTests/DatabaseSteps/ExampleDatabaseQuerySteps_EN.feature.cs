@@ -127,12 +127,12 @@ this.FeatureBackground();
 #line 9
 testRunner.Given("I execute the SQL query \'Select 1 as ExampleColumn\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
                             "ExampleColumn"});
-                table17.AddRow(new string[] {
+                table27.AddRow(new string[] {
                             "1"});
 #line 10
-testRunner.Then("I expect the following results:", ((string)(null)), table17, "Then ");
+testRunner.Then("I expect the following results:", ((string)(null)), table27, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -162,12 +162,12 @@ this.FeatureBackground();
 #line 16
 testRunner.When("I execute the following SQL query:", "Select 1 as ExampleColumn", ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table28 = new TechTalk.SpecFlow.Table(new string[] {
                             "ExampleColumn"});
-                table18.AddRow(new string[] {
+                table28.AddRow(new string[] {
                             "1"});
 #line 21
-testRunner.Then("I expect the following results:", ((string)(null)), table18, "Then ");
+testRunner.Then("I expect the following results:", ((string)(null)), table28, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -197,12 +197,12 @@ this.FeatureBackground();
 #line 26
 testRunner.Given("I execute the SQL query file \'.\\DatabaseSteps\\SupportFiles\\testQueryFile.sql\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table29 = new TechTalk.SpecFlow.Table(new string[] {
                             "ExampleColumn"});
-                table19.AddRow(new string[] {
+                table29.AddRow(new string[] {
                             "1"});
 #line 27
-testRunner.Then("I expect the following results:", ((string)(null)), table19, "Then ");
+testRunner.Then("I expect the following results:", ((string)(null)), table29, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -128,25 +128,25 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table39 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table51 = new TechTalk.SpecFlow.Table(new string[] {
                             "ExampleColumn"});
-                table39.AddRow(new string[] {
+                table51.AddRow(new string[] {
                             "Some data"});
 #line 10
  testRunner.Given("the staging-storage table [dbo].[ExampleStagingTable] is loaded with the followin" +
-                        "g data:", ((string)(null)), table39, "Given ");
+                        "g data:", ((string)(null)), table51, "Given ");
 #line hidden
 #line 13
  testRunner.When("I execute the [dbo].[GetExampleStagingTable] function", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table40 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table52 = new TechTalk.SpecFlow.Table(new string[] {
                             "ExampleColumn",
                             "StageDateTime"});
-                table40.AddRow(new string[] {
+                table52.AddRow(new string[] {
                             "Some data",
                             "2000-01-01 00:00:00.00"});
 #line 14
- testRunner.Then("I expect the following results:", ((string)(null)), table40, "Then ");
+ testRunner.Then("I expect the following results:", ((string)(null)), table52, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -173,24 +173,24 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table41 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table53 = new TechTalk.SpecFlow.Table(new string[] {
                             "ExampleColumnWith Space"});
-                table41.AddRow(new string[] {
+                table53.AddRow(new string[] {
                             "Some data"});
 #line 19
  testRunner.Given("the staging-storage table [Schema With Space].[ExampleStagingTableWith Space] is " +
-                        "loaded with the following data:", ((string)(null)), table41, "Given ");
+                        "loaded with the following data:", ((string)(null)), table53, "Given ");
 #line hidden
 #line 22
  testRunner.When("I retrieve the contents of the [Schema With Space].[ExampleStagingTableWith Space" +
                         "] table", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table42 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table54 = new TechTalk.SpecFlow.Table(new string[] {
                             "ExampleColumnWith Space"});
-                table42.AddRow(new string[] {
+                table54.AddRow(new string[] {
                             "Some data"});
 #line 23
- testRunner.Then("I expect the following results:", ((string)(null)), table42, "Then ");
+ testRunner.Then("I expect the following results:", ((string)(null)), table54, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

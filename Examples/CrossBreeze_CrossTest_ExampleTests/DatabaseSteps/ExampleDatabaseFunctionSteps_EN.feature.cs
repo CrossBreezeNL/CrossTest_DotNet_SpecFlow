@@ -101,6 +101,9 @@ namespace CrossBreeze.CrossTest.ExampleTests.DatabaseSteps
 #line 6
  testRunner.And("the ExampleDatabase database is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+#line 7
+ testRunner.And("the table [dbo].[ExampleStagingTable] is empty", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
@@ -111,7 +114,7 @@ namespace CrossBreeze.CrossTest.ExampleTests.DatabaseSteps
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Execute function", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 8
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -124,13 +127,30 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 9
- testRunner.When("I execute the [sys].[fn_servershareddrives] function", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "DriveName"});
+                            "ExampleColumn"});
+                table1.AddRow(new string[] {
+                            "Some data"});
+                table1.AddRow(new string[] {
+                            "Some data2"});
 #line 10
- testRunner.Then("I expect the following results:", ((string)(null)), table1, "Then ");
+ testRunner.Given("the staging-storage table [dbo].[ExampleStagingTable] is loaded with the followin" +
+                        "g data:", ((string)(null)), table1, "Given ");
+#line hidden
+#line 14
+ testRunner.When("I execute the [dbo].[GetExampleStagingTable] function", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn",
+                            "StageDateTime"});
+                table2.AddRow(new string[] {
+                            "Some data",
+                            "2000-01-01 00:00:00.00"});
+                table2.AddRow(new string[] {
+                            "Some data2",
+                            "2000-01-01 00:00:00.00"});
+#line 15
+ testRunner.Then("I expect the following results:", ((string)(null)), table2, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -144,40 +164,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Execute templated function", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 13
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 4
-this.FeatureBackground();
-#line hidden
-#line 14
- testRunner.When("I execute the fn_servershareddrives sys function", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "DriveName"});
-#line 15
- testRunner.Then("I expect the following results:", ((string)(null)), table2, "Then ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Execute function with parameters")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Database function test steps (EN)")]
-        public void ExecuteFunctionWithParameters()
-        {
-            string[] tagsOfScenario = ((string[])(null));
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Execute function with parameters", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 18
+#line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -191,23 +178,28 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Parameter",
-                            "Value"});
+                            "ExampleColumn"});
                 table3.AddRow(new string[] {
-                            "file_or_directory",
-                            "\'C:\\Not_a_real_file\'"});
-#line 19
- testRunner.When("I execute the [sys].[dm_os_file_exists] function with the following parameter:", ((string)(null)), table3, "When ");
+                            "Some data"});
+                table3.AddRow(new string[] {
+                            "Some data2"});
+#line 21
+ testRunner.Given("the staging-storage table [dbo].[ExampleStagingTable] is loaded with the followin" +
+                        "g data:", ((string)(null)), table3, "Given ");
+#line hidden
+#line 25
+ testRunner.When("I execute the GetExampleStagingTable dbo function", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
-                            "file_exists",
-                            "file_is_a_directory",
-                            "parent_directory_exists"});
+                            "ExampleColumn",
+                            "StageDateTime"});
                 table4.AddRow(new string[] {
-                            "0",
-                            "0",
-                            "1"});
-#line 22
+                            "Some data",
+                            "2000-01-01 00:00:00.00"});
+                table4.AddRow(new string[] {
+                            "Some data2",
+                            "2000-01-01 00:00:00.00"});
+#line 26
  testRunner.Then("I expect the following results:", ((string)(null)), table4, "Then ");
 #line hidden
             }
@@ -215,14 +207,14 @@ this.FeatureBackground();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Execute function with convention and parameters")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Execute function with parameters")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Database function test steps (EN)")]
-        public void ExecuteFunctionWithConventionAndParameters()
+        public void ExecuteFunctionWithParameters()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Execute function with convention and parameters", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 26
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Execute function with parameters", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 31
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -236,24 +228,83 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Parameter",
-                            "Value"});
+                            "ExampleColumn"});
                 table5.AddRow(new string[] {
-                            "file_or_directory",
-                            "\'C:\\Not_a_real_file\'"});
-#line 27
- testRunner.When("I execute the dm_os_file_exists sys function with the following parameter:", ((string)(null)), table5, "When ");
+                            "Some data2"});
+#line 32
+ testRunner.Given("the staging-storage table [dbo].[ExampleStagingTable] is loaded with the followin" +
+                        "g data:", ((string)(null)), table5, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
-                            "file_exists",
-                            "file_is_a_directory",
-                            "parent_directory_exists"});
+                            "Parameter",
+                            "Value"});
                 table6.AddRow(new string[] {
-                            "0",
-                            "0",
-                            "1"});
-#line 30
- testRunner.Then("I expect the following results:", ((string)(null)), table6, "Then ");
+                            "ExampleColumn",
+                            "\'Some data2\'"});
+#line 35
+ testRunner.When("I execute the [dbo].[GetExampleStagingTableWithParameter] function with the follo" +
+                        "wing parameter:", ((string)(null)), table6, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn",
+                            "StageDateTime"});
+                table7.AddRow(new string[] {
+                            "Some data2",
+                            "2000-01-01 00:00:00.00"});
+#line 38
+ testRunner.Then("I expect the following results:", ((string)(null)), table7, "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Execute function with convetion and parameters")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Database function test steps (EN)")]
+        public void ExecuteFunctionWithConvetionAndParameters()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Execute function with convetion and parameters", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 42
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 4
+this.FeatureBackground();
+#line hidden
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn"});
+                table8.AddRow(new string[] {
+                            "Some data2"});
+#line 43
+ testRunner.Given("the staging-storage table [dbo].[ExampleStagingTable] is loaded with the followin" +
+                        "g data:", ((string)(null)), table8, "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Parameter",
+                            "Value"});
+                table9.AddRow(new string[] {
+                            "ExampleColumn",
+                            "\'Some data2\'"});
+#line 46
+ testRunner.When("I execute the GetExampleStagingTableWithParameter dbo2 function with the followin" +
+                        "g parameter:", ((string)(null)), table9, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn",
+                            "StageDateTime"});
+                table10.AddRow(new string[] {
+                            "Some data2",
+                            "2000-01-01 00:00:00.00"});
+#line 49
+ testRunner.Then("I expect the following results:", ((string)(null)), table10, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -267,7 +318,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Execute function with parameters from template", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 34
+#line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -280,19 +331,25 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 35
- testRunner.When("I execute the dm_os_file_exists sys2 function", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn"});
+                table11.AddRow(new string[] {
+                            "Some data2"});
+#line 54
+testRunner.Given("the staging-storage table [dbo].[ExampleStagingTable] is loaded with the followin" +
+                        "g data:", ((string)(null)), table11, "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
-                            "file_exists",
-                            "file_is_a_directory",
-                            "parent_directory_exists"});
-                table7.AddRow(new string[] {
-                            "0",
-                            "0",
-                            "1"});
-#line 36
- testRunner.Then("I expect the following results:", ((string)(null)), table7, "Then ");
+#line 57
+ testRunner.When("I execute the GetExampleStagingTableWithParameter dbo2 function", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn",
+                            "StageDateTime"});
+                table12.AddRow(new string[] {
+                            "Some data2",
+                            "2000-01-01 00:00:00.00"});
+#line 58
+ testRunner.Then("I expect the following results:", ((string)(null)), table12, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

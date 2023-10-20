@@ -140,6 +140,11 @@ namespace CrossBreeze.CrossTest.SpecFlow.Utils
 
                     // Boolean
                     case "Boolean":
+                        // If the input is 1, translate it to true.
+                        if (rawValue.Equals("1")) return true;
+                        // If the input is 0, translate it to true.
+                        if (rawValue.Equals("0")) return false;
+                        // If input is not a 0 or 1, parse the raw value.
                         return Boolean.Parse(rawValue);
 
                     // Byte[]
@@ -147,6 +152,10 @@ namespace CrossBreeze.CrossTest.SpecFlow.Utils
                         // The length of the byte string must be even.
                         Assert.IsTrue(rawValue.Length % 2 == 0, "The length of the byte string must be even");
                         return DataTypeUtils.StringToByteArray(rawValue);
+
+                    // DateTimeOffset
+                    case "DateTimeOffset":
+                        return DateTimeOffset.Parse(rawValue);
 
                     //// Object
                     //case "Object":

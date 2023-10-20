@@ -101,6 +101,9 @@ namespace CrossBreeze.CrossTest.ExampleTests.DatabaseSteps
 #line 6
  testRunner.And("de ExampleDatabase database wordt gebruikt", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
 #line hidden
+#line 7
+ testRunner.And("dat de tabel [dbo].[ExampleStagingTable] leeg is", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "En ");
+#line hidden
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
@@ -111,7 +114,7 @@ namespace CrossBreeze.CrossTest.ExampleTests.DatabaseSteps
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Functie uitvoeren", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 8
+#line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -124,13 +127,30 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 9
- testRunner.When("ik de functie [sys].[fn_servershareddrives] uitvoer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
-#line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
-                            "DriveName"});
+                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn"});
+                table13.AddRow(new string[] {
+                            "Some data"});
+                table13.AddRow(new string[] {
+                            "Some data2"});
 #line 10
- testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table8, "Dan ");
+ testRunner.Given("de staging-storage tabel [dbo].[ExampleStagingTable] met de volgende data geladen" +
+                        " wordt:", ((string)(null)), table13, "Gegeven ");
+#line hidden
+#line 14
+ testRunner.When("ik de functie [dbo].[GetExampleStagingTable] uitvoer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn",
+                            "StageDateTime"});
+                table14.AddRow(new string[] {
+                            "Some data",
+                            "2000-01-01 00:00:00.00"});
+                table14.AddRow(new string[] {
+                            "Some data2",
+                            "2000-01-01 00:00:00.00"});
+#line 15
+ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table14, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -144,7 +164,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Functie met template uitvoeren", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 13
+#line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -157,13 +177,30 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 14
- testRunner.When("ik de fn_servershareddrives sys functie uitvoer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn"});
+                table15.AddRow(new string[] {
+                            "Some data"});
+                table15.AddRow(new string[] {
+                            "Some data2"});
+#line 21
+ testRunner.Given("de staging-storage tabel [dbo].[ExampleStagingTable] met de volgende data geladen" +
+                        " wordt:", ((string)(null)), table15, "Gegeven ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
-                            "DriveName"});
-#line 15
- testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table9, "Dan ");
+#line 25
+ testRunner.When("ik de GetExampleStagingTable dbo functie uitvoer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn",
+                            "StageDateTime"});
+                table16.AddRow(new string[] {
+                            "Some data",
+                            "2000-01-01 00:00:00.00"});
+                table16.AddRow(new string[] {
+                            "Some data2",
+                            "2000-01-01 00:00:00.00"});
+#line 26
+ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table16, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -177,7 +214,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Functie met parameters uitvoeren", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 18
+#line 31
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -190,25 +227,32 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn"});
+                table17.AddRow(new string[] {
+                            "Some data2"});
+#line 32
+ testRunner.Given("de staging-storage tabel [dbo].[ExampleStagingTable] met de volgende data geladen" +
+                        " wordt:", ((string)(null)), table17, "Gegeven ");
+#line hidden
+                TechTalk.SpecFlow.Table table18 = new TechTalk.SpecFlow.Table(new string[] {
                             "Parameter",
                             "Value"});
-                table10.AddRow(new string[] {
-                            "file_or_directory",
-                            "\'C:\\Not_a_real_file\'"});
-#line 19
- testRunner.When("ik de functie [sys].[dm_os_file_exists] uitvoer met de volgende parameters:", ((string)(null)), table10, "Als ");
+                table18.AddRow(new string[] {
+                            "ExampleColumn",
+                            "\'Some data2\'"});
+#line 35
+ testRunner.When("ik de functie [dbo].[GetExampleStagingTableWithParameter] uitvoer met de volgende" +
+                        " parameter:", ((string)(null)), table18, "Als ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
-                            "file_exists",
-                            "file_is_a_directory",
-                            "parent_directory_exists"});
-                table11.AddRow(new string[] {
-                            "0",
-                            "0",
-                            "1"});
-#line 22
- testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table11, "Dan ");
+                TechTalk.SpecFlow.Table table19 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn",
+                            "StageDateTime"});
+                table19.AddRow(new string[] {
+                            "Some data2",
+                            "2000-01-01 00:00:00.00"});
+#line 38
+ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table19, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -222,7 +266,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Functie met template en parameters uitvoeren", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 26
+#line 42
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -235,25 +279,32 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn"});
+                table20.AddRow(new string[] {
+                            "Some data2"});
+#line 43
+ testRunner.Given("de staging-storage tabel [dbo].[ExampleStagingTable] met de volgende data geladen" +
+                        " wordt:", ((string)(null)), table20, "Gegeven ");
+#line hidden
+                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
                             "Parameter",
                             "Value"});
-                table12.AddRow(new string[] {
-                            "file_or_directory",
-                            "\'C:\\Not_a_real_file\'"});
-#line 27
- testRunner.When("ik de dm_os_file_exists sys functie uitvoer met de volgende parameter:", ((string)(null)), table12, "Als ");
+                table21.AddRow(new string[] {
+                            "ExampleColumn",
+                            "\'Some data2\'"});
+#line 46
+ testRunner.When("ik de GetExampleStagingTableWithParameter dbo2 functie uitvoer met de volgende pa" +
+                        "rameter:", ((string)(null)), table21, "Als ");
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
-                            "file_exists",
-                            "file_is_a_directory",
-                            "parent_directory_exists"});
-                table13.AddRow(new string[] {
-                            "0",
-                            "0",
-                            "1"});
-#line 30
- testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table13, "Dan ");
+                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn",
+                            "StageDateTime"});
+                table22.AddRow(new string[] {
+                            "Some data2",
+                            "2000-01-01 00:00:00.00"});
+#line 49
+ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table22, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -267,7 +318,7 @@ this.FeatureBackground();
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Functie met parameters uit template uitvoeren", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 34
+#line 53
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -280,19 +331,25 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 35
- testRunner.When("ik de dm_os_file_exists sys2 functie uitvoer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn"});
+                table23.AddRow(new string[] {
+                            "Some data2"});
+#line 54
+ testRunner.Given("de staging-storage tabel [dbo].[ExampleStagingTable] met de volgende data geladen" +
+                        " wordt:", ((string)(null)), table23, "Gegeven ");
 #line hidden
-                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
-                            "file_exists",
-                            "file_is_a_directory",
-                            "parent_directory_exists"});
-                table14.AddRow(new string[] {
-                            "0",
-                            "0",
-                            "1"});
-#line 36
- testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table14, "Dan ");
+#line 57
+ testRunner.When("ik de GetExampleStagingTableWithParameter dbo2 functie uitvoer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Als ");
+#line hidden
+                TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
+                            "ExampleColumn",
+                            "StageDateTime"});
+                table24.AddRow(new string[] {
+                            "Some data2",
+                            "2000-01-01 00:00:00.00"});
+#line 58
+ testRunner.Then("verwacht ik het volgende resultaat:", ((string)(null)), table24, "Dan ");
 #line hidden
             }
             this.ScenarioCleanup();

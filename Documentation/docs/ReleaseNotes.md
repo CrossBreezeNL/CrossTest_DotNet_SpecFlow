@@ -21,6 +21,11 @@ Click on the header of a version number to go to the documentation of that speci
 [//]: # (>         * [X] Some issue...)
 
 ## [Version 1.1](../1.1/)
+- [ ] 1.1.2.0 <sup>20-10-2023</sup>
+> !!! success "Enhanced features"
+>     * [ ] Database steps
+>           - [X] Added support for more SQL data types (Bit & DateTimeOffset).
+
 - [ ] 1.1.1.0 <sup>07-06-2023</sup>
 > !!! success "Enhanced features"
 >     * [ ] Configuration

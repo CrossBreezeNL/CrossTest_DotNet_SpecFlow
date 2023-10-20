@@ -34,9 +34,9 @@ Scenario: Run typed ADF proces
 
 Scenario: Run ADF proces with parameters
 	When the CrossTestPipelineWithParameters ADF process in the ExampleAdfPipeline project is being executed with the following parameter:
-		| Parameter     | Value						|
-		| baseUrl		| https://x-breeze.com/		|
-		| uri			| crossgenerate					|
+		| Parameter | Value                        |
+		| baseUrl   | https://test.crossbreeze.nl/ |
+		| uri       | DotNet                       |
 	And I retrieve the contents of the [dbo].[testTable] table
 	Then I expect the following results:
         | id | description |
@@ -44,8 +44,8 @@ Scenario: Run ADF proces with parameters
 
 Scenario: Run typed ADF proces with parameters
 	When the CrossTestPipelineWithParameters adfTemplate ADF process in the ExampleAdfPipeline project is being executed with the following parameter:
-		| Parameter     | Value		|
-		| uri			| crossgenerate		|
+		| Parameter | Value  |
+		| uri       | DotNet |
 	And I retrieve the contents of the [dbo].[testTable] table
 	Then I expect the following results:
         | id | description |

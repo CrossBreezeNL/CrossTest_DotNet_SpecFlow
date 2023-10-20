@@ -127,7 +127,7 @@ jobs:
   - task: SqlDacpacDeploymentOnMachineGroup@0
     inputs:
       TaskType: 'sqlQuery'
-      SqlFile: '$(System.DefaultWorkingDirectory)\Examples\CrossBreeze_CrossTest_ExampleTests\create_tables.sql'
+      SqlFile: '$(System.DefaultWorkingDirectory)\Examples\CrossBreeze_CrossTest_ExampleTests\prepare_sql_database.sql'
       ServerName: 'crossbreeze.database.windows.net'
       DatabaseName: 'ExampleDatabase'
       AuthScheme: 'sqlServerAuthentication'

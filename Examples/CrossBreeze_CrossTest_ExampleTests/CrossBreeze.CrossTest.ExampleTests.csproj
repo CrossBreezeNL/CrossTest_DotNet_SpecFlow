@@ -50,11 +50,11 @@
     <None Include="DatabaseSteps\ExampleDatabaseQuerySteps_NL.feature" />
     <None Include="DatabaseSteps\ExampleDatabaseFunctionSteps_EN.feature" />
     <None Include="DatabaseSteps\ExampleDatabaseSqlAgentJobSteps_EN.feature" />
+    <None Include="DatabaseSteps\ExampleDatabaseTableSteps_DataTypes.feature" />
     <None Include="DatabaseSteps\ExampleDatabaseTableSteps_EN.feature" />
     <None Include="DatabaseSteps\ExampleDatabaseTableSteps_NL.feature" />
     <None Include="ExampleTest.feature" />
     <None Include="ExampleTests.runsettings" />
-    <None Include="FirstTest.feature" />
     <None Include="packages.config" />
     <None Include="DatabaseSteps\ExampleDatabaseQuerySteps_EN.feature" />
     <None Include="ProcessSteps\ExampleADFProcessSteps_NL.feature" />
