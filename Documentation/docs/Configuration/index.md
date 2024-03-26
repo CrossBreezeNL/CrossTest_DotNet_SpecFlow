@@ -42,7 +42,7 @@ In order to use Azure Data Factory (ADF) processes from within CrossTest you mus
 Make sure the following section node has been added to the configSections of your App.config
 ```xml
 <configSections>
-		<section name="crossTestAdf" type="CrossBreeze.CrossTest.Process.Adf.Configuration.AdfProcessesConfig, CrossBreeze.CrossTest.Process.Adf" />
+		<section name="crossTestAdf" type="CrossBreeze.CrossTest.Process.Adf.Configuration.crossTestAdfConfig, CrossBreeze.CrossTest.Process.Adf" />
 </configSections>
 ```
 
