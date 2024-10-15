@@ -50,6 +50,7 @@
     <None Include="DatabaseSteps\ExampleDatabaseQuerySteps_NL.feature" />
     <None Include="DatabaseSteps\ExampleDatabaseFunctionSteps_EN.feature" />
     <None Include="DatabaseSteps\ExampleDatabaseSqlAgentJobSteps_EN.feature" />
+    <None Include="DatabaseSteps\ExampleDatabaseTableStepsInTransaction_EN.feature" />
     <None Include="DatabaseSteps\ExampleDatabaseTableSteps_DataTypes.feature" />
     <None Include="DatabaseSteps\ExampleDatabaseTableSteps_EN.feature" />
     <None Include="DatabaseSteps\ExampleDatabaseTableSteps_NL.feature" />

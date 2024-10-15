@@ -55,6 +55,11 @@ namespace CrossBreeze.CrossTest.Database.Configuration
         [XDoc(Description ="The name of the connection string defined in the config, that this database server config refers to.")]
         public string ConnectionName => this["connectionName"] as string;
 
+        // Transaction isolation level
+        [ConfigurationProperty("transactionIsolationLevel", DefaultValue = "Serializable")]
+        [XDoc(Description = "The type of isolation level that is applied when running tests in a transaction.")]
+        public string TransactionIsolationLevel => this["transactionIsolationLevel"] as string;
+
 
     }
 }
