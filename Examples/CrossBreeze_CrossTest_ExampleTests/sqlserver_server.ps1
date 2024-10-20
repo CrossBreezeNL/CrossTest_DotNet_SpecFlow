@@ -9,4 +9,4 @@ docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Test1234' -e 'MSSQL_AGENT_ENABLED=
 Start-Sleep -s 10
 
 # Execute sql script needed to run tests on the server
-docker exec -w /scripts crosstest_specflow_sqlserver /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P Test1234 -i prepare_sql_docker.sql
+docker exec -w /scripts crosstest_specflow_sqlserver /opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P Test1234 -C -i prepare_sql_docker.sql
