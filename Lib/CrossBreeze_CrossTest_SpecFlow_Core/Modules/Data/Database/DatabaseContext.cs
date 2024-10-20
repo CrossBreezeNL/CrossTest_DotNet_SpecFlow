@@ -38,7 +38,7 @@ namespace CrossBreeze.CrossTest.SpecFlow.Modules.Data.Database.Context
         public void BeginTransaction(ScenarioContext scenarioContext)
         {
             // Begin the transaction with configured isolation level.
-            DatabaseTransaction = DatabaseConnection.BeginTransaction((IsolationLevel)System.Enum.Parse(typeof(IsolationLevel), this.databaseServerConfig.TransactionIsolationLevel));
+            DatabaseTransaction = DatabaseConnection.BeginTransaction((IsolationLevel)System.Enum.Parse(typeof(IsolationLevel), this.databaseServerConfig.IsolationLevel));
         }
 
         public bool IsTransactionOpen()

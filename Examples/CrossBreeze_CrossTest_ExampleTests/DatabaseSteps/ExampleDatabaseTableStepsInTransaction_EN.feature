@@ -32,11 +32,11 @@ Scenario: Another Simple insert
 	When the test is being executed within a transaction
 	Given the table [xt_transaction_test] is loaded with the following data:
 	| Id | Description  |
-	| 1  | Test         |
-	| 2  | Another test |
+	| 3  | Test         |
+	| 4  | Another test |
 
 	When I retrieve the contents of the [dbo].[xt_transaction_test] table
 	Then I expect the following results:
 	| Id | Description  |
-	| 1  | Test         |
-	| 2  | Another test |
+	| 3  | Test         |
+	| 4  | Another test |

@@ -56,9 +56,9 @@ namespace CrossBreeze.CrossTest.Database.Configuration
         public string ConnectionName => this["connectionName"] as string;
 
         // Transaction isolation level
-        [ConfigurationProperty("transactionIsolationLevel", DefaultValue = "Serializable")]
+        [ConfigurationProperty("isolationLevel", DefaultValue = "Serializable")]
         [XDoc(Description = "The type of isolation level that is applied when running tests in a transaction.")]
-        public string TransactionIsolationLevel => this["transactionIsolationLevel"] as string;
+        public string IsolationLevel => this["isolationLevel"] as string;
 
 
     }

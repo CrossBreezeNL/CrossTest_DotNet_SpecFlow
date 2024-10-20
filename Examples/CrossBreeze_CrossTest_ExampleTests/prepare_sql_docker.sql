@@ -4,6 +4,10 @@ GO
 USE [ExampleDatabase]
 GO
 
+ALTER DATABASE ExampleDatabase
+SET ALLOW_SNAPSHOT_ISOLATION ON
+GO
+
 -- Create all database objects for testing in the current database.
 :r prepare_sql_database.sql
 
