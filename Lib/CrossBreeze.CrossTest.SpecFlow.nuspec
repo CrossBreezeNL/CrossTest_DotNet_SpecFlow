@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>CrossBreeze.CrossTest</id>
-    <version>1.1.2.0</version>
+    <version>1.1.3.0</version>
     <title>CrossTest</title>
     <authors>Harmen Wessels, Jacob Siemaszko, Willem Otten, Moo Othman</authors>
     <owners>CrossBreeze</owners>
@@ -11,8 +11,8 @@
     <iconUrl>https://test.crossbreeze.nl/img/x-test-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>An open-source data solution testing library (using SpecFlow).</description>
-    <releaseNotes>Added support for more SQL datatypes.</releaseNotes>
-    <copyright>Copyright © CrossBreeze 2023</copyright>
+    <releaseNotes>Added support for transaction isolation level on database connections.</releaseNotes>
+    <copyright>Copyright © CrossBreeze 2024</copyright>
     <tags>Test Database DWH BI SQL T-SQL SSAS</tags>
     <dependencies>
       <group targetFramework=".NETFramework4.7">

@@ -21,6 +21,12 @@ Click on the header of a version number to go to the documentation of that speci
 [//]: # (>         * [X] Some issue...)
 
 ## [Version 1.1](../1.1/)
+- [ ] 1.1.3.0 <sup>24-10-2024</sup>
+> !!! success "Enhanced features"
+>     * [ ] Configuration
+          * [ ] Database server configuration
+>             - [X] Set isolation level for transactions.
+
 - [ ] 1.1.2.0 <sup>20-10-2023</sup>
 > !!! success "Enhanced features"
 >     * [ ] Database steps
@@ -30,7 +36,7 @@ Click on the header of a version number to go to the documentation of that speci
 > !!! success "Enhanced features"
 >     * [ ] Configuration
 >         * [ ] Microsoft SQL Server Database
->             - Set access token for SqlConnection.
+>             - [X] Set access token for SqlConnection.
 
 - [ ] 1.1.0.0 <sup>10-03-2023</sup>
 > !!! success "New features"
