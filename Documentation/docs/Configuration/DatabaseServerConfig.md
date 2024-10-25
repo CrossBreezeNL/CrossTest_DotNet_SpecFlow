@@ -10,6 +10,7 @@ A configuration for a database server
   accessToken="..." 
   commandTimeout="..." 
   connectionName="..." 
+  isolationLevel="..." 
   type="..."
 />
 ```
@@ -21,6 +22,7 @@ A configuration for a database server
 | accessToken | String | The access token to use for the connection.               |
 | commandTimeout | Int32 | Timeout on queries and statements in seconds.               |
 | connectionName | String | The name of the connection string defined in the config, that this database server config refers to.               |
+| isolationLevel | String | The type of isolation level that is applied when running tests in a transaction. The default value is Serializable.               |
 | type      | DatabaseServerType      |  See [DatabaseServerType](../DatabaseServerType) for allowed values. |
 
 ### Config elements

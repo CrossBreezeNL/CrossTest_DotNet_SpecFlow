@@ -9,5 +9,7 @@ Steps to release a new version of CrossTest:
      - Update the version number.
      - Update the release notes.
 7. Execute the CreateNuPkg.cmd file.
-8. Update the PushNuPkg.cmd to the right version.
+8. Update the PushNuPkg.cmd file
+     - Replace API_KEY with a valid API key to push to nuget.
+     - Update to the right version.
 9. Execute the PushNuPkg.cmd file.

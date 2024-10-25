@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CrossBreeze.CrossTest.Process.Ssis</RootNamespace>
     <AssemblyName>CrossBreeze.CrossTest.Process.Ssis</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <SccProjectName>SAK</SccProjectName>
